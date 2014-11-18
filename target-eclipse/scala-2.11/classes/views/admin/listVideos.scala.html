@@ -1,0 +1,36 @@
+@(videos: List[Video], count:Int, page:Int, pageLength:Int)
+@main("") {
+@adminDashboard(""){
+
+<div id="container">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<h2>List all courses</h2>
+		</div>
+
+		<table class="table table-striped">
+			<tr>
+				<th>Video ID</th>
+				<th>Title</th>
+				<th>Description</th>
+				<th>URL</th>
+			</tr>
+			@for((video, index) <- videos.zipWithIndex) {
+			<tr>
+				<td>@video.id</td>
+				<td>@video.title</td>
+				<td>@video.description</td>
+				<td><a href="@video.url">@video.url</a></td>
+			</tr>
+			}
+		</table>
+	</div>
+	@paginate(page, pageLength, count, routes.AdminController.listVideos(_))
+</div>
+
+} }
+
+
+
+
+

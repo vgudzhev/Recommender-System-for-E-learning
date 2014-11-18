@@ -1,0 +1,17 @@
+@import helper._
+
+@main("Welcome to Play") {
+	@smartSearchDashboard(""){
+		<div id="container">
+        <h2 class="form-signin-heading">Search by Book ID</h2>
+        @helper.form(action=routes.SmartSearchController.searchUserByBookPref(), 'class ->"smart-search-form") {
+            <div id="contactInfo">
+              <input type='text' name='bookid' id='bookid' class="form-control" />
+            </div>
+            <p></p>
+            <input class="btn btn-lg btn-primary btn-success" type="submit" value="Submit" />
+        }
+    </div>      
+	}
+}
+

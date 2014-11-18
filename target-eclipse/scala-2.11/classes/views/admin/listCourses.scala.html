@@ -1,0 +1,34 @@
+@(courses: List[Course], count:Int, page:Int, pageLength:Int)
+@main("Welcome to Play") { @adminDashboard(""){
+
+<div id="container">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<h2>List all courses</h2>
+		</div>
+
+		<table class="table table-striped">
+			<tr>
+				<th>Course ID</th>
+				<th>Title</th>
+				<th>Description</th>
+			</tr>
+			@for((course, index) <- courses.zipWithIndex) {
+			<tr>
+				<td>@course.id</td>
+				<td>@course.title</td>
+				<td>@course.description</td>
+			</tr>
+			}
+		</table>
+	</div>
+	@paginate(page, pageLength, count,
+	routes.AdminController.listCourses(_))
+</div>
+
+} }
+
+
+
+
+

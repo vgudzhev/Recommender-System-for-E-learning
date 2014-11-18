@@ -1,0 +1,12 @@
+@(message: String, operationType:Int)
+@main("") { @rateItemsDashboard(""){
+@if(operationType==0){
+<div class="alert alert-success" role="alert">
+	<p>@message</p>
+</div>
+}
+@if(operationType==1){
+<div class="alert alert-danger" role="alert">
+	<p>@message</p>
+</div>
+} } }

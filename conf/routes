@@ -1,0 +1,88 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+#       Home page
+
+GET     /                               controllers.ApplicationController.home()
+GET     /home                           controllers.ApplicationController.home()
+GET     /404                            controllers.ApplicationController.pageNotFound()
+GET     /init                           controllers.ApplicationController.init()
+GET     /about                          controllers.ApplicationController.about()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file                   controllers.Assets.at(path="/public", file)
+
+#       User actions
+
+GET     /login                           controllers.UserController.renderLoginPage()
+POST    /loginUser                       controllers.UserController.signIn()
+GET     /logout                          controllers.UserController.logout()
+GET     /signup                          controllers.UserController.renderSignUpPage()
+POST    /signupUser                      controllers.UserController.signUp()
+GET     /userProfile                     controllers.UserController.showUserProfile()
+
+#       Smart search
+
+GET     /smartSearch                     controllers.SmartSearchController.showPage()
+GET     /smartSearch/info                controllers.SmartSearchController.info()
+POST    /smartSearch/search              controllers.SmartSearchController.search()
+GET     /smartSearch/byUserID            controllers.SmartSearchController.renderSearchUserByID()
+POST    /smartSearch/byUserID            controllers.SmartSearchController.searchUserByID()
+GET     /smartSearch/ratedVideo          controllers.SmartSearchController.renderSearchUsersByVideoPref()
+POST    /smartSearch/ratedVideo          controllers.SmartSearchController.searchUserByVideoPref()
+GET     /smartSearch/ratedCourse         controllers.SmartSearchController.renderSearchUsersByCoursePref()
+POST    /smartSearch/ratedCourse         controllers.SmartSearchController.searchUserByCoursePref()
+GET     /smartSearch/ratedItem           controllers.SmartSearchController.renderSearchUserByItemPref()
+POST    /smartSearch/ratedItem           controllers.SmartSearchController.searchUserByItemPref()
+GET     /smartSearch/ratedBook           controllers.SmartSearchController.renderSearchUserByBookPref()
+POST    /smartSearch/ratedBook           controllers.SmartSearchController.searchUserByBookPref()
+
+
+#       Reccomennder system
+
+GET     /recommendations/info/:type      controllers.RecommenderController.info(type)
+GET     /recommendations/info           controllers.RecommenderController.infoPage()
+GET     /recommendations/:type           controllers.RecommenderController.getRecommendations(type)
+
+#      Rate items
+GET    /rate/:type                       controllers.RateItemsController.rate(type)
+GET    /rateItems/info                   controllers.RateItemsController.info()
+POST   /postRate:itemID                  controllers.RateItemsController.postRate(itemID)
+
+#      Admin
+GET    /admin                                controllers.AdminController.adminHome()
+GET    /admin/listUsers                      controllers.AdminController.listUsers(page:Int=1)
+GET    /admin/listUsers/:page                controllers.AdminController.listUsers(page:Int)
+GET    /admin/listCourses                    controllers.AdminController.listCourses(page:Int=1)
+GET    /admin/listCourses/:page              controllers.AdminController.listCourses(page:Int)
+GET    /admin/listAbstractItems              controllers.AdminController.listAbstractItems(page:Int=1)
+GET    /admin/listAbstractItems/:page        controllers.AdminController.listAbstractItems(page:Int)
+GET    /admin/listBooks                      controllers.AdminController.listBooks(page:Int=1)
+GET    /admin/listBooks/:page                controllers.AdminController.listBooks(page:Int)
+GET    /admin/listVideos                     controllers.AdminController.listVideos(page:Int=1)
+GET    /admin/listVideos/:page               controllers.AdminController.listVideos(page:Int)
+GET    /admin/listAbstractItemsRatings       controllers.AdminController.listAbstractItemsRating(page:Int=1)
+GET    /admin/listAbstractItemsRatings:page  controllers.AdminController.listAbstractItemsRating(page:Int)
+GET    /admin/listCourseRatings              controllers.AdminController.listCourseRating(page:Int=1)
+GET    /admin/listCourseRatings:page         controllers.AdminController.listCourseRating(page:Int)
+GET    /admin/listBookRatings                controllers.AdminController.listBookRating(page:Int=1)
+GET    /admin/listBookRatings:page           controllers.AdminController.listBookRating(page:Int)
+GET    /admin/listVideoRatings               controllers.AdminController.listVideoRating(page:Int=1)
+GET    /admin/listVideoRatings:page          controllers.AdminController.listVideoRating(page:Int)
+GET    /admin/integration                    controllers.AdminController.integration()
+
+#     Insert items
+GET   /insert/info                       controllers.InsertController.renderInfo()
+GET   /insert/video                      controllers.InsertController.renderInsertVideo()
+POST  /insert/video                      controllers.InsertController.insertVideo()
+GET   /insert/course                     controllers.InsertController.renderInsertCourse()
+POST  /insert/course                     controllers.InsertController.insertCourse()
+GET   /insert/book                       controllers.InsertController.renderInsertBook()
+POST  /insert/book                       controllers.InsertController.insertBook()
+GET   /insert/item                       controllers.InsertController.renderInsertItem()
+POST  /insert/item                       controllers.InsertController.insertItem()
+
+#      Integration with other systems
+GET    /get/courses/coursera             controllers.IntegrationController.getFromCoursera()
+GET    /get/courses/udacity              controllers.IntegrationController.getFromUdacity()

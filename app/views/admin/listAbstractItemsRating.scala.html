@@ -1,0 +1,34 @@
+@(ratings: List[models.rating.AbstractItemRating], count:Int, page:Int,
+pageLength:Int) @main("Welcome to Play") { @adminDashboard(""){
+
+<div id="container">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<h2>List abstract items rating</h2>
+		</div>
+
+		<table class="table table-striped">
+			<tr>
+				<th>User ID</th>
+				<th>Item ID</th>
+				<th>Rating</th>
+			</tr>
+			@for((rateItem, index) <- ratings.zipWithIndex) {
+			<tr>
+				<td>@rateItem.userID</td>
+				<td>@rateItem.itemID</td>
+				<td>@rateItem.rating</td>
+			</tr>
+			}
+		</table>
+	</div>
+	@paginate(page, pageLength, count,
+	routes.AdminController.listAbstractItemsRating(_))
+</div>
+
+} }
+
+
+
+
+

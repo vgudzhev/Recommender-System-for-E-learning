@@ -1,0 +1,33 @@
+@(items: List[models.rating.AbstractItemRating])
+@main("Welcome to Play") {
+	@smartSearchDashboard(""){
+	
+<div class="container">
+	@if(items.size == 0){
+		<p>No items found</p>
+	}else{
+	<div class="row">
+		<div class="col-md-2">
+		 	<h2>Abstract items</h2>
+		</div>
+  		<div class="col-md-10">
+  			<table class="table table-striped">
+		    	<tr>
+					<th>USER id</th>
+					<th>USER Rating</th>
+				</tr>
+				@for((item, index) <- items.zipWithIndex) {
+			    <tr>
+					<td>@item.userID</td>
+					<td>@item.rating</td>
+				</tr>
+				}
+			</table>  
+  		</div>
+	</div>
+	}
+</div>	
+	
+			
+	}
+}

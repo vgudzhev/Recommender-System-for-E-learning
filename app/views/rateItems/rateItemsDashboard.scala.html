@@ -1,0 +1,24 @@
+@(title: String)(content: Html)
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-3 col-md-2 sidebar">
+			<ul class="nav nav-sidebar">
+				<li><a href="/rate/books">Books</a></li>
+				<li><a href="/rate/videos">FMI videos</a></li>
+				<li><a href="/rate/courses">Online courses</a></li>
+				<li><a href="/rate/items">Abstract items</a></li>
+				<li>
+					<div class="alert alert-success" role="alert">
+				 		<a href="/rateItems/info" class="alert-link">INFO</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			<h1 class="page-header">Rate items</h1>
+			<div class="row placeholders">
+				@content
+			</div>
+		</div>
+	</div>
+</div>

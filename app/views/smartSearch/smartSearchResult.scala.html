@@ -1,0 +1,24 @@
+@(wrappedItems: List[ItemWrapper]) 
+@main("") {
+@smartSearchDashboard(""){
+@if(wrappedItems==null){
+	<p>No results found</p>
+}else{
+<div class="container">
+	<table class="table table-striped">
+
+		<tr>
+			<th>ID</th>
+			<th>Title</th>
+			<th>Description</th>
+		</tr>
+		@for((item, index) <- wrappedItems.zipWithIndex) {
+		<tr>
+			<td>@item.id</td>
+			<td>@item.title</td>
+			<td>@item.description</td>
+		</tr>
+		}
+	</table>
+</div>
+} } }

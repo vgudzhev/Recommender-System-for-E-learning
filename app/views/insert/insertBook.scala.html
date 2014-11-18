@@ -1,0 +1,23 @@
+@(aform: Form[InsertController.BookForm])
+
+@import helper._
+
+@main("Welcome to Play") {
+	@insertDashboard(""){
+		<div id="container">
+
+        @form(routes.InsertController.insertBook, 'class -> "smart-search-form") {
+        <h2 class="form-signin-heading">Insert a book</h2>
+            <div id="contactInfo">
+              @inputText(aform("title"), 'class -> "form-control")
+              @inputText(aform("author"), 'class -> "form-control")
+              @inputText(aform("year"), 'class -> "form-control")
+              @inputText(aform("publisher"), 'class -> "form-control")
+              @inputText(aform("url"), 'class -> "form-control")
+            </div>
+            <input  class="btn btn-lg btn-primary btn-success" type="submit" value="Submit" />
+        }
+    </div>      
+	}
+}
+

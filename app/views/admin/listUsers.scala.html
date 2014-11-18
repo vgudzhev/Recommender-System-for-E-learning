@@ -1,0 +1,34 @@
+@(users: List[User], count:Int, page:Int, pageLength:Int) 
+@main("Welcometo Play") { @adminDashboard(""){
+
+<div id="container">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<h2>List with users</h2>
+		</div>
+
+		<table class="table table-striped">
+			<tr>
+				<th>User ID</th>
+				<th>User name</th>
+				<th>E-mail</th>
+			</tr>
+
+			@for((user, index) <- users.zipWithIndex) {
+			<tr>
+				<td>@user.userID</td>
+				<td>@user.name</td>
+				<td>@user.email</td>
+			</tr>
+			}
+		</table>
+	</div>
+	@paginate(page, pageLength, count, routes.AdminController.listUsers(_))
+</div>
+
+} }
+
+
+
+
+

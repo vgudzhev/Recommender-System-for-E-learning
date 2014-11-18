@@ -1,0 +1,32 @@
+@(videos: List[Video],recType:String)
+														
+@main("Video recommendation") {
+	@recommendationsDashboard("Course recommendation"){
+		<div id="container">
+		<h1></h1>
+			@if(videos.size ==0) {
+			<h1>No recommendations found for this user</h1>
+			} else {
+			<h2>@recType</h2>
+			<table id="recommendations" class="table table-striped">
+				<tr>
+					<th>Video id</th>
+					<th>Video name</th>
+					<th>Video description</th>
+				</tr>
+				@for((video, index) <- videos.zipWithIndex) {
+				     @if(video != null){
+				    <tr>
+				   
+						<td>@video.id</td>
+						<td>@video.title</td>
+						<td>@video.description</td>
+					
+					</tr>
+					}
+				}
+			</table> 
+			}
+	  </div>
+  }
+}

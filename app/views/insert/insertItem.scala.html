@@ -1,0 +1,21 @@
+@(aform: Form[InsertController.ItemForm])
+
+@import helper._
+
+@main("Welcome to Play") {
+	@insertDashboard(""){
+		<div id="container">
+
+        @form(routes.InsertController.insertItem, 'class -> "smart-search-form") {
+        <h2 class="form-signin-heading">Insert item</h2>
+            <div id="contactInfo">
+              @inputText(aform("title"), 'class -> "form-control")
+              @inputText(aform("description"), 'class -> "form-control")
+
+            </div>
+            <input  class="btn btn-lg btn-primary btn-success" type="submit" value="Submit" />
+        }
+    </div>      
+	}
+}
+

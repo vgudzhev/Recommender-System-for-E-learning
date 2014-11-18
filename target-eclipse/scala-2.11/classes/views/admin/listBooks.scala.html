@@ -1,0 +1,38 @@
+@(books: List[Book], count:Int, page:Int, pageLength:Int)
+
+@main("Welcome to Play") {
+	@adminDashboard(""){
+
+<div id="container">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<h2>List all books</h2>
+		</div>
+
+		<table class="table table-striped">
+			<tr>
+				<th>Book ID</th>
+				<th>Title</th>
+				<th>Year</th>
+				<th>Publisher</th>
+			</tr>
+			@for((book, index) <- books.zipWithIndex) {
+			<tr>
+				<td>@book.id</td>
+				<td>@book.title</td>
+				<td>@book.year</td>
+				<td>@book.publisher</td>
+			</tr>
+			}
+		</table>
+	</div>
+	@paginate(page, pageLength, count, routes.AdminController.listBooks(_))
+</div>
+
+	}
+}
+
+
+
+
+

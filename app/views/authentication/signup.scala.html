@@ -1,0 +1,21 @@
+@(message: String,number:Int, signUpForm: Form[UserController.Register])
+
+@import helper._
+
+@main("Contact") {
+<div id="container">
+
+        @form(routes.UserController.signUp(), 'class -> "form-signin") {
+        <h2 class="form-signin-heading">Create account</h2>
+            <div id="contactInfo">
+              @inputText(signUpForm("fullName"), 'class -> "form-control")
+              @inputText(signUpForm("email"), 'class -> "form-control")
+              @inputText(signUpForm("password"), 'class -> "form-control")
+              <p>@number * 2 = ?</p>
+              @inputText(signUpForm("sum"), 'class -> "form-control")
+             <p>@message</p>
+            </div>
+            <input  class="btn btn-lg btn-primary btn-success" type="submit" value="Submit" />
+        }
+    </div>
+}

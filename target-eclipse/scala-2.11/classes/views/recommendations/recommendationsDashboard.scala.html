@@ -1,0 +1,43 @@
+@(title: String)(content: Html)
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-3 col-md-2 sidebar">
+			<ul class="nav nav-sidebar">
+				<li><h2>Based on user collaborotive filterring</h2>
+				<ul>
+					<li><a href="/recommendations/pcu">Pearson correlation</a></li>
+					<li><a href="/recommendations/pcwu">Pearson weighted correlation</a></li>
+					<li><a href="/recommendations/edu">Euclidean correlation</a></li>
+					<li><a href="/recommendations/edwu">Euclidean weighted correlation</a></li>
+					<li><a href="/recommendations/scu">Spearman correlation</a></li>
+					<li><a href="/recommendations/tcu">Tanimoto coefficient</a></li>
+				</ul>
+				
+				</li>
+				<li><h2>Based on item similarity</h2>
+					<ul>
+					<li><a href="/recommendations/pci">Pearson correlation</a></li>
+					<li><a href="/recommendations/pcwi">Pearson weighted correlation</a></li>
+					<li><a href="/recommendations/edi">Euclidean correlation</a></li>
+					<li><a href="/recommendations/edwi">Euclidean weighted correlation</a></li>
+					<li><a href="/recommendations/sci">Spearman correlation</a></li>
+				</ul>
+				</li>
+				<li>
+					<div class="alert alert-success" role="alert">
+				 		<a href="#" class="alert-link">INFO</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			<h1 class="page-header">@title</h1>
+
+			<div class="row placeholders">
+			@content
+
+			</div>
+
+		</div>
+	</div>
+</div>

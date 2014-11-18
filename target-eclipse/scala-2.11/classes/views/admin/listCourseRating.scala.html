@@ -1,0 +1,30 @@
+@(ratings: List[models.rating.CourseRating], count:Int, page:Int,
+pageLength:Int) @main("Welcome to Play") { @adminDashboard(""){
+
+<div id="container">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<h2>List courses rating</h2>
+		</div>
+
+		<table class="table table-striped">
+			<tr>
+				<th>User ID</th>
+				<th>Course ID</th>
+				<th>Rating</th>
+			</tr>
+			@for((rateItem, index) <- ratings.zipWithIndex) {
+			<tr>
+				<td>@rateItem.userID</td>
+				<td>@rateItem.courseID</td>
+				<td>@rateItem.rating</td>
+			</tr>
+			}
+		</table>
+	</div>
+	@paginate(page, pageLength, count,
+	routes.AdminController.listCourseRating(_))
+</div>
+
+} }
+

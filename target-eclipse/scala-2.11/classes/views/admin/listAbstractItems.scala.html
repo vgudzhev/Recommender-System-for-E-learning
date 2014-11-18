@@ -1,0 +1,34 @@
+@(items: List[AbstractItem], count:Int, page:Int, pageLength:Int)
+@main("Abstract items list") { @adminDashboard(""){
+
+<div id="container">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<h2>List with all abstract items</h2>
+		</div>
+
+		<table class="table table-striped">
+			<tr>
+				<th>Item ID</th>
+				<th>Title</th>
+				<th>Description</th>
+			</tr>
+			@for((item, index) <- items.zipWithIndex) {
+			<tr>
+				<td>@item.id</td>
+				<td>@item.title</td>
+				<td>@item.description</td>
+			</tr>
+			}
+		</table>
+	</div>
+	@paginate(page, pageLength, count,
+	routes.AdminController.listAbstractItems(_))
+</div>
+
+} }
+
+
+
+
+

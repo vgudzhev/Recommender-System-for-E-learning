@@ -1,0 +1,23 @@
+@(aform: Form[InsertController.VideoForm])
+
+@import helper._
+
+@main("Insert video") {
+	@insertDashboard(""){
+		<div id="container">
+
+        @form(routes.InsertController.insertVideo, 'class -> "smart-search-form") {
+        <h2 class="form-signin-heading">Insert a video</h2>
+            <div id="contactInfo">
+              @inputText(aform("title"), 'class -> "form-control")
+              @inputText(aform("description"), 'class -> "form-control")
+              @inputText(aform("url"), 'class -> "form-control")
+              @inputText(aform("img-path"), 'class -> "form-control")
+            </div>
+            <input  class="btn btn-lg btn-primary btn-success" type="submit" value="Submit" />
+        }
+    </div>      
+	}
+}
+
+

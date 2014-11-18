@@ -1,0 +1,30 @@
+@(ratings: List[models.rating.VideoRating], count:Int, page:Int, pageLength:Int)
+@main("Welcome to Play") {
+	@adminDashboard(""){
+
+<div id="container">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<h2>List video rating</h2>
+		</div>
+		
+		<table class="table table-striped">
+			<tr>
+				<th>User ID</th>
+				<th>Video ID</th>
+				<th>Rating</th>
+			</tr>
+			@for((rateItem, index) <- ratings.zipWithIndex) {
+			<tr>
+				<td>@rateItem.userID</td>
+				<td>@rateItem.videoID</td>
+				<td>@rateItem.rating</td>
+			</tr>
+			}
+		</table>
+	</div>
+	@paginate(page, pageLength, count, routes.AdminController.listVideoRating(_))
+</div>
+
+	} 
+}
