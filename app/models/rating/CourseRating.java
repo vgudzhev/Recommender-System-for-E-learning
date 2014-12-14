@@ -29,7 +29,6 @@ public class CourseRating extends Model {
 		private long userID;
 		private long courseID;
 		private double rating;
-
 		
 		public Builder userID(long userID){
 			this.userID =userID;

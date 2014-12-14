@@ -1,9 +1,7 @@
 package controllers;
 
 import static play.data.Form.form;
-
 import java.util.Random;
-
 import play.data.DynamicForm;
 import play.data.Form;
 import play.data.validation.Constraints.Required;
@@ -12,6 +10,13 @@ import play.mvc.Result;
 import models.User;
 import views.html.authentication.*;
 
+/**
+ * The class is responsible for rendering user account control pages and also
+ * provide methods for user account control such as login ,logout and view
+ * profile.
+ * 
+ * @author VGudzhev
+ */
 public class UserController extends Controller {
 
 	public static Result renderLoginPage() {
@@ -59,19 +64,19 @@ public class UserController extends Controller {
 			return ok(signup.render("You are robot!", randomNumber,
 					Form.form(UserController.Register.class)));
 		}
-		
+
 		String email = requestData.get("email");
 		String name = requestData.get("fullName");
 		String password = requestData.get("password");
 		User user = new User.UserBuilder().email(email).name(name)
 				.password(password).build();
-		
+
 		if (User.findByEmail(email) == null) {
 			long id = User.find.findRowCount();
 			user.userID = ++id;
 			user.save();
 			session("user", user.email);
-			
+
 			return ok(createdUser.render());
 		} else {
 			return ok(signup.render("This email is already in use",

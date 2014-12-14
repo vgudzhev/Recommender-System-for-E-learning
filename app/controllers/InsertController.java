@@ -47,7 +47,6 @@ public class InsertController extends Controller {
 		String url = requestData.get("url");
 		String imgPath = requestData.get("img-path");
 		try {
-			int videoId = Video.find.findRowCount();
 			Video video = new Video.VideoBuilder()
 					.title(title).description(description).url(url)
 					.img(imgPath).build();
@@ -149,7 +148,6 @@ public class InsertController extends Controller {
 		public String year;
 		public String publisher;
 		public String url;
-
 	}
 
 }

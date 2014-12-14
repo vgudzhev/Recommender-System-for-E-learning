@@ -18,6 +18,13 @@ import play.mvc.Result;
 import play.mvc.Security;
 import views.html.smartSearch.*;
 
+/**
+ * The class is responsible for the search functionality. User should be able to
+ * search items and to search others`s users preferences. All methods cannot be
+ * accessed by non-registered users.
+ * 
+ * @author VGudzhev
+ */
 public class SmartSearchController extends Controller {
 
 	@Security.Authenticated(SecuredController.class)
@@ -157,40 +164,9 @@ public class SmartSearchController extends Controller {
 	public static Result searchUserByBookPref() {
 		DynamicForm requestData = Form.form().bindFromRequest();
 		String bookID = requestData.get("bookid");
-		List<BookRating> booksRating = BookRating.find
-				.where().eq("bookID", bookID).findList();
+		List<BookRating> booksRating = BookRating.find.where()
+				.eq("bookID", bookID).findList();
 
 		return ok(listUserByBookPref.render(booksRating));
 	}
-
-	// public static class SearchForm {
-	// @Required
-	// public String type;
-	// public String title;
-	// }
-//
-//	public static class UserIDForm {
-//		@Required
-//		public String userID;
-//	}
-//
-//	public static class VideoForm {
-//		@Required
-//		public String videoID;
-//	}
-//
-//	public static class CourseForm {
-//		@Required
-//		public String courseID;
-//	}
-//
-//	public static class ItemForm {
-//		@Required
-//		public String itemID;
-//	}
-//
-//	public static class BookForm {
-//		@Required
-//		public String bookID;
-//	}
 }

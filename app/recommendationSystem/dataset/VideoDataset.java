@@ -15,7 +15,7 @@ public class VideoDataset {
 	public static void init() {
 		try {
 			importVideo(VIDEO);
-//			importVideoRating(VIDEO_RATING);
+			importVideoRating(VIDEO_RATING);
 		} catch (IOException e) {
 			Logger.info("Cannot import Video CSV files" + e.getMessage());
 			

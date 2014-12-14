@@ -13,6 +13,12 @@ import play.libs.F.Function;
 import play.libs.F.Promise;
 import views.html.admin.integrationStatus;
 
+/**
+ * This class is used by administrators to create connections between the
+ * web-app and other services.
+ * 
+ * @author VGudzhev
+ */
 public class IntegrationController extends Controller {
 
 	public static String COURSERA_API = "https://api.coursera.org/api/catalog.v1/courses?fields=name,shortDescription";
@@ -22,14 +28,14 @@ public class IntegrationController extends Controller {
 		final Promise<Result> resultPromise = WS.url(UDACITY_API)
 				.setTimeout(5000).get().map(new Function<WSResponse, Result>() {
 					public Result apply(WSResponse response) {
-						
-						JsonNode root = response.asJson();						
+
+						JsonNode root = response.asJson();
 						if (root == null) {
 							return badRequest("Expecting Json data");
 						}
-						
-						JsonNode courses = root.get("courses");					
-						Iterator<JsonNode> allCourses = courses.elements();				
+
+						JsonNode courses = root.get("courses");
+						Iterator<JsonNode> allCourses = courses.elements();
 						long counter = 0;
 						while (allCourses.hasNext()) {
 							JsonNode temp = allCourses.next();
@@ -39,7 +45,7 @@ public class IntegrationController extends Controller {
 							if (description.length() > 255) {
 								description = description.substring(0, 255);
 							}
-							
+
 							try {
 								Course course = new Course.CourseBuilder()
 										.title(title).description(description)

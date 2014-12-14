@@ -15,6 +15,12 @@ import views.html.rateItems.rateItems;
 import views.html.rateItems.rateItemsInfo;
 import views.html.rateItems.rateItemsStatus;
 
+/**
+ * This class provides rating functionality. Every registered user should be
+ * able to rate all items.
+ * 
+ * @author VGudzhev
+ */
 public class RateItemsController extends Controller {
 	static DatasetType datasetType;
 
@@ -57,8 +63,7 @@ public class RateItemsController extends Controller {
 			description = item.description;
 		}
 
-		return ok(rateItems.render(id, title,
-				description));
+		return ok(rateItems.render(id, title, description));
 	}
 
 	@Security.Authenticated(SecuredController.class)
@@ -72,15 +77,13 @@ public class RateItemsController extends Controller {
 		String message = null;
 		try {
 			RatingEngine.rate(user.userID, ratedItemID, rating, datasetType);
-			message = "Your item was successfully rated with " + rating + " stars!";
-			return ok(rateItemsStatus.render(message,0));
+			message = "Your item was successfully rated with " + rating
+					+ " stars!";
+			return ok(rateItemsStatus.render(message, 0));
 		} catch (Exception e) {
-			message = "Rating operation was unsuccessful!"; 
+			message = "Rating operation was unsuccessful!";
 			return ok(rateItemsStatus.render(message, 1));
 		}
-		
-
-		
 	}
 
 	public static Result info() {
