@@ -19,6 +19,9 @@ import views.html.admin.integrationStatus;
  * 
  * @author VGudzhev
  */
+
+// TODO https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html#searchexamples
+
 public class IntegrationController extends Controller {
 
 	public static String COURSERA_API = "https://api.coursera.org/api/catalog.v1/courses?fields=name,shortDescription";

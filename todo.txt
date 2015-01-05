@@ -1,0 +1,10 @@
+TODO list
+ - i18n (ENG, BG)
+ - get user rating, get other users rating, get all users ratings
+ - populate DB - populate from system, populate from file
+ - get user rating from time/ to time
+ - rate items show id description summary picture AND LINK to the resource
+ - Recomendations prefered algorithm
+ - recommendation get dummy/remove 5
+ - intgration with itunes api , create new dummy data
+ 

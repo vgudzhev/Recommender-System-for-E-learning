@@ -33,6 +33,7 @@ public class RateItemsController extends Controller {
 		long id = -1;
 		String title = null;
 		String description = null;
+		String url = null;
 
 		if (type.equals("books")) {
 			datasetType = DatasetType.BOOKS;
@@ -40,6 +41,7 @@ public class RateItemsController extends Controller {
 			Book book = Book.findById(id);
 			title = book.title;
 			description = book.description;
+			
 
 		} else if (type.equals("videos")) {
 			datasetType = DatasetType.VIDEOS;

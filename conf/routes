@@ -39,7 +39,7 @@ GET     /smartSearch/ratedBook           controllers.SmartSearchController.rende
 POST    /smartSearch/ratedBook           controllers.SmartSearchController.searchUserByBookPref()
 
 
-#       Reccomennder system
+#       Recommender system
 
 GET     /recommendations/info/:type      controllers.RecommenderController.info(type)
 GET     /recommendations/info           controllers.RecommenderController.infoPage()
@@ -71,6 +71,14 @@ GET    /admin/listBookRatings:page           controllers.AdminController.listBoo
 GET    /admin/listVideoRatings               controllers.AdminController.listVideoRating(page:Int=1)
 GET    /admin/listVideoRatings:page          controllers.AdminController.listVideoRating(page:Int)
 GET    /admin/integration                    controllers.AdminController.integration()
+GET    /admin/listAbstractItemsRatingAsCSV   controllers.AdminController.listAbstractItemsRatingAsCSV()
+GET    /admin/listCourseRatingAsCSV          controllers.AdminController.listCourseRatingAsCSV()
+GET    /admin/listVideoRatingAsCSV           controllers.AdminController.listVideoRatingAsCSV()
+GET    /admin/listBookRatingAsCSV            controllers.AdminController.listBookRatingAsCSV()
+GET    /admin/import-export                  controllers.AdminController.importExport()
+GET    /admin/renderImport                   controllers.AdminController.renderImport()
+GET    /admin/renderExport                   controllers.AdminController.renderExport()
+POST   /admin/exportAll                      controllers.AdminController.exportAll()
 
 #     Insert items
 GET   /insert/info                       controllers.InsertController.renderInfo()

@@ -1,18 +1,19 @@
 @main("Welcome to Play") {
 	@adminDashboard(""){
 	<div class="jumbotron">
-	  <h2>Welcome back</h2>
-	  <p>SSRS admin panel provides the following features:</p>
+	  <h2>@Messages("admin.greeting")</h2>
+	  <p>@Messages("admin.title")</p>
 	  <ul>
-		<li>List users</li>
-		<li>List all courses</li>
-		<li>List all videos</li>
-		<li>List all abstract items</li>
-		<li>List courses rating</li>
-		<li>List videos rating</li>
-		<li>List videos rating</li>
-		<li>List abstract items rating</li>
-		<li>Integration with other systems</li>	
+		<li>@Messages("admin.list.users")</li>
+		<li>@Messages("admin.list.courses")</li>
+		<li>@Messages("admin.list.videos")</li>
+		<li>@Messages("admin.list.items")</li>
+		<li>@Messages("admin.list.books")</li>
+		<li>@Messages("admin.list.course.rating")</li>
+		<li>@Messages("admin.list.video.rating")</li>
+		<li>@Messages("admin.list.books.rating")</li>
+		<li>@Messages("admin.list.items.rating")</li>
+		<li>@Messages("admin.integration")</li>	
 	  </ul>
 	</div>
 	}

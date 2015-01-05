@@ -23,9 +23,9 @@
 		<div class="col-md-12">
 			<div class="row">
 		      	<div class="caption">
-		      	@helper.form(action = routes.RateItemsController.postRate(itemID+"")) {
-				<input id="input-21b" name="input-21b" type="number" class="rating form-control" min="0" max="5" step="0.1" data-size="lg">	
-	          	<input class="btn btn-lg btn-primary btn-success" type="submit" value="Submit" />
+		      	@form(action = routes.RateItemsController.postRate(itemID+"")) {
+					<input id="input-21b" name="input-21b" type="number" class="rating form-control" min="0" max="5" step="0.1" data-size="lg">	
+		          	<input class="btn btn-lg btn-primary btn-success" type="submit" value="Submit" />
 				}		           	
 		       	</div>
 		    </div>
