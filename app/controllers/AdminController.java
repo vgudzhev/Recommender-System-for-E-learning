@@ -1,6 +1,5 @@
 package controllers;
 
-import java.util.Iterator;
 import java.util.List;
 
 import models.Book;
@@ -12,16 +11,15 @@ import models.rating.AbstractItemRating;
 import models.rating.BookRating;
 import models.rating.CourseRating;
 import models.rating.VideoRating;
-import play.data.DynamicForm;
-import play.data.Form;
+import play.i18n.Messages;
 import play.mvc.Controller;
 import play.mvc.Result;
+import recommendationSystem.dataset.DatasetDropper;
+import recommendationSystem.dataset.ExportUtils.DatasetExporter;
 import views.html.admin.*;
 
 public class AdminController extends Controller {
 	private static final int PAGE_LENGTH = 20;
-	private static final String SEPARATOR=",";
-	private static final String NEW_LINE="\n";
 
 	public static Result adminHome() {
 		return ok(admin.render());
@@ -84,31 +82,6 @@ public class AdminController extends Controller {
 		return ok(listAbstractItemsRating.render(allratings, collectionLength,
 				page, PAGE_LENGTH));
 	}
-	
-	public static Result listAbstractItemsRatingAsCSV(){
-		Chunks<String> chunks = new StringChunks() {
-
-			public void onReady(Chunks.Out<String> out) {
-				List<AbstractItemRating> ratings = AbstractItemRating.find.all();
-				for (AbstractItemRating currentRating : ratings) {
-					out.write(currentRating.id+"");
-					out.write(SEPARATOR);
-					out.write(currentRating.userID+"");
-					out.write(SEPARATOR);
-					out.write(currentRating.itemID+"");
-					out.write(SEPARATOR);
-					out.write(currentRating.rating+"");
-					out.write(NEW_LINE);
-				}
-				out.close();
-			}
-		};
-
-		response().setContentType("text/csv");
-		response().setHeader("Content-disposition",
-				"attachment; filename=" + "abstractItemsRating.csv");
-		return ok(chunks);
-	}
 
 	public static Result listCourseRating(int page) {
 		int collectionLength = CourseRating.find.findRowCount();
@@ -118,31 +91,6 @@ public class AdminController extends Controller {
 				from, to);
 		return ok(listCourseRating.render(allratings, collectionLength, page,
 				PAGE_LENGTH));
-	}
-	
-	public static Result listCourseRatingAsCSV(){
-		Chunks<String> chunks = new StringChunks() {
-
-			public void onReady(Chunks.Out<String> out) {
-				List<CourseRating> ratings = CourseRating.find.all();
-				for (CourseRating currentRating : ratings) {
-					out.write(currentRating.id+"");
-					out.write(SEPARATOR);
-					out.write(currentRating.userID+"");
-					out.write(SEPARATOR);
-					out.write(currentRating.courseID+"");
-					out.write(SEPARATOR);
-					out.write(currentRating.rating+"");
-					out.write(NEW_LINE);
-				}
-				out.close();
-			}
-		};
-
-		response().setContentType("text/csv");
-		response().setHeader("Content-disposition",
-				"attachment; filename=" + "courseRating.csv");
-		return ok(chunks);
 	}
 
 	public static Result listVideoRating(int page) {
@@ -154,31 +102,6 @@ public class AdminController extends Controller {
 		return ok(listVideoRating.render(allratings, collectionLength, page,
 				PAGE_LENGTH));
 	}
-	
-	public static Result listVideoRatingAsCSV(){
-		Chunks<String> chunks = new StringChunks() {
-
-			public void onReady(Chunks.Out<String> out) {
-				List<VideoRating> ratings = VideoRating.find.all();
-				for (VideoRating currentRating : ratings) {
-					out.write(currentRating.id+"");
-					out.write(SEPARATOR);
-					out.write(currentRating.userID+"");
-					out.write(SEPARATOR);
-					out.write(currentRating.videoID+"");
-					out.write(SEPARATOR);
-					out.write(currentRating.rating+"");
-					out.write(NEW_LINE);
-				}
-				out.close();
-			}
-		};
-
-		response().setContentType("text/csv");
-		response().setHeader("Content-disposition",
-				"attachment; filename=" + "videoRating.csv");
-		return ok(chunks);
-	}
 
 	public static Result listBookRating(int page) {
 		int collectionLength = BookRating.find.findRowCount();
@@ -189,55 +112,13 @@ public class AdminController extends Controller {
 		return ok(listBooksRating.render(allratings, collectionLength, page,
 				PAGE_LENGTH));
 	}
-	
-	public static Result listBookRatingAsCSV(){	
-		Chunks<String> chunks = new StringChunks() {
 
-			public void onReady(Chunks.Out<String> out) {
-				List<BookRating> ratings = BookRating.find.all();
-				
-				for(BookRating currentRating: ratings){
-					out.write(currentRating.id+"");
-					out.write(SEPARATOR);
-					out.write(currentRating.userID+"");
-					out.write(SEPARATOR);
-					out.write(currentRating.bookID+"");
-					out.write(SEPARATOR);
-					out.write(currentRating.rating+"");
-					out.write(NEW_LINE);
-				}
-				out.close();
-			}
-		};
 
-		response().setContentType("text/csv");
-		response().setHeader("Content-disposition",
-				"attachment; filename=" + "export.csv");
-		return ok(chunks);
-		
-	}
-	
-	public static Result importExport(){		
-		return ok(importExport.render());
-	}
-	
-	public static Result renderImport(){
-		return ok(importPage.render());
-	}
-	
-	public static Result renderExport(){
-		return ok(exportPage.render());
-	}
-	
-	public static Result exportAll(){
-//		DynamicForm requestData = Form.form().bindFromRequest();
-		
-		return TODO;
-	}
 
 	public static Result integration() {
 		return ok(integration.render());
 	}
+	
 
 	private static int getEndPage(int collectionLength, int from) {
 		int to = (from + PAGE_LENGTH) > collectionLength ? collectionLength

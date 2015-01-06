@@ -66,6 +66,9 @@ public class RecommenderController extends Controller {
 		}
 
 		List<RecommendedItemTuple> recommendedItems = getRecommendedItems(list);
+		if (recommendedItems == null) {
+			return badRequest(recommendationStatus.render("No rating found"));
+		}
 
 		switch (datasetType) {
 		case BOOKS:
@@ -99,7 +102,7 @@ public class RecommenderController extends Controller {
 			}
 
 			return ok(listVideoRecommendations.render(videos,
-					recommendationType.getDescription()));
+					recommendationType.getDescription(), recommendedItems));
 
 		default:
 			return redirect("/404");

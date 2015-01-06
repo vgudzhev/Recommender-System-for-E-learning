@@ -6,7 +6,11 @@ pageLength:Int) @main("Welcome to Play") { @adminDashboard(""){
 	<div class="panel panel-default">
 		<div class="panel-body">
 			<h2>List abstract items rating</h2>
-			<a class="btn btn-primary" href="/admin/listAbstractItemsRatingAsCSV">Export CSV</a>
+			<a class="btn btn-primary" href="/admin//admin/importAbstractItemsRatings/csv">Import from CSV</a>
+			<a class="btn btn-primary" href="/admin/importAbstractItemsRatings/json">Import from JSON</a>
+			<a class="btn btn-success" href="/admin//admin/exportAbstractItemsRatings/csv">Export as CSV</a>
+			<a class="btn btn-success" href="/admin/exportAbstractItemsRatings/json">Export as JSON</a>
+			<a class="btn btn-danger" href="/admin/delete/abstractItemsRatings">Delete all</a>
 		</div>
 
 		<table class="table table-striped">

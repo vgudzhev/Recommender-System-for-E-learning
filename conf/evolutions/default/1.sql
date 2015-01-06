@@ -54,14 +54,6 @@ create table course_rating (
   constraint pk_course_rating primary key (id))
 ;
 
-create table fake_rating (
-  id                        bigint not null,
-  fake_user_id              bigint,
-  fake_item_id              bigint,
-  rating                    double,
-  constraint pk_fake_rating primary key (id))
-;
-
 create table user (
   user_id                   bigint not null,
   email                     varchar(255),
@@ -100,8 +92,6 @@ create sequence course_seq;
 
 create sequence course_rating_seq;
 
-create sequence fake_rating_seq;
-
 create sequence user_seq;
 
 create sequence video_seq;
@@ -127,8 +117,6 @@ drop table if exists course;
 
 drop table if exists course_rating;
 
-drop table if exists fake_rating;
-
 drop table if exists user;
 
 drop table if exists video;
@@ -148,8 +136,6 @@ drop sequence if exists book_rating_seq;
 drop sequence if exists course_seq;
 
 drop sequence if exists course_rating_seq;
-
-drop sequence if exists fake_rating_seq;
 
 drop sequence if exists user_seq;
 

@@ -11,7 +11,7 @@ import play.mvc.Result;
 import play.libs.ws.*;
 import play.libs.F.Function;
 import play.libs.F.Promise;
-import views.html.admin.integrationStatus;
+import views.html.admin.statusPage;
 
 /**
  * This class is used by administrators to create connections between the
@@ -59,7 +59,7 @@ public class IntegrationController extends Controller {
 									counter++;
 								}
 							} catch (Exception e) {
-								return ok(integrationStatus
+								return ok(statusPage
 										.render("Something bad happened "
 												+ e.getMessage()));
 							}
@@ -72,7 +72,7 @@ public class IntegrationController extends Controller {
 							message = "Number of uploaded courses: " + counter;
 						}
 
-						return ok(integrationStatus.render(message));
+						return ok(statusPage.render(message));
 					}
 				});
 		return resultPromise;
@@ -110,7 +110,7 @@ public class IntegrationController extends Controller {
 								}
 
 							} catch (Exception e) {
-								return ok(integrationStatus
+								return ok(statusPage
 										.render("Something bad happened "
 												+ e.getMessage()));
 							}
@@ -122,7 +122,7 @@ public class IntegrationController extends Controller {
 						} else {
 							message = "Number of uploaded courses: " + counter;
 						}
-						return ok(integrationStatus.render(message));
+						return ok(statusPage.render(message));
 					}
 				});
 		return resultPromise;

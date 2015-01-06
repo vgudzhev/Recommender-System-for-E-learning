@@ -60,14 +60,17 @@ admin.import.export=Import/export
 admin.import.info=Lorem ipsum Lorem ipsum Lorem ipsum
 admin.export.info=Lorem ipsumLorem ipsum Lorem ipsum
 
-list.users=List users
-list.courses=List courses
-list.books=List books
-list.videos=List videos
-list.items=List abstract items
+list.users=View users
+list.courses=View courses
+list.books=View books
+list.videos=View videos
+list.items=View abstract items
 courses.rating=Courses rating
 books.rating=Books rating
 videos.rating=Videos rating
 items.rating=Abstract items rating
 itegration.with.other.systems=Integration with other systems
 admin.dashboard=Admin dashboard
+
+deleteStatus.complete=Delete was successfull
+deleteStatus.error=Error
