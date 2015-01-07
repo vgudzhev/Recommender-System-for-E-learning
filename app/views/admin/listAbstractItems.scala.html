@@ -1,17 +1,25 @@
 @(items: List[AbstractItem], count:Int, page:Int, pageLength:Int)
+@import helper._
 @main("Abstract items list") { @adminDashboard(""){
 
 <div id="container">
 	<div class="panel panel-default">
 		<div class="panel-body">
 			<h2>List with all abstract items</h2>
-			<a class="btn btn-primary" href="/admin/importAbstractItems/csv">Import from CSV</a>
-			<a class="btn btn-primary" href="/admin/importAbstractItems/json">Import from JSON</a>
-			<a class="btn btn-success" href="/admin/exportAbstractItems/csv">Export as CSV</a>
-			<a class="btn btn-success" href="/admin/exportAbstractItems/json">Export as JSON</a>
-			<a class="btn btn-danger" href="/admin/delete/abstractItems">Delete all</a>
+			
+			<ul class="list-inline">
+				<li class="importButton">
+					@form(action = routes.ImportDatasetController.importAbtractItems, 'enctype -> "multipart/form-data") {
+		    		   <input type="file" name="abstractItemsInput">
+		    		   <p></p>
+		        	   <input type="submit" class="btn btn-primary" value="Import from CSV">
+		    		}
+	    		</li>		
+				<li><a class="btn btn-success" href="/admin/exportUsers/csv">Export as CSV</a></li>
+				<li><a class="btn btn-success" href="/admin/exportUsers/json">Export as JSON</a></li>
+				<li><a class="btn btn-danger" href="/admin/delete/users">Delete all</a></li>
+			</ul>
 		</div>
-
 		<table class="table table-striped">
 			<tr>
 				<th>Item ID</th>

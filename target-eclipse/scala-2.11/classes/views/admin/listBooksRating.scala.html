@@ -1,4 +1,5 @@
 @(ratings: List[models.rating.BookRating], count:Int, page:Int,pageLength:Int)
+@import helper._
 @main("Welcome to Play") {
 @adminDashboard(""){
 
@@ -6,11 +7,18 @@
 	<div class="panel panel-default">
 		<div class="panel-body">
 			<h2>Books rating</h2>
-			<a class="btn btn-primary" href="/admin/importBookRatings/csv">Import from CSV</a>
-			<a class="btn btn-primary" href="/admin/importBookRatings/json">Import from JSON</a>
-			<a class="btn btn-success" href="/admin/exportBookRatings/csv">Export as CSV</a>
-			<a class="btn btn-success" href="/admin/exportBookRatings/json">Export as JSON</a>
-			<a class="btn btn-danger" href="/admin/delete/bookRatings">Delete all</a>
+			<ul class="list-inline">
+				<li class="importButton">
+					@form(action = routes.ImportDatasetController.importBooksRating, 'enctype -> "multipart/form-data") {
+		    		   <input type="file" name="booksRatingInput">
+		    		   <p></p>
+		        	   <input type="submit" class="btn btn-primary" value="Import from CSV">
+		    		}
+	    		</li>		
+				<li><a class="btn btn-success" href="/admin/exportBookRating/csv">Export as CSV</a></li>
+				<li><a class="btn btn-success" href="/admin/exportBookRating/json">Export as JSON</a></li>
+				<li><a class="btn btn-danger" href="/admin/delete/bookRating">Delete all</a></li>
+			</ul>
 		</div>
 
 		<table class="table table-striped">

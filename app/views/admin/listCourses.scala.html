@@ -1,15 +1,23 @@
 @(courses: List[Course], count:Int, page:Int, pageLength:Int)
+@import helper._
 @main("Welcome to Play") { @adminDashboard(""){
 
 <div id="container">
 	<div class="panel panel-default">
 		<div class="panel-body">
 			<h2>List all courses</h2>
-			<a class="btn btn-primary" href="/admin/importCourses/csv">Import from CSV</a>
-			<a class="btn btn-primary" href="/admin/importCourses/json">Import from JSON</a>
-			<a class="btn btn-success" href="/admin/exportCourses/csv">Export as CSV</a>
-			<a class="btn btn-success" href="/admin/exportCourses/json">Export as JSON</a>
-			<a class="btn btn-danger" href="/admin/delete/courses">Delete all</a>
+			<ul class="list-inline">
+				<li class="importButton">
+					@form(action = routes.ImportDatasetController.importCourses, 'enctype -> "multipart/form-data") {
+		    		   <input type="file" name="courseInput">
+		    		   <p></p>
+		        	   <input type="submit" class="btn btn-primary" value="Import from CSV">
+		    		}
+	    		</li>		
+				<li><a class="btn btn-success" href="/admin/exportCourses/csv">Export as CSV</a></li>
+				<li><a class="btn btn-success" href="/admin/exportCourses/json">Export as JSON</a></li>
+				<li><a class="btn btn-danger" href="/admin/delete/courses">Delete all</a></li>
+			</ul>
 		</div>
 
 		<table class="table table-striped">

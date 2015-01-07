@@ -74,3 +74,6 @@ admin.dashboard=Admin dashboard
 
 deleteStatus.complete=Delete was successfull
 deleteStatus.error=Error
+
+dataset.import.error=Unable to load the dataset
+no.csv.found=No CSV file found

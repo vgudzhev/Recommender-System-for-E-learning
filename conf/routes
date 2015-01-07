@@ -7,7 +7,6 @@
 GET     /                               controllers.ApplicationController.home()
 GET     /home                           controllers.ApplicationController.home()
 GET     /404                            controllers.ApplicationController.pageNotFound()
-GET     /init                           controllers.ApplicationController.init()
 GET     /about                          controllers.ApplicationController.about()
 
 # Map static resources from the /public folder to the /assets URL path
@@ -82,6 +81,17 @@ GET    /admin/exportBooks/:type                    controllers.ExportDatasetCont
 GET    /admin/exportAbstractItems/:type            controllers.ExportDatasetController.exportAbstractItems(type)
 GET    /admin/exportVideos/:type                   controllers.ExportDatasetController.exportVideos(type)
 GET    /admin/exportCourses/:type                  controllers.ExportDatasetController.exportCourses(type)
+
+#      Import dataset
+POST   /admin/import/users                          controllers.ImportDatasetController.importUsers()
+POST   /admin/import/abtractItems                          controllers.ImportDatasetController.importAbtractItems()
+POST   /admin/import/abtractItemRatings                          controllers.ImportDatasetController.importAbtractItemRatings()
+POST   /admin/import/books                          controllers.ImportDatasetController.importBooks()
+POST   /admin/import/booksRating                          controllers.ImportDatasetController.importBooksRating()
+POST   /admin/import/courses                          controllers.ImportDatasetController.importCourses()
+POST   /admin/import/courseRating                          controllers.ImportDatasetController.importCourseRating()
+POST   /admin/import/videos                          controllers.ImportDatasetController.importVideos()
+POST   /admin/import/videoRating                          controllers.ImportDatasetController.importVideoRating()
 
 #      Delete datasets
 GET    /admin/delete/users                         controllers.DeleteDatasetController.deleteAllUsers()

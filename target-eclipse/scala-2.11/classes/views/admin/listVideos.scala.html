@@ -1,16 +1,24 @@
 @(videos: List[Video], count:Int, page:Int, pageLength:Int)
+@import helper._
 @main("") {
 @adminDashboard(""){
 
 <div id="container">
 	<div class="panel panel-default">
 		<div class="panel-body">
-			<h2>List all courses</h2>
-			<a class="btn btn-primary" href="/admin/importVideo/csv">Import from CSV</a>
-			<a class="btn btn-primary" href="/admin/importVideo/json">Import from JSON</a>
-			<a class="btn btn-success" href="/admin/exportVideo/csv">Export as CSV</a>
-			<a class="btn btn-success" href="/admin/exportVideo/json">Export as JSON</a>
-			<a class="btn btn-danger" href="/admin/delete/videos">Delete all</a>
+			<h2>List all vides</h2>
+			<ul class="list-inline">
+				<li class="importButton">
+					@form(action = routes.ImportDatasetController.importVideos, 'enctype -> "multipart/form-data") {
+		    		   <input type="file" name="videoInput">
+		    		   <p></p>
+		        	   <input type="submit" class="btn btn-primary" value="Import from CSV">
+		    		}
+	    		</li>		
+				<li><a class="btn btn-success" href="/admin/exportVideo/csv">Export as CSV</a></li>
+				<li><a class="btn btn-success" href="/admin/exportVideo/json">Export as JSON</a></li>
+				<li><a class="btn btn-danger" href="/admin/delete/videos">Delete all</a></li>
+			</ul>			
 		</div>
 
 		<table class="table table-striped">
