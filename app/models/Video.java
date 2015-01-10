@@ -8,10 +8,13 @@ import play.db.ebean.Model;
 
 @Entity
 public class Video extends Model {
+	
 	@Id
 	@GeneratedValue
 	public long id;
+	
 	public String title;
+	public String shortDescription;
 	public String description;
 	public String url;
 	public String img;
@@ -23,16 +26,17 @@ public class Video extends Model {
 	public static Finder<String,Video> find = new Finder<String,Video>(
 	        String.class, Video.class);
 	
-	private Video(VideoBuilder VideoBuilder){
-		this.title = VideoBuilder.title;
-		this.description = VideoBuilder.description;
-		this.url = VideoBuilder.url;
-		this.img = VideoBuilder.img;
-		
+	private Video(VideoBuilder videoBuilder){
+		this.title = videoBuilder.title;
+		this.shortDescription = videoBuilder.shortDescription;
+		this.description = videoBuilder.description;
+		this.url = videoBuilder.url;
+		this.img = videoBuilder.img;	
 	}
 	
 	public static class VideoBuilder {
 		private String title;
+		private String shortDescription;
 		private String description;
 		private String url;
 		private String img;
@@ -44,6 +48,11 @@ public class Video extends Model {
 		
 		public VideoBuilder description(String description){
 			this.description = description;
+			return this;
+		}
+		
+		public VideoBuilder shortDescription(String shortDescription){
+			this.shortDescription = shortDescription;
 			return this;
 		}
 		

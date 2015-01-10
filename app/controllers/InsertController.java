@@ -86,10 +86,7 @@ public class InsertController extends Controller {
 			String title = requestData.get("title");
 			String description = requestData.get("description");
 			int id = AbstractItem.find.findRowCount();
-			AbstractItem item = new AbstractItem();
-			item.title = title;
-			item.description = description;
-			item.id = ++id;
+			AbstractItem item = new AbstractItem.AbstractItemBuilder().title(title).description(description).build();
 			item.save();
 
 		} catch (Exception e) {

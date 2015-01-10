@@ -18,34 +18,34 @@ public class CourseRating extends Model {
 	public long userID;
 	public long courseID;
 	public double rating;
-	
-	public CourseRating(Builder builder){
-		userID= builder.userID;
+
+	public CourseRating(Builder builder) {
+		userID = builder.userID;
 		courseID = builder.courseID;
 		rating = builder.rating;
 	}
-	
+
 	public static class Builder {
 		private long userID;
 		private long courseID;
 		private double rating;
-		
-		public Builder userID(long userID){
-			this.userID =userID;
+
+		public Builder userID(long userID) {
+			this.userID = userID;
 			return this;
 		}
-		
-		public Builder courseID(long courseID){
+
+		public Builder courseID(long courseID) {
 			this.courseID = courseID;
 			return this;
 		}
-		
-		public Builder rating(double rating){
-			this.rating= rating;
+
+		public Builder rating(double rating) {
+			this.rating = rating;
 			return this;
 		}
-		
-		public CourseRating build(){
+
+		public CourseRating build() {
 			return new CourseRating(this);
 		}
 	}
@@ -56,8 +56,8 @@ public class CourseRating extends Model {
 	public static List<CourseRating> findByUserID(long userID) {
 		return find.where().eq("userID", userID).findList();
 	}
-	
-	public static List<CourseRating> findByUserEmail(String email){
+
+	public static List<CourseRating> findByUserEmail(String email) {
 		User user = User.findByEmail(email);
 		long id = user.userID;
 		return find.where().eq("userID", id).findList();

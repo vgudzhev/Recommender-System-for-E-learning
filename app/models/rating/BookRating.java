@@ -19,10 +19,6 @@ public class BookRating extends Model {
 	public long bookID;
 	public double rating;
 
-	public static List<BookRating> findByUserID(long userID) {
-		return find.where().eq("userID", userID).findList();
-	}
-
 	public BookRating(Builder bookRatingBuilder) {
 		userID = bookRatingBuilder.userID;
 		bookID = bookRatingBuilder.bookID;
@@ -61,6 +57,10 @@ public class BookRating extends Model {
 		User user = User.findByEmail(email);
 		long id = user.userID;
 		return find.where().eq("userID", id).findList();
+	}
+
+	public static List<BookRating> findByUserID(long userID) {
+		return find.where().eq("userID", userID).findList();
 	}
 
 }

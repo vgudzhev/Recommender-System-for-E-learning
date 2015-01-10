@@ -14,7 +14,8 @@ public class Book extends Model{
 	public String author;
 	public String year;
 	public String publisher;
-	public String imageUrl;
+	public String img;
+	public String shortDescription;
 	public String description;
 
 	public static Finder<String, Book> find = new Finder<String, Book>(
@@ -30,7 +31,8 @@ public class Book extends Model{
 		author = bookBuilder.author;
 		year = bookBuilder.year;
 		publisher = bookBuilder.publisher;
-		imageUrl = bookBuilder.imageUrl;
+		img = bookBuilder.img;
+		shortDescription = bookBuilder.shortDescription;
 		description = bookBuilder.description;
 		
 	}
@@ -41,7 +43,8 @@ public class Book extends Model{
 		private String author;
 		private String year;
 		private String publisher;
-		private String imageUrl;
+		private String img;
+		private String shortDescription;
 		private String description;
 		
 		public BookBuilder id(long id){
@@ -69,8 +72,13 @@ public class Book extends Model{
 			return this;
 		}
 		
-		public BookBuilder image(String url){
-			this.imageUrl = url;
+		public BookBuilder image(String img){
+			this.img = img;
+			return this;
+		}
+		
+		public BookBuilder shortDescription(String shortDescription){
+			this.shortDescription = shortDescription;
 			return this;
 		}
 		

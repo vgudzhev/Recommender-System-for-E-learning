@@ -14,6 +14,7 @@ public class Course extends Model{
 	@GeneratedValue
 	public long id;
 	public String title;
+	public String shortDescription;
 	public String description;
 	public String url;
 	public String img;
@@ -26,18 +27,19 @@ public class Course extends Model{
 	        String.class, Course.class
 	 );
 	
-	private Course(CourseBuilder CourseBuilder){
-		this.id=CourseBuilder.id;
-		this.title = CourseBuilder.title;
-		this.description = CourseBuilder.description;
-		this.url = CourseBuilder.url;
-		this.img = CourseBuilder.img;
-		
+	private Course(CourseBuilder courseBuilder){
+		this.id=courseBuilder.id;
+		this.title = courseBuilder.title;
+		this.shortDescription= courseBuilder.shortDescription;
+		this.description = courseBuilder.description;
+		this.url = courseBuilder.url;
+		this.img = courseBuilder.img;	
 	}
 	
 	public static class CourseBuilder {
 		private long id;
 		private String title;
+		private String shortDescription;
 		private String description;
 		private String url;
 		private String img;
@@ -54,6 +56,11 @@ public class Course extends Model{
 		
 		public CourseBuilder description(String description){
 			this.description = description;
+			return this;
+		}
+		
+		public CourseBuilder shortDescription(String shortDescription){
+			this.shortDescription = shortDescription;
 			return this;
 		}
 		
