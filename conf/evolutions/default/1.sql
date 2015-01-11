@@ -6,7 +6,9 @@
 create table abstract_item (
   id                        bigint not null,
   title                     varchar(255),
+  short_description         varchar(255),
   description               varchar(255),
+  img                       varchar(255),
   constraint pk_abstract_item primary key (id))
 ;
 
@@ -24,7 +26,8 @@ create table book (
   author                    varchar(255),
   year                      varchar(255),
   publisher                 varchar(255),
-  image_url                 varchar(255),
+  img                       varchar(255),
+  short_description         varchar(255),
   description               varchar(255),
   constraint pk_book primary key (id))
 ;
@@ -40,6 +43,7 @@ create table book_rating (
 create table course (
   id                        bigint not null,
   title                     varchar(255),
+  short_description         varchar(255),
   description               varchar(255),
   url                       varchar(255),
   img                       varchar(255),
@@ -60,12 +64,15 @@ create table user (
   name                      varchar(255),
   password                  varchar(255),
   age                       integer,
+  gender                    varchar(255),
+  profession                varchar(255),
   constraint pk_user primary key (user_id))
 ;
 
 create table video (
   id                        bigint not null,
   title                     varchar(255),
+  short_description         varchar(255),
   description               varchar(255),
   url                       varchar(255),
   img                       varchar(255),

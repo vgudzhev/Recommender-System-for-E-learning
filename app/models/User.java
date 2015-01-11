@@ -12,13 +12,9 @@ public class User extends Model{
     public String email;
 	public String name;
     public String password;
-    public int age;
-    
-    public User(String email, String name, String password) {
-      this.email = email;
-      this.name = name;
-      this.password = password;
-    }
+    public int age = 0;
+    public String gender;
+    public String profession;
     
     public User(UserBuilder userBuilder){
     	this.userID = userBuilder.userID;
@@ -26,6 +22,8 @@ public class User extends Model{
     	this.name = userBuilder.name;
     	this.password = userBuilder.password;
     	this.age= userBuilder.age;
+        this.gender=userBuilder.gender;
+        this.profession = userBuilder.profession;
     }
     
     public static class UserBuilder {
@@ -34,6 +32,8 @@ public class User extends Model{
     	private String name;
     	private String password;
     	private int age;
+    	private String gender;
+    	private String profession;
     	
     	public UserBuilder id(Long userID){
     		this.userID = userID;
@@ -52,6 +52,16 @@ public class User extends Model{
     	
     	public UserBuilder password(String password){
     		this.password = password;
+    		return this;
+    	}
+    	
+    	public UserBuilder gender(String gender){
+    		this.gender = gender;
+    		return this;
+    	}
+    	
+    	public UserBuilder profession(String profession){
+    		this.profession = profession;
     		return this;
     	}
     	

@@ -209,11 +209,8 @@ public class CSVImporter {
 				bw.write(oneLine.toString());
 				bw.newLine();
 
-				AbstractItem abstractItem = new AbstractItem();
-				abstractItem.id = id;
-				abstractItem.title = name;
-				abstractItem.description = topic;
-
+				AbstractItem abstractItem = new AbstractItem.AbstractItemBuilder()
+						.title(name).description(topic).build();
 				abstractItem.save();
 			}
 		} finally {
