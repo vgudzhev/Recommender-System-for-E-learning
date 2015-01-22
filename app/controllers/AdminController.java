@@ -11,11 +11,16 @@ import models.rating.AbstractItemRating;
 import models.rating.BookRating;
 import models.rating.CourseRating;
 import models.rating.VideoRating;
+import play.data.DynamicForm;
+import play.data.Form;
 import play.i18n.Messages;
 import play.mvc.Controller;
 import play.mvc.Result;
+import play.mvc.Results;
 import recommendationSystem.dataset.DatasetDropper;
 import recommendationSystem.dataset.ExportUtils.DatasetExporter;
+import recommendationSystem.dataset.ImportUtils.CSVImporter;
+import recommendationSystem.dataset.ImportUtils.DatasetImporter;
 import views.html.admin.*;
 
 public class AdminController extends Controller {
@@ -117,6 +122,28 @@ public class AdminController extends Controller {
 
 	public static Result integration() {
 		return ok(integration.render());
+	}
+	
+	public static Result renderLoadData(){
+		return ok(importData.render());
+	}
+	public static Result loadData(){
+		DynamicForm requestData = Form.form().bindFromRequest();
+		String dataType = requestData.get("dataType");
+		
+		try{
+			if (dataType.equals("demo-dataset")) {
+				DatasetImporter.getCSVImporter().importDemoDataset();
+			}else if(dataType.equals("normal-dataset")) {
+				DatasetImporter.getCSVImporter().importNormalDataset();
+			}else if (dataType.equals("large-dataset")) {
+				DatasetImporter.getCSVImporter().importLargeDataset();
+			}
+		}catch(Exception ex){
+			return badRequest(statusPage.render(ex.getMessage()));
+		}
+		
+		return ok(statusPage.render("ok"));
 	}
 	
 

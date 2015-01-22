@@ -1,4 +1,4 @@
-@(items: List[Book],recType:String)
+@(items: List[Book],recType:String, rating:List[Double])
 														
 @main("Books recommendations") {
 	@recommendationsDashboard("Book recommendations"){
@@ -10,13 +10,27 @@
 			<h2>@recType</h2>
 			<table id="recommendations" class="table table-striped">
 				<tr>
-					<th>Book id</th>
-					<th>Book name</th>
+					<th>ID</th>
+					<th>Title</th>
+					<th>Author</th>
+					<th>Year</th>
+					<th>publisher</th>
+					<th>Image URL</th>
+					<th>Short Description</th>
+					<th>Description</th>
+					<th>Rating</th>
 				</tr>
 				@for((item, index) <- items.zipWithIndex) {
 				    <tr>
 						<td>@item.id</td>
 						<td>@item.title</td>
+						<td>@item.author</td>
+						<td>@item.year</td>
+						<td>@item.publisher</td>
+						<td>@item.img</td>
+						<td>@item.shortDescription</td>
+						<td>@item.description</td>
+						<td>@rating.lift(index)</td>
 					</tr>
 				}
 			</table> 

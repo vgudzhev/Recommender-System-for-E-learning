@@ -33,7 +33,7 @@ public class ImportDatasetController extends Controller {
 		}
 	}
 	
-	public static Result importAbtractItems() {
+	public static Result importAbstractItems() {
 		MultipartFormData body = request().body().asMultipartFormData();
 		FilePart items = body.getFile("abstractItemInput");
 		if (items != null) {
@@ -51,7 +51,7 @@ public class ImportDatasetController extends Controller {
 		}
 	}
 	
-	public static Result importAbtractItemRatings() {
+	public static Result importAbstractItemRatings() {
 		MultipartFormData body = request().body().asMultipartFormData();
 		FilePart users = body.getFile("abstractItemRatingInput");
 		if (users != null) {
@@ -71,9 +71,9 @@ public class ImportDatasetController extends Controller {
 	
 	public static Result importBooks() {
 		MultipartFormData body = request().body().asMultipartFormData();
-		FilePart users = body.getFile("booksInput");
-		if (users != null) {
-			File file = users.getFile();
+		FilePart books = body.getFile("booksInput");
+		if (books != null) {
+			File file = books.getFile();
 			try{
 				DatasetImporter.getCSVImporter().importBooks(file);
 				

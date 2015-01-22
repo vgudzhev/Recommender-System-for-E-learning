@@ -1,0 +1,42 @@
+@import helper._
+@main("Welcome to Play"){
+@adminDashboard(""){
+<h1>...</h1>
+@form(action=routes.AdminController.loadData, 'class ->"smart-search-form") {
+	<select id="selectItem" name="selectItem">
+		<option value="demo-dataset">Demo</option>
+		<option value="normal-dataset">Normal</option>
+		<option value="large-dataset">Large</option>
+	</select>
+	 <p></p>
+	<input class="btn btn-lg btn-primary btn-success" type="submit"
+		value="Submit" /> 
+	}
+	
+	<div class="row">
+	<div class="col-md-4">
+		<h2>Demo</h2>
+		<h3></h3>
+		contains : ssssss<p>
+		</p>
+	</div>
+	
+	<div class="col-md-4">
+		<h2>Normal</h2>
+		<h3></h3>
+		<p>contains ...
+		</p>
+	</div>
+	
+	<div class="col-md-4">
+		<h2>contains ...</h2>
+		<h3></h3>
+		<p>
+		</p>
+	</div>
+	
+</div>
+	
+
+} }
+

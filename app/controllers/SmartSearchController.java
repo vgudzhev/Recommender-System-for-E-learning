@@ -6,16 +6,19 @@ import models.AbstractItem;
 import models.Book;
 import models.Course;
 import models.ItemWrapper;
+import models.User;
 import models.Video;
 import models.rating.BookRating;
 import models.rating.CourseRating;
 import models.rating.AbstractItemRating;
+import models.rating.RatingWrapper;
 import models.rating.VideoRating;
 import play.data.DynamicForm;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;
+import views.html.admin.listAbstractItems;
 import views.html.smartSearch.*;
 
 /**
@@ -26,7 +29,8 @@ import views.html.smartSearch.*;
  * @author VGudzhev
  */
 public class SmartSearchController extends Controller {
-
+	private static int PAGE_LENGTH = 20;
+	
 	@Security.Authenticated(SecuredController.class)
 	public static Result showPage() {
 		return ok(smartSearch.render());
@@ -103,32 +107,44 @@ public class SmartSearchController extends Controller {
 	}
 
 	@Security.Authenticated(SecuredController.class)
-	public static Result searchUserByID() {
+	public static Result searchUserByID(int page) {
 		DynamicForm requestData = Form.form().bindFromRequest();
 		String type = requestData.get("selectItem");
 		String userDetails = requestData.get("userDetails");
-		List<CourseRating> courseRating = null;
-		List<AbstractItemRating> abstractItemRating = null;
-		List<VideoRating> videoRating = null;
-		List<BookRating> booksRating = null;
-
+		String dataType = requestData.get("dataType");
+		long userID = 0;
+		List<RatingWrapper> allItems = null;
+		
 		if (type.equals("id")) {
-			long userID = Long.parseLong(userDetails);
-			courseRating = CourseRating.findByUserID(userID);
-			abstractItemRating = AbstractItemRating.findByUserID(userID);
-			videoRating = VideoRating.findByUserID(userID);
-			booksRating = BookRating.findByUserID(userID);
+			userID = Long.parseLong(userDetails);
 
 		} else if (type.equals("email")) {
-			courseRating = CourseRating.findByUserEmail(userDetails);
-			abstractItemRating = AbstractItemRating
-					.findByUserEmail(userDetails);
-			videoRating = VideoRating.findByUserEmail(userDetails);
-			booksRating = BookRating.findByUserEmail(userDetails);
+			userID = User.findByEmail(userDetails).userID;
+		}
+		
+		int collectionLength = 0;
+		int from = (page - 1) * PAGE_LENGTH;
+		int to = (from + PAGE_LENGTH) > collectionLength ? collectionLength
+				: from + PAGE_LENGTH;
+		if(dataType.equals("video")){
+			collectionLength = VideoRating.findByUserID(userID).size();
+			allItems = RatingWrapper.wrapVideos(VideoRating.findByUserID(userID).subList(from, to));
+			
+		}else if (dataType.equals("book")) {
+			collectionLength = BookRating.findByUserID(userID).size();
+			allItems = RatingWrapper.wrapBooks(BookRating.findByUserID(userID).subList(from, to));
+					
+		}else if (dataType.equals("course")) {
+			collectionLength = CourseRating.findByUserID(userID).size();
+			allItems = RatingWrapper.wrapCourses(CourseRating.findByUserID(userID).subList(from, to));
+					
+		}else if (dataType.equals("item")) {
+			collectionLength = AbstractItemRating.findByUserID(userID).size();
+			allItems = RatingWrapper.wrapAbstractItems(AbstractItemRating.findByUserID(userID).subList(from, to));
+					
 		}
 
-		return ok(listUserRating.render(courseRating, abstractItemRating,
-				booksRating, videoRating));
+		return ok(listUserRating.render(allItems, collectionLength, page, PAGE_LENGTH, dataType));
 	}
 
 	public static Result searchUserByVideoPref() {

@@ -25,9 +25,11 @@ GET     /userProfile                     controllers.UserController.showUserProf
 
 GET     /smartSearch                     controllers.SmartSearchController.showPage()
 GET     /smartSearch/info                controllers.SmartSearchController.info()
+POST    /smartSearch/search            controllers.SmartSearchController.search()
 POST    /smartSearch/search              controllers.SmartSearchController.search()
 GET     /smartSearch/byUserID            controllers.SmartSearchController.renderSearchUserByID()
-POST    /smartSearch/byUserID            controllers.SmartSearchController.searchUserByID()
+POST    /smartSearch/byUserID                 controllers.SmartSearchController.searchUserByID(page:Int=1)
+POST    /smartSearch/byUserID/:page           controllers.SmartSearchController.searchUserByID(page:Int)
 GET     /smartSearch/ratedVideo          controllers.SmartSearchController.renderSearchUsersByVideoPref()
 POST    /smartSearch/ratedVideo          controllers.SmartSearchController.searchUserByVideoPref()
 GET     /smartSearch/ratedCourse         controllers.SmartSearchController.renderSearchUsersByCoursePref()
@@ -70,6 +72,8 @@ GET    /admin/listBookRatings:page                 controllers.AdminController.l
 GET    /admin/listVideoRatings                     controllers.AdminController.listVideoRating(page:Int=1)
 GET    /admin/listVideoRatings:page                controllers.AdminController.listVideoRating(page:Int)
 GET    /admin/integration                          controllers.AdminController.integration()
+GET    /admin/renderLoadData                             controllers.AdminController.renderLoadData()
+POST   /admin/loadData                             controllers.AdminController.loadData()
 
 #      Export datasets
 GET    /admin/exportAbstractItemsRating/:type      controllers.ExportDatasetController.exportAbstractItemsRating(type)
@@ -84,8 +88,8 @@ GET    /admin/exportCourses/:type                  controllers.ExportDatasetCont
 
 #      Import dataset
 POST   /admin/import/users                          controllers.ImportDatasetController.importUsers()
-POST   /admin/import/abtractItems                          controllers.ImportDatasetController.importAbtractItems()
-POST   /admin/import/abtractItemRatings                          controllers.ImportDatasetController.importAbtractItemRatings()
+POST   /admin/import/abstractItems                          controllers.ImportDatasetController.importAbstractItems()
+POST   /admin/import/abstractItemRatings                          controllers.ImportDatasetController.importAbstractItemRatings()
 POST   /admin/import/books                          controllers.ImportDatasetController.importBooks()
 POST   /admin/import/booksRating                          controllers.ImportDatasetController.importBooksRating()
 POST   /admin/import/courses                          controllers.ImportDatasetController.importCourses()

@@ -3,10 +3,16 @@
 @smartSearchDashboard(""){
 <div id="container">
 	<h2 class="form-signin-heading">Search User preferences by ID or Email:</h2>
-	@helper.form(action=routes.SmartSearchController.searchUserByID(), 'class ->"smart-search-form") {
+	@helper.form(action=routes.SmartSearchController.searchUserByID(1), 'class ->"smart-search-form") {
 	 <select id="selectItem" name="selectItem">
 		<option value="id">By ID</option>
 		<option value="email">By email</option>
+	</select>
+	<select id='dataType' name='dataType'>
+		<option value='book'>@Messages("menu.books")</option>
+		<option value='course'>@Messages("menu.courses")</option>
+		<option value='video'>@Messages("menu.videos")</option>
+		<option value='item'>@Messages("menu.items")</option>
 	</select>
 	<p></p>
 	<div id="contactInfo">

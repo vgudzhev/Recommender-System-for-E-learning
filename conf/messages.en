@@ -59,7 +59,7 @@ admin.integration=Integration with other systems
 admin.import.export=Import/export
 admin.import.info=Lorem ipsum Lorem ipsum Lorem ipsum
 admin.export.info=Lorem ipsumLorem ipsum Lorem ipsum
-
+admin.loadData= Load dataset
 list.users=View users
 list.courses=View courses
 list.books=View books

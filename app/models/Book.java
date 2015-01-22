@@ -1,6 +1,7 @@
 package models;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 import play.db.ebean.Model;
@@ -9,7 +10,8 @@ import play.db.ebean.Model;
 public class Book extends Model{
 	
 	@Id
-	public long id;
+	@GeneratedValue
+	public long   id;
 	public String title;
 	public String author;
 	public String year;

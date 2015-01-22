@@ -1,16 +1,21 @@
 package recommendationSystem.dataset;
 
 public final class DatasetPath {
-	private static final String DATASET_FOLDER = "data/";
-	private static final String BOOKS_RATING = "books-rating.csv";
-	private static final String BOOKS = "books.csv";
-	private static final String COURSES = "courses.csv";
-	private static final String COURSES_RATING = "courses-rating.csv";
-	private static final String ITEMS_RATING = "abstract-item-rating.csv";
-	private static final String ITEMS = "abstract-items.csv";
-	private static final String USERS = "users.csv";
-	private static final String VIDEO_RATING = "video-rating.csv";
-	private static final String VIDEO = "videos.csv";
+	public static final String DATASET_FOLDER = "data/";
+	public static final String BOOKS_RATING = "books-rating.csv";
+	public static final String BOOKS = "books.csv";
+	public static final String COURSES = "courses.csv";
+	public static final String COURSES_RATING = "courses-rating.csv";
+	public static final String ITEMS_RATING = "abstract-item-rating.csv";
+	public static final String ITEMS = "abstract-items.csv";
+	public static final String USERS = "users.csv";
+	public static final String VIDEO_RATING = "video-rating.csv";
+	public static final String VIDEO = "videos.csv";
+	
+	public static final String DEMO_DATASET = DATASET_FOLDER + "demo/";
+	public static final String NORMAL_DATASET = DATASET_FOLDER + "normal/";
+	public static final String LARGE_DATASET  = DATASET_FOLDER + "large/";
+
 	
 	public static String booksRatingPath() {
 		return DATASET_FOLDER + BOOKS_RATING;

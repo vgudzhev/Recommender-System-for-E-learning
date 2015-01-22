@@ -9,7 +9,7 @@
 			
 			<ul class="list-inline">
 				<li class="importButton">
-					@form(action = routes.ImportDatasetController.importAbtractItems, 'enctype -> "multipart/form-data") {
+					@form(action = routes.ImportDatasetController.importAbstractItems, 'enctype -> "multipart/form-data") {
 		    		   <input type="file" name="abstractItemsInput">
 		    		   <p></p>
 		        	   <input type="submit" class="btn btn-primary" value="Import from CSV">
@@ -17,7 +17,7 @@
 	    		</li>		
 				<li><a class="btn btn-success" href="/admin/exportUsers/csv">Export as CSV</a></li>
 				<li><a class="btn btn-success" href="/admin/exportUsers/json">Export as JSON</a></li>
-				<li><a class="btn btn-danger" href="/admin/delete/users">Delete all</a></li>
+				<li><a class="btn btn-danger" href="/admin/delete/abstractItems">Delete all</a></li>
 			</ul>
 		</div>
 		<table class="table table-striped">

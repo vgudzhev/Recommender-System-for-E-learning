@@ -1,99 +1,34 @@
-@(courses: List[models.rating.CourseRating], items: List[models.rating.AbstractItemRating], books: List[models.rating.BookRating], videos: List[models.rating.VideoRating])
-@main("Welcome to Play") {
-	@smartSearchDashboard(""){
-	
-<div class="container">
-	<div class="row">
-	@if(courses.size == 0 && books.size == 0 && items.size ==0 && videos.size ==0){
-		<p>No users found</p>
-	}
-	@if(courses.size > 0){
-		<div class="col-md-2">
-		 	<h2>Courses</h2>
-		</div>
-  		<div class="col-md-10">
-  			<table class="table table-striped">
-		    	<tr>
-					<th>Course id</th>
-					<th>Rating</th>
-				</tr>
-				@for((course, index) <- courses.zipWithIndex) {
-			    <tr>
-					<td>@course.courseID</td>
-					<td>@course.rating</td>
-				</tr>
-				}
-			</table>  
-  		</div>
-	}
-	@if(books.size > 0){
-  		<div class="col-md-2">
-		 	<h2>Books</h2>
-		</div>
-  		<div class="col-md-10">
-  			<table class="table table-striped">
-		    	<tr>
-					<th>Book ID rating</th>
-					<th>Rating</th>
-				</tr>
-				@for((book, index) <- books.zipWithIndex) {
-			    <tr>
-					<td>@book.bookID</td>
-					<td>@book.rating</td>
-				</tr>
-				}
-			</table>  
-  		</div>
-  		}
-  		
-  		@if(videos.size > 0){
-  		<div class="col-md-2">
-		 	<h2>Videos</h2>
-		</div>
-  		<div class="col-md-10">
-  			<table class="table table-striped">
-		    	<tr>
-					<th>item id</th>
-					<th>Rating</th>
-				</tr>
-				@for((video, index) <- videos.zipWithIndex) {
-			    <tr>
-					<td>@video.videoID</td>
-					<td>@video.rating</td>
-				</tr>
-				}
-			</table>  
-  		</div>
-  		}
-  		
-  		@if(items.size >0){
-  		<div class="col-md-2">
-		 	<h2>Abstract items</h2>
-		</div>
-  		<div class="col-md-10">
-  			<table class="table table-striped">
-		    	<tr>
-					<th>item id</th>
-					<th>Rating</th>
-				</tr>
-				@for((item, index) <- items.zipWithIndex) {
-			    <tr>
-					<td>@item.itemID</td>
-					<td>@item.rating</td>
-				</tr>
-				}
-			</table>  
-  		</div>
-  		}
+@(ratings: List[models.rating.RatingWrapper], count:Int, page:Int,pageLength:Int, dataType: String)
+@import helper._
+@main("") {
+
+<div id="container">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<h2>@dataType rating</h2>
 	</div>
-</div>	
-	
-			
-	}
-}
+
+		<table class="table table-striped">
+			<tr>
+				<th>User ID</th>
+				<th>@dataType ID</th>
+				<th>Rating</th>
+			</tr>
+			@for((rateItem, index) <- ratings.zipWithIndex) {
+			<tr>
+				<td>@rateItem.userID</td>
+				<td>@rateItem.itemID</td>
+				<td>@rateItem.rating</td>
+			</tr>
+			}
+		</table>
+	</div>
+	@paginate(page, pageLength, count, routes.SmartSearchController.searchUserByID(_))
+</div>
+
+} 
 
 
 
 
 
-	

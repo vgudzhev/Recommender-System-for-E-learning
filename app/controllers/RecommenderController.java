@@ -69,40 +69,47 @@ public class RecommenderController extends Controller {
 		if (recommendedItems == null) {
 			return badRequest(recommendationStatus.render("No rating found"));
 		}
-
+		
+		
+		List<Double> ratings = new ArrayList<Double>();
 		switch (datasetType) {
 		case BOOKS:
 			List<Book> books = new ArrayList<Book>();
 			for (int i = 0; i < recommendedItems.size(); i++) {
 				books.add(Book.findById(recommendedItems.get(i).getId()));
+				ratings.add(recommendedItems.get(i).getRating());
 			}
+
 			return ok(listBookRecommendatons.render(books,
-					recommendationType.getDescription()));
+					recommendationType.getDescription(), ratings));
 		case COURSES:
 			List<Course> courses = new ArrayList<Course>();
 			for (int i = 0; i < recommendedItems.size(); i++) {
 				courses.add(Course.findByID(recommendedItems.get(i).getId()));
+				ratings.add(recommendedItems.get(i).getRating());
 			}
 			return ok(listCourseRecommendations.render(courses,
-					recommendationType.getDescription()));
+					recommendationType.getDescription(), ratings));
 
 		case ABSTRACT_ITEMS:
 			List<AbstractItem> items = new ArrayList<AbstractItem>();
 			for (int i = 0; i < recommendedItems.size(); i++) {
 				items.add(AbstractItem.findByID(recommendedItems.get(i).getId()));
+				ratings.add(recommendedItems.get(i).getRating());
 			}
 
 			return ok(listAbstractItemRecommendations.render(items,
-					recommendationType.getDescription()));
+					recommendationType.getDescription(), ratings));
 
 		case VIDEOS:
 			List<Video> videos = new ArrayList<Video>();
 			for (int i = 0; i < recommendedItems.size(); i++) {
 				videos.add(Video.findByID(recommendedItems.get(i).getId()));
+				ratings.add(recommendedItems.get(i).getRating());
 			}
 
 			return ok(listVideoRecommendations.render(videos,
-					recommendationType.getDescription(), recommendedItems));
+					recommendationType.getDescription(), ratings));
 
 		default:
 			return redirect("/404");

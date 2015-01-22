@@ -6,6 +6,8 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+
+import play.Logger;
 import recommendationSystem.dataset.DatasetPath;
 import models.AbstractItem;
 import models.Book;
@@ -63,25 +65,24 @@ public class CSVImporter {
 			while ((nextLine = reader.readNext()) != null) {
 				Long id = Long.parseLong(nextLine[0]);
 				String title = nextLine[1];
-				String author = nextLine[2];
-				String year = nextLine[3];
-				String publisher = nextLine[4];
-				String imageUrl = nextLine[5];
+				// String author = nextLine[2];
+				// String year = nextLine[3];
+				// String publisher = nextLine[4];
+				// String imageUrl = nextLine[5];
+				// String shortDescription =nextLine[6];
+				// String description = nextLine[7];
 
-				oneLine.append(id);
-				oneLine.append(CSV_SEPARATOR);
 				oneLine.append(title);
 				oneLine.append(CSV_SEPARATOR);
-				oneLine.append(author);
 				bw.write(oneLine.toString());
 				bw.newLine();
 				oneLine = null;
 
-				Book book = new Book.BookBuilder().id(id).title(title)
-						.author(author).year(year).publisher(publisher)
-						.image(imageUrl).build();
+				Book book = new Book.BookBuilder().title(title).build();
 				book.save();
 			}
+		} catch (Exception ex) {
+			Logger.info(ex.toString());
 		} finally {
 			reader.close();
 			bw.flush();
@@ -196,13 +197,10 @@ public class CSVImporter {
 		String[] nextLine;
 		try {
 			while ((nextLine = reader.readNext()) != null) {
-				Long id = Long.parseLong(nextLine[0]);
 				String name = nextLine[1];
 				String topic = nextLine[2];
 
 				StringBuffer oneLine = new StringBuffer();
-				oneLine.append(id);
-				oneLine.append(CSV_SEPARATOR);
 				oneLine.append(name);
 				oneLine.append(CSV_SEPARATOR);
 				oneLine.append(topic);
@@ -316,4 +314,29 @@ public class CSVImporter {
 			bw.close();
 		}
 	}
+
+	public void importDemoDataset() throws IOException {
+		importData(DatasetPath.DEMO_DATASET);
+	}
+
+	public void importNormalDataset() throws IOException {
+		importData(DatasetPath.NORMAL_DATASET);
+	}
+
+	public void importLargeDataset() throws IOException {
+		importData(DatasetPath.LARGE_DATASET);
+	}
+
+	public void importData(String dataType) throws IOException {
+		importUsers(new File(dataType + DatasetPath.USERS));
+		importBooks(new File(dataType + DatasetPath.BOOKS));
+		importBookRating(new File(dataType + DatasetPath.BOOKS_RATING));
+		importCourses(new File(dataType + DatasetPath.COURSES));
+		importCourseRating(new File(dataType + DatasetPath.COURSES_RATING));
+		importItems(new File(dataType + DatasetPath.ITEMS));
+		importItemsRating(new File(dataType + DatasetPath.ITEMS_RATING));
+		importVideo(new File(dataType + DatasetPath.VIDEO));
+		importVideoRating(new File(dataType + DatasetPath.VIDEO_RATING));
+	}
+
 }

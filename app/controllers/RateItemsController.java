@@ -40,8 +40,7 @@ public class RateItemsController extends Controller {
 			id = ratingEngine.getBookForRate();
 			Book book = Book.findById(id);
 			title = book.title;
-			description = book.description;
-			
+			description = book.description;	
 
 		} else if (type.equals("videos")) {
 			datasetType = DatasetType.VIDEOS;

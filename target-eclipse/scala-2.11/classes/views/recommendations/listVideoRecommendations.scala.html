@@ -1,4 +1,4 @@
-@(videos: List[Video],recType:String, rating:List[recommendationSystem.RecommendedItemTuple])
+@(videos: List[Video],recType:String, rating:List[Double])
 														
 @main("Video recommendation") {
 	@recommendationsDashboard("Course recommendation"){
@@ -13,7 +13,7 @@
 					<th>Video id</th>
 					<th>Video name</th>
 					<th>Video description</th>
-					<th>Value</th>
+					<th>Rating</th>
 				</tr>
 				@for((video, index) <- videos.zipWithIndex) {
 				     @if(video != null){
