@@ -17,6 +17,7 @@ import org.apache.mahout.cf.taste.neighborhood.UserNeighborhood;
 import org.apache.mahout.cf.taste.recommender.RecommendedItem;
 import org.apache.mahout.cf.taste.similarity.UserSimilarity;
 
+import play.Logger;
 import recommendationSystem.dataset.DatasetType;
 
 public class UserBasedEngine extends RecommenderEngine {
@@ -30,11 +31,12 @@ public class UserBasedEngine extends RecommenderEngine {
 	public List<RecommendedItem> getPearsonCorellation()
 			throws TasteException, IOException {
 		UserSimilarity userSimilarity = new PearsonCorrelationSimilarity(model);
-//		UserNeighborhood neighborhood = new  NearestNUserNeighborhood(NEAREST_K, userSimilarity, model);
-		UserNeighborhood neighborhood = new ThresholdUserNeighborhood(0.1, userSimilarity, model);
+		UserNeighborhood neighborhood = new  NearestNUserNeighborhood(NEAREST_K, userSimilarity, model);
+//		UserNeighborhood neighborhood = new ThresholdUserNeighborhood(0.1, userSimilarity, model);
 		GenericUserBasedRecommender recommender = new GenericUserBasedRecommender(model, neighborhood, userSimilarity);
 		
 		List<RecommendedItem> recommendations = recommender.recommend(userId, MAX_RECOMMENDATIONS);
+		Logger.info((recommendations == null) + " user id");
 		
 		return recommendations;
 	}
@@ -42,9 +44,9 @@ public class UserBasedEngine extends RecommenderEngine {
 	public List<RecommendedItem> getWeightedPearsonCorellation()
 			throws TasteException, IOException {
 		UserSimilarity userSimilarity = new PearsonCorrelationSimilarity(model, Weighting.WEIGHTED);
-//		UserNeighborhood neighborhood =
-//				new NearestNUserNeighborhood(userNeighborhood, userSimilarity, model);
-		UserNeighborhood neighborhood = new ThresholdUserNeighborhood(0.1, userSimilarity, model);
+		UserNeighborhood neighborhood =
+				new NearestNUserNeighborhood(userNeighborhood, userSimilarity, model);
+//		UserNeighborhood neighborhood = new ThresholdUserNeighborhood(0.1, userSimilarity, model);
 		GenericUserBasedRecommender recommender =
 				new GenericUserBasedRecommender(model, neighborhood, userSimilarity);				
 		List<RecommendedItem> recommendations = recommender.recommend(

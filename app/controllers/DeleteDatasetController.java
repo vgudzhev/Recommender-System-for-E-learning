@@ -65,8 +65,8 @@ public class DeleteDatasetController extends Controller{
 	
 	public static Result deleteAllBookRatings(){
 		try{
-			DatasetDropper.dropBookTable();
-			return AdminController.listBooks(FIRST_PAGE);
+			DatasetDropper.dropBookRatingTable();
+			return AdminController.listBookRating(FIRST_PAGE);
 		}catch(Exception ex){
 			return badRequest(statusPage.render(Messages.get("deleteStatus.error")));
 		}

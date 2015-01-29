@@ -44,6 +44,11 @@ public class AbstractItem extends Model {
 		private String shortDescription;
 		private String description;
 		private String img;
+		
+		public AbstractItemBuilder id(long id){
+			this.id = id;
+			return this;
+		}
 
 		public AbstractItemBuilder title(String title) {
 			this.title = title;

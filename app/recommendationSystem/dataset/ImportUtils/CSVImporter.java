@@ -32,24 +32,30 @@ public class CSVImporter {
 		try {
 			while ((nextLine = reader.readNext()) != null) {
 				Long userID = Long.parseLong(nextLine[0]);
-				String email = nextLine[1];
-				String password = nextLine[2];
-				String name = email.substring(0, email.indexOf("@"));
+				if (User.findByID(userID) == null) {
+					String email = nextLine[1];
+					String password = nextLine[2];
+					String name = email.substring(0, email.indexOf("@"));
 
-				StringBuffer oneLine = new StringBuffer();
-				oneLine.append(userID);
-				oneLine.append(CSV_SEPARATOR);
-				oneLine.append(email);
-				oneLine.append(CSV_SEPARATOR);
-				oneLine.append(name);
-				bw.write(oneLine.toString());
-				bw.newLine();
+					StringBuffer oneLine = new StringBuffer();
+					oneLine.append(userID);
+					oneLine.append(CSV_SEPARATOR);
+					oneLine.append(email);
+					oneLine.append(CSV_SEPARATOR);
+					oneLine.append(name);
+					bw.write(oneLine.toString());
+					bw.newLine();
 
-				User user = new User.UserBuilder().id(userID).email(email)
-						.password(password).name(name).build();
-				user.save();
+					User user = new User.UserBuilder().email(email).id(userID)
+							.password(password).name(name).build();
+					user.save();
+				}
 			}
+		} catch (Exception e) {
+			Logger.info("Exception in import user + " + e.toString());
+
 		} finally {
+			reader.close();
 			bw.flush();
 			bw.close();
 		}
@@ -64,25 +70,28 @@ public class CSVImporter {
 		try {
 			while ((nextLine = reader.readNext()) != null) {
 				Long id = Long.parseLong(nextLine[0]);
-				String title = nextLine[1];
-				// String author = nextLine[2];
-				// String year = nextLine[3];
-				// String publisher = nextLine[4];
-				// String imageUrl = nextLine[5];
-				// String shortDescription =nextLine[6];
-				// String description = nextLine[7];
+				if (Book.findById(id) == null) {
+					String title = nextLine[1] == null ? "" : nextLine[1];
+					// String author = nextLine[2];
+					// String year = nextLine[3];
+					// String publisher = nextLine[4];
+					// String imageUrl = nextLine[5];
+					// String shortDescription =nextLine[6];
+					// String description = nextLine[7];
+					oneLine.append(id);
+					oneLine.append(CSV_SEPARATOR);
+					oneLine.append(title);
+					oneLine.append(CSV_SEPARATOR);
+					bw.write(oneLine.toString());
+					bw.newLine();
 
-				oneLine.append(title);
-				oneLine.append(CSV_SEPARATOR);
-				bw.write(oneLine.toString());
-				bw.newLine();
-				oneLine = null;
-
-				Book book = new Book.BookBuilder().title(title).build();
-				book.save();
+					Book book = new Book.BookBuilder().title(title).id(id)
+							.build();
+					book.save();
+				}
 			}
 		} catch (Exception ex) {
-			Logger.info(ex.toString());
+			Logger.info("Exception in import books" + ex.getLocalizedMessage());
 		} finally {
 			reader.close();
 			bw.flush();
@@ -115,6 +124,8 @@ public class CSVImporter {
 						.bookID(bookID).rating(rating).build();
 				bookRating.save();
 			}
+		} catch (Exception ex) {
+			Logger.info("Exception in import books rating" + ex.getLocalizedMessage());
 		} finally {
 			reader.close();
 			bw.flush();
@@ -131,23 +142,27 @@ public class CSVImporter {
 		try {
 			while ((nextLine = reader.readNext()) != null) {
 				long courseID = Long.parseLong(nextLine[0]);
-				String title = nextLine[1];
-				String description = nextLine[2];
+				if (Course.findByID(courseID) == null) {
+					String title = nextLine[1];
+					String description = nextLine[2];
 
-				StringBuffer oneLine = new StringBuffer();
-				oneLine.append(courseID);
-				oneLine.append(CSV_SEPARATOR);
-				oneLine.append(title);
-				oneLine.append(CSV_SEPARATOR);
-				oneLine.append(description);
-				bw.write(oneLine.toString());
-				bw.newLine();
+					StringBuffer oneLine = new StringBuffer();
+					oneLine.append("Course ID");
+					oneLine.append(CSV_SEPARATOR);
+					oneLine.append(title);
+					oneLine.append(CSV_SEPARATOR);
+					oneLine.append(description);
+					bw.write(oneLine.toString());
+					bw.newLine();
 
-				Course course = new Course.CourseBuilder().title(title)
-						.id(courseID).description(description).build();
+					Course course = new Course.CourseBuilder().title(title)
+							.description(description).build();
 
-				course.save();
+					course.save();
+				}
 			}
+		} catch (Exception ex) {
+			Logger.info("Exception in import courses" + ex.getLocalizedMessage());
 		} finally {
 			reader.close();
 			bw.flush();
@@ -182,6 +197,8 @@ public class CSVImporter {
 
 				courseRating.save();
 			}
+		} catch (Exception ex) {
+			Logger.info("Exception in import course rating" + ex.getLocalizedMessage());
 		} finally {
 			reader.close();
 			bw.flush();
@@ -197,20 +214,27 @@ public class CSVImporter {
 		String[] nextLine;
 		try {
 			while ((nextLine = reader.readNext()) != null) {
-				String name = nextLine[1];
-				String topic = nextLine[2];
+				long id = Long.parseLong(nextLine[0]);
+				if (AbstractItem.findByID(id) == null) {
+					String name = nextLine[1];
+					String topic = nextLine[2];
 
-				StringBuffer oneLine = new StringBuffer();
-				oneLine.append(name);
-				oneLine.append(CSV_SEPARATOR);
-				oneLine.append(topic);
-				bw.write(oneLine.toString());
-				bw.newLine();
+					StringBuffer oneLine = new StringBuffer();
+					oneLine.append(id);
+					oneLine.append(CSV_SEPARATOR);
+					oneLine.append(name);
+					oneLine.append(CSV_SEPARATOR);
+					oneLine.append(topic);
+					bw.write(oneLine.toString());
+					bw.newLine();
 
-				AbstractItem abstractItem = new AbstractItem.AbstractItemBuilder()
-						.title(name).description(topic).build();
-				abstractItem.save();
+					AbstractItem abstractItem = new AbstractItem.AbstractItemBuilder()
+							.id(id).title(name).description(topic).build();
+					abstractItem.save();
+				}
 			}
+		} catch (Exception ex) {
+			Logger.info("Exception in import abbstract item" + ex.getLocalizedMessage());
 		} finally {
 			reader.close();
 			bw.flush();
@@ -243,6 +267,8 @@ public class CSVImporter {
 						.userID(userID).itemID(itemID).rating(rating).build();
 				abstractItemRating.save();
 			}
+		} catch (Exception ex) {
+			Logger.info("Exception in import items rating" + ex.getLocalizedMessage());
 		} finally {
 			reader.close();
 			bw.flush();
@@ -257,25 +283,32 @@ public class CSVImporter {
 		String[] nextLine;
 		try {
 			while ((nextLine = reader.readNext()) != null) {
-				String name = nextLine[0];
-				String url = nextLine[1];
-				String description = nextLine[2];
+				long id = Long.parseLong(nextLine[0]);
+				if (Video.findByID(id) == null) {
+					String name = nextLine[1];
+					String url = nextLine[2];
+					String description = nextLine[3];
 
-				StringBuffer oneLine = new StringBuffer();
-				oneLine.append(name);
-				oneLine.append(CSV_SEPARATOR);
-				oneLine.append(url);
-				oneLine.append(CSV_SEPARATOR);
-				oneLine.append(description);
-				bw.write(oneLine.toString());
-				bw.newLine();
+					StringBuffer oneLine = new StringBuffer();
+					oneLine.append(id);
+					oneLine.append(CSV_SEPARATOR);
+					oneLine.append(name);
+					oneLine.append(CSV_SEPARATOR);
+					oneLine.append(url);
+					oneLine.append(CSV_SEPARATOR);
+					oneLine.append(description);
+					bw.write(oneLine.toString());
+					bw.newLine();
 
-				Video video = new Video.VideoBuilder().title(name)
-						.description(description).url(url).build();
+					Video video = new Video.VideoBuilder().title(name)
+							.description(description).url(url).build();
 
-				video.save();
+					video.save();
+				}
 			}
-		} finally {
+		} catch (Exception ex) {
+			Logger.info("Exception in import video" + ex.getLocalizedMessage());
+		}finally {
 			reader.close();
 			bw.flush();
 			bw.close();
@@ -308,6 +341,9 @@ public class CSVImporter {
 
 				videoRating.save();
 			}
+		}catch (NumberFormatException e) {
+				Logger.info("--"+e.getMessage());
+		
 		} finally {
 			reader.close();
 			bw.flush();
@@ -315,7 +351,7 @@ public class CSVImporter {
 		}
 	}
 
-	public void importDemoDataset() throws IOException {
+	public void importDemoDataset() throws NumberFormatException, IOException {
 		importData(DatasetPath.DEMO_DATASET);
 	}
 
@@ -327,16 +363,16 @@ public class CSVImporter {
 		importData(DatasetPath.LARGE_DATASET);
 	}
 
-	public void importData(String dataType) throws IOException {
-		importUsers(new File(dataType + DatasetPath.USERS));
-		importBooks(new File(dataType + DatasetPath.BOOKS));
-		importBookRating(new File(dataType + DatasetPath.BOOKS_RATING));
-		importCourses(new File(dataType + DatasetPath.COURSES));
-		importCourseRating(new File(dataType + DatasetPath.COURSES_RATING));
-		importItems(new File(dataType + DatasetPath.ITEMS));
-		importItemsRating(new File(dataType + DatasetPath.ITEMS_RATING));
-		importVideo(new File(dataType + DatasetPath.VIDEO));
-		importVideoRating(new File(dataType + DatasetPath.VIDEO_RATING));
+	public void importData(String dataType) throws NumberFormatException, IOException {
+			importUsers(new File(dataType + DatasetPath.USERS));
+			importCourses(new File(dataType + DatasetPath.COURSES));
+			importBooks(new File(dataType + DatasetPath.BOOKS));
+			importVideo(new File(dataType + DatasetPath.VIDEO));
+			importItemsRating(new File(dataType + DatasetPath.ITEMS_RATING));
+			importCourseRating(new File(dataType + DatasetPath.COURSES_RATING));
+			importBookRating(new File(dataType + DatasetPath.BOOKS_RATING));
+			importVideoRating(new File(dataType + DatasetPath.VIDEO_RATING));	
+			importItems(new File(dataType + DatasetPath.ITEMS));		
 	}
 
 }

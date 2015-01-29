@@ -35,7 +35,7 @@ public class ImportDatasetController extends Controller {
 	
 	public static Result importAbstractItems() {
 		MultipartFormData body = request().body().asMultipartFormData();
-		FilePart items = body.getFile("abstractItemInput");
+		FilePart items = body.getFile("abstractItemsInput");
 		if (items != null) {
 			File file = items.getFile();
 			try{
@@ -143,9 +143,9 @@ public class ImportDatasetController extends Controller {
 	
 	public static Result importVideos() {
 		MultipartFormData body = request().body().asMultipartFormData();
-		FilePart users = body.getFile("videoInput");
-		if (users != null) {
-			File file = users.getFile();
+		FilePart videos = body.getFile("videoInput");
+		if (videos != null) {
+			File file = videos.getFile();
 			try{
 				DatasetImporter.getCSVImporter().importVideo(file);
 				

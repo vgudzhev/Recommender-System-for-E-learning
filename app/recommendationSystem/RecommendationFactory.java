@@ -6,6 +6,7 @@ import java.util.List;
 import org.apache.mahout.cf.taste.common.TasteException;
 import org.apache.mahout.cf.taste.recommender.RecommendedItem;
 
+import play.Logger;
 import recommendationSystem.dataset.DatasetType;
 import recommendationSystem.engine.ItemBasedEngine;
 import recommendationSystem.engine.UserBasedEngine;
@@ -18,6 +19,9 @@ public class RecommendationFactory {
 		UserBasedEngine userBasedEngine = new UserBasedEngine(datasetType, userId);
 		switch (recommendationType) {
 		
+		case PEARSON_CORELLATION_USER:
+			return userBasedEngine.getPearsonCorellation();
+			
 		case EUCLIDEAN_DISTANCE_ITEM:
 			return itemBasedEngine.getEuclideanDistance();
 			
@@ -36,12 +40,6 @@ public class RecommendationFactory {
 		case EUCLIDEAN_DISTANCE_W_USER:
 			return userBasedEngine.getWeightedEuclideanDistance();
 			
-		case SPEARMAN_CORELLATION_ITEM:
-			return userBasedEngine.getSpearmanCorellation();
-			
-		case PEARSON_CORELLATION_USER:
-			return userBasedEngine.getPearsonCorellation();
-			
 		case PEARSON_CORELLATION_W_USER:
 			return  userBasedEngine.getWeightedPearsonCorellation();
 			
@@ -50,6 +48,9 @@ public class RecommendationFactory {
 			
 		case TANIMOTO_COEFFICIENT_USER:
 			return userBasedEngine.getTanimotoCoefficient();
+		
+		case TANIMOTO_COEFFICIENT_ITEM:
+			return itemBasedEngine.getTanimotoCoefficient();
 			
 		default:
 			return null;

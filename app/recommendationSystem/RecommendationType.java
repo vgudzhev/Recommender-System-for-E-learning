@@ -11,7 +11,7 @@ public enum RecommendationType {
 		PEARSON_CORELLATION_W_ITEM("pcwi", "Item Based recommendation based on Pearson corellation between items with weighted score"),
 		EUCLIDEAN_DISTANCE_ITEM("edi", "Item Based recommendation based on Euclidean distance between items"),
 		EUCLIDEAN_DISTANCE_W_ITEM("edwi", "Item Based recommendation based on Euclidean distance between items with weighted score"),
-		SPEARMAN_CORELLATION_ITEM("sci", "Item Based recommendation based on Spearman corellation between users");
+		TANIMOTO_COEFFICIENT_ITEM("tci", "Item based reccomendation based on Tanimoto coeeficient");
 		
 		private String key;
 		private String description;

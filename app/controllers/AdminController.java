@@ -11,6 +11,7 @@ import models.rating.AbstractItemRating;
 import models.rating.BookRating;
 import models.rating.CourseRating;
 import models.rating.VideoRating;
+import play.Logger;
 import play.data.DynamicForm;
 import play.data.Form;
 import play.i18n.Messages;
@@ -140,6 +141,7 @@ public class AdminController extends Controller {
 				DatasetImporter.getCSVImporter().importLargeDataset();
 			}
 		}catch(Exception ex){
+			Logger.info("AdminController.loaData" + ex.toString());
 			return badRequest(statusPage.render(ex.getMessage()));
 		}
 		

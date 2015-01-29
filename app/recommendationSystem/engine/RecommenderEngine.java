@@ -24,7 +24,7 @@ public class RecommenderEngine {
 			case VIDEOS:
 				return new FileDataModel(Play.application().getFile(DatasetPath.videoRatingPath()));
 			case ABSTRACT_ITEMS:
-				return new FileDataModel(Play.application().getFile(DatasetPath.abstractItemsPath()));
+				return new FileDataModel(Play.application().getFile(DatasetPath.itemsRatingPath()));
 			case COURSES:
 				return new FileDataModel(Play.application().getFile(DatasetPath.coursesRatingPath()));
 			default:

@@ -13,7 +13,7 @@ public class Global extends GlobalSettings {
         if (User.find.findRowCount() == 0) {
             String initialData =  Yaml.load("initial-data.yml").toString();
             String[] adminData = initialData.split(" ");
-            User admin = new User.UserBuilder().email(adminData[0]).password(adminData[1]).id(0l).build();
+            User admin = new User.UserBuilder().name("admin").email(adminData[0]).password(adminData[1]).id(1l).build();
             admin.save();
         }
     }

@@ -9,7 +9,10 @@ import models.Course;
 import models.User;
 import models.Video;
 import models.rating.*;
+
 import org.apache.mahout.cf.taste.recommender.RecommendedItem;
+
+import play.Logger;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;
@@ -62,7 +65,7 @@ public class RecommenderController extends Controller {
 			list = RecommendationFactory.get(recommendationType, USER_ID,
 					datasetType);
 		} catch (Exception e) {
-			return ok(recommendationStatus.render(UNEXPECTED_ERROR));
+			return badRequest(recommendationStatus.render(UNEXPECTED_ERROR + e.toString()));
 		}
 
 		List<RecommendedItemTuple> recommendedItems = getRecommendedItems(list);
@@ -94,7 +97,8 @@ public class RecommenderController extends Controller {
 		case ABSTRACT_ITEMS:
 			List<AbstractItem> items = new ArrayList<AbstractItem>();
 			for (int i = 0; i < recommendedItems.size(); i++) {
-				items.add(AbstractItem.findByID(recommendedItems.get(i).getId()));
+				AbstractItem item = AbstractItem.findByID(recommendedItems.get(i).getId());
+				items.add(item);
 				ratings.add(recommendedItems.get(i).getRating());
 			}
 
@@ -128,6 +132,7 @@ public class RecommenderController extends Controller {
 			float rating = item.getValue();
 			items.add(RecommendedItemTuple.getInstance(itemID, rating));
 		}
+		
 		return items;
 	}
 }

@@ -72,7 +72,7 @@ GET    /admin/listBookRatings:page                 controllers.AdminController.l
 GET    /admin/listVideoRatings                     controllers.AdminController.listVideoRating(page:Int=1)
 GET    /admin/listVideoRatings:page                controllers.AdminController.listVideoRating(page:Int)
 GET    /admin/integration                          controllers.AdminController.integration()
-GET    /admin/renderLoadData                             controllers.AdminController.renderLoadData()
+GET    /admin/renderLoadData                       controllers.AdminController.renderLoadData()
 POST   /admin/loadData                             controllers.AdminController.loadData()
 
 #      Export datasets

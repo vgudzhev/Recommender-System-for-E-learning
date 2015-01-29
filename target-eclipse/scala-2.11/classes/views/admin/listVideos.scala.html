@@ -6,7 +6,7 @@
 <div id="container">
 	<div class="panel panel-default">
 		<div class="panel-body">
-			<h2>List all vides</h2>
+			<h2>List all videos</h2>
 			<ul class="list-inline">
 				<li class="importButton">
 					@form(action = routes.ImportDatasetController.importVideos, 'enctype -> "multipart/form-data") {
@@ -15,8 +15,8 @@
 		        	   <input type="submit" class="btn btn-primary" value="Import from CSV">
 		    		}
 	    		</li>		
-				<li><a class="btn btn-success" href="/admin/exportVideo/csv">Export as CSV</a></li>
-				<li><a class="btn btn-success" href="/admin/exportVideo/json">Export as JSON</a></li>
+				<li><a class="btn btn-success" href="/admin/exportVideos/csv">Export as CSV</a></li>
+				<li><a class="btn btn-success" href="/admin/exportVideos/json">Export as JSON</a></li>
 				<li><a class="btn btn-danger" href="/admin/delete/videos">Delete all</a></li>
 			</ul>			
 		</div>
