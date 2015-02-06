@@ -1,6 +1,0 @@
-TODO list
- - i18n (ENG, BG)
- - rate items show id description summary picture AND LINK to the resource
- - Recomendations prefered algorithm
- - intgration with itunes api , create new dummy data
- 

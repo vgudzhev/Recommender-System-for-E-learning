@@ -2,7 +2,11 @@ package models;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+
+import org.mindrot.jbcrypt.BCrypt;
+
 import play.db.ebean.Model;
+import recommendationSystem.utils.HashHelper;
 
 @Entity
 public class User extends Model{
@@ -15,6 +19,7 @@ public class User extends Model{
     public int age = 0;
     public String gender;
     public String profession;
+    public String defaultLocale;
     
     public User(UserBuilder userBuilder){
     	this.userID = userBuilder.userID;
@@ -24,6 +29,7 @@ public class User extends Model{
     	this.age= userBuilder.age;
         this.gender=userBuilder.gender;
         this.profession = userBuilder.profession;
+        this.defaultLocale = userBuilder.defaultLocale;
     }
     
     public static class UserBuilder {
@@ -34,6 +40,7 @@ public class User extends Model{
     	private int age;
     	private String gender;
     	private String profession;
+    	private String defaultLocale;
     	
     	public UserBuilder id(Long userID){
     		this.userID = userID;
@@ -51,7 +58,7 @@ public class User extends Model{
     	}
     	
     	public UserBuilder password(String password){
-    		this.password = password;
+    		this.password = HashHelper.createPassword(password); 
     		return this;
     	}
     	
@@ -62,6 +69,11 @@ public class User extends Model{
     	
     	public UserBuilder profession(String profession){
     		this.profession = profession;
+    		return this;
+    	}
+    	
+    	public UserBuilder defaultLocale(String defaultLocale){
+    		this.defaultLocale = defaultLocale;
     		return this;
     	}
     	
@@ -80,10 +92,12 @@ public class User extends Model{
     );
     
     public static boolean authenticate(String email, String password) {
-         if(find.where().eq("email", email).eq("password", password).findUnique() != null){
-        	 return true;
-         }
-         return false;
+    	User user = User.find.where().eq("email", email).findUnique();
+        if (user != null && BCrypt.checkpw(password, user.password)) {
+          return true;
+        } else {
+          return false;
+        }
     }
     
     public static User findByEmail(String email) {

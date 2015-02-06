@@ -9,7 +9,7 @@
         <h2 class="form-signin-heading">Sign in</h2>
             <div id="contactInfo">
               @inputText(signInForm("email"), 'class -> "form-control")
-              @inputText(signInForm("password"), 'class -> "form-control")
+              @inputPassword(signInForm("password"), 'class -> "form-control")
              <p>@message</p>
             </div>
             <input  class="btn btn-lg btn-primary btn-success" type="submit" value="Submit" />

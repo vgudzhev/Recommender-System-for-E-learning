@@ -12,5 +12,6 @@ libraryDependencies ++= Seq(
   cache,
   javaWs,
   "org.apache.mahout" % "mahout-core" % "0.9",
-  "mysql" % "mysql-connector-java" % "5.1.32"
+  "mysql" % "mysql-connector-java" % "5.1.32",
+  "org.mindrot" % "jbcrypt" % "0.3m"
 )
