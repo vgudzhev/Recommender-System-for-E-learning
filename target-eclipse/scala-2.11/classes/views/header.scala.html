@@ -35,9 +35,9 @@
 							</ul>
 						</div>
 					</li>
-					<!-- If user is admin -->
-					@if(session.get("user") == "admin@mail.bg"){
-					<li><a href="/admin">Admin</a></li> }
+					@if(session.get("role") == "admin"){
+					<li><a href='/admin'>Admin</a></li>
+					}
 				</ul>
 				@if(session.get("user") != null) {
 				<div class="btn-group userProfile">

@@ -34,8 +34,8 @@ public class CSVImporter {
 				Long userID = Long.parseLong(nextLine[0]);
 				if (User.findByID(userID) == null) {
 					String email = nextLine[1];
-					String password = nextLine[2];
 					String name = email.substring(0, email.indexOf("@"));
+					String password = nextLine[2];					
 
 					StringBuffer oneLine = new StringBuffer();
 					oneLine.append(userID);
@@ -217,19 +217,19 @@ public class CSVImporter {
 				long id = Long.parseLong(nextLine[0]);
 				if (AbstractItem.findByID(id) == null) {
 					String name = nextLine[1];
-					String topic = nextLine[2];
+//					String topic = nextLine[2];
 
 					StringBuffer oneLine = new StringBuffer();
 					oneLine.append(id);
 					oneLine.append(CSV_SEPARATOR);
 					oneLine.append(name);
 					oneLine.append(CSV_SEPARATOR);
-					oneLine.append(topic);
+					oneLine.append("TODO");
 					bw.write(oneLine.toString());
 					bw.newLine();
 
 					AbstractItem abstractItem = new AbstractItem.AbstractItemBuilder()
-							.id(id).title(name).description(topic).build();
+							.id(id).title(name).description("TODO").build();
 					abstractItem.save();
 				}
 			}

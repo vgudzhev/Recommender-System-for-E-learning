@@ -1,12 +1,8 @@
 package controllers;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import models.AbstractItem;
 import models.Book;
 import models.Course;
-import models.ItemWrapper;
 import models.User;
 import models.Video;
 import play.data.DynamicForm;
@@ -37,7 +33,6 @@ public class RateItemsController extends Controller {
 		long id = -1;
 		String title = null;
 		String description = null;
-		String url = null;
 
 		if (type.equals("books")) {
 			datasetType = DatasetType.BOOKS;

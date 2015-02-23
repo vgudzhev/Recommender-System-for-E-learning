@@ -6,7 +6,6 @@ import java.util.List;
 import org.apache.mahout.cf.taste.common.TasteException;
 import org.apache.mahout.cf.taste.common.Weighting;
 import org.apache.mahout.cf.taste.impl.neighborhood.NearestNUserNeighborhood;
-import org.apache.mahout.cf.taste.impl.neighborhood.ThresholdUserNeighborhood;
 import org.apache.mahout.cf.taste.impl.recommender.GenericUserBasedRecommender;
 import org.apache.mahout.cf.taste.impl.similarity.EuclideanDistanceSimilarity;
 import org.apache.mahout.cf.taste.impl.similarity.PearsonCorrelationSimilarity;
@@ -17,7 +16,6 @@ import org.apache.mahout.cf.taste.neighborhood.UserNeighborhood;
 import org.apache.mahout.cf.taste.recommender.RecommendedItem;
 import org.apache.mahout.cf.taste.similarity.UserSimilarity;
 
-import play.Logger;
 import recommendationSystem.dataset.DatasetType;
 
 public class UserBasedEngine extends RecommenderEngine {
@@ -36,7 +34,6 @@ public class UserBasedEngine extends RecommenderEngine {
 		GenericUserBasedRecommender recommender = new GenericUserBasedRecommender(model, neighborhood, userSimilarity);
 		
 		List<RecommendedItem> recommendations = recommender.recommend(userId, MAX_RECOMMENDATIONS);
-		Logger.info((recommendations == null) + " user id");
 		
 		return recommendations;
 	}

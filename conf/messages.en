@@ -22,19 +22,19 @@ alert.error=Something bad happened !
 alert.not.found=Page not found
 
 jumbotron.title=Recommender systems for E-learning
-jumbotron.text=Jumbotron text
+jumbotron.text=SSRS is a recommemnder system which can be used by a users to get recommendations for various items.  
 
 row.insert.items.title=Insert Items
-row.insert.items.text=Insert item text
+row.insert.items.text=Insert item is used by the users when they wanted to add content to the system.
 row.insert.items.button=Insert Items info
 row.smart.search.title=Smart Search
-row.smart.search.text=Smart search txt
+row.smart.search.text=Smart search is used by the users to search for items, users, and user`s ratings.
 row.smart.search.button=Smart Search Info
 row.get.recommendations.title=Get recommendations
-row.get.recommendations.text=Get rec text
+row.get.recommendations.text=Get recommendations is used by the users to get personalized recommendations.
 row.get.recommendations.button=Get recommendations info
 row.rate.items.title=Rate Items
-row.rate.items.text=Rate items text 
+row.rate.items.text=Rate items is used by the users to give the system their rating about the items.
 row.rate.items.button=Rate Items info
 
 insert.items=Insert items
@@ -77,3 +77,4 @@ deleteStatus.error=Error
 
 dataset.import.error=Unable to load the dataset
 no.csv.found=No CSV file found
+about=

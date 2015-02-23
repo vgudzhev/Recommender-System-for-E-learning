@@ -5,16 +5,13 @@ import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 
 import play.Logger;
+import recommendationSystem.dataset.DatasetPath;
 import recommendationSystem.dataset.DatasetType;
 
 
 public class RatingSerializer {
 
 	private static final String CSV_SEPARATOR = ",";
-	private static final String ITEM_RATING = "data/rating/abstract-item-rating.csv";
-	private static final String BOOK_RATING = "data/rating/books-rating.csv";
-	private static final String COURSE_RATING = "data/rating/courses-rating.csv";
-	private static final String VIDEO_RATING = "data/rating/video-rating.csv";
 
 	public static void writeToCSV(long userID, long itemID, double rating, DatasetType datasetType) {
 		String path = getPath(datasetType);
@@ -40,13 +37,13 @@ public class RatingSerializer {
 	private static String getPath(DatasetType datasetType) {
 		switch (datasetType) {
 		case ABSTRACT_ITEMS:
-			return ITEM_RATING;
+			return DatasetPath.itemsRatingPath();
 		case BOOKS:
-			return BOOK_RATING;
+			return DatasetPath.booksRatingPath();
 		case COURSES:
-			return COURSE_RATING;
+			return DatasetPath.coursesRatingPath();
 		case VIDEOS:
-			return VIDEO_RATING;
+			return DatasetPath.videoRatingPath();
 		}
 		return null;
 	}

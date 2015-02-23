@@ -2,8 +2,8 @@ package controllers;
 
 import play.mvc.Controller;
 import play.mvc.Result;
-import play.mvc.Results.Chunks;
 import recommendationSystem.dataset.ExportUtils.DatasetExporter;
+import views.html.*;
 
 public class ExportDatasetController extends Controller{
 	private static final String JSON = "json";
@@ -26,7 +26,7 @@ public class ExportDatasetController extends Controller{
 					.exportAbstractItemsRating();
 
 		default:
-			return TODO;
+			return badRequest(notFound.render());
 		}
 
 	}
@@ -46,7 +46,7 @@ public class ExportDatasetController extends Controller{
 			return DatasetExporter.getJSONExporter().exportCourseRating();
 
 		default:
-			return TODO;
+			return badRequest(notFound.render());
 		}
 	}
 
@@ -65,7 +65,7 @@ public class ExportDatasetController extends Controller{
 			return DatasetExporter.getJSONExporter().exportVideoRating();
 
 		default:
-			return TODO;
+			return badRequest(notFound.render());
 		}
 
 	}
@@ -84,7 +84,7 @@ public class ExportDatasetController extends Controller{
 			return DatasetExporter.getJSONExporter().exportBookRating();
 
 		default:
-			return TODO;
+			return badRequest(notFound.render());
 		}
 	}
 
@@ -101,7 +101,7 @@ public class ExportDatasetController extends Controller{
 		case JSON:
 			return DatasetExporter.getJSONExporter().exportUsers();
 		default:
-			return TODO;
+			return badRequest(notFound.render());
 		}
 	}
 
@@ -118,7 +118,7 @@ public class ExportDatasetController extends Controller{
 		case JSON:
 			return DatasetExporter.getJSONExporter().exportBooks();
 		default:
-			return TODO;
+			return badRequest(notFound.render());
 		}
 	}
 
@@ -135,7 +135,7 @@ public class ExportDatasetController extends Controller{
 		case JSON:
 			return DatasetExporter.getJSONExporter().exportVideos();
 		default:
-			return TODO;
+			return badRequest(notFound.render());
 		}
 	}
 
@@ -152,7 +152,7 @@ public class ExportDatasetController extends Controller{
 		case JSON:
 			return DatasetExporter.getJSONExporter().exportCourses();
 		default:
-			return TODO;
+			return badRequest(notFound.render());
 		}
 	}
 
@@ -169,7 +169,7 @@ public class ExportDatasetController extends Controller{
 		case JSON:
 			return DatasetExporter.getJSONExporter().exportAbstractItems();
 		default:
-			return TODO;
+			return badRequest(notFound.render());
 		}
 	}
 }

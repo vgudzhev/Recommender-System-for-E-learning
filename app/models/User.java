@@ -20,6 +20,7 @@ public class User extends Model{
     public String gender;
     public String profession;
     public String defaultLocale;
+    public String role;
     
     public User(UserBuilder userBuilder){
     	this.userID = userBuilder.userID;
@@ -30,6 +31,7 @@ public class User extends Model{
         this.gender=userBuilder.gender;
         this.profession = userBuilder.profession;
         this.defaultLocale = userBuilder.defaultLocale;
+        this.role=userBuilder.role;
     }
     
     public static class UserBuilder {
@@ -41,6 +43,7 @@ public class User extends Model{
     	private String gender;
     	private String profession;
     	private String defaultLocale;
+    	private String role = "user";
     	
     	public UserBuilder id(Long userID){
     		this.userID = userID;
@@ -82,6 +85,11 @@ public class User extends Model{
     		return this;
     	}
     	
+    	public UserBuilder role(String role){
+    		this.role=role;
+    		return this;
+    	}
+    	
     	public User build(){
     		return new User(this);
     	}
@@ -91,12 +99,12 @@ public class User extends Model{
         String.class, User.class
     );
     
-    public static boolean authenticate(String email, String password) {
+    public static User authenticate(String email, String password) {
     	User user = User.find.where().eq("email", email).findUnique();
         if (user != null && BCrypt.checkpw(password, user.password)) {
-          return true;
+          return user;
         } else {
-          return false;
+          return null;
         }
     }
     

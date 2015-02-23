@@ -27,11 +27,11 @@ public class UserController extends Controller {
 		DynamicForm requestData = Form.form().bindFromRequest();
 		String email = requestData.get("email");
 		String password = requestData.get("password");
-
-		if (User.authenticate(email, password)) {
+		User user = User.authenticate(email, password); 
+		if (user != null) {
 			session().clear();
 			session("user", email);
-
+			session("role", user.role);
 			return redirect("/home");
 		}
 		return badRequest(signin.render("Invalid user name or password",

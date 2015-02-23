@@ -1,30 +1,1683 @@
-1,java, programming
-2,csharp, programming
-3,python, programming
-4,ruby, programming
-5,php, programming
-6,scala, programming
-7,groovy, programming
-8,cooking,free time
-9,healthcare,free time
-10,fitness,free time
-11,bio,free time
-12,joga,free time
-13,football,sport
-14,basketball,sport
-15,soccer,sport
-16,hockey,sport
-17,volleyball,sport
-18,fashion,money
-19,luxuryStocks,money
-20,whiskey,money
-21,bourbon,money
-22,arqitecure,engineering
-23,design,engineering
-24,engineering,engineering
-25,math,engineering
-26,civil-engineering,engineering
-27,windows,software
-28,linux,software
-29,solaris,software
-30,ios,software
+1,Toy Story (1995),null
+2,GoldenEye (1995),null
+3,Four Rooms (1995),null
+4,Get Shorty (1995),null
+5,Copycat (1995),null
+6,Shanghai Triad (Yao a yao yao dao waipo qiao),null (1995),null
+7,Twelve Monkeys (1995),null
+8,Babe (1995),null
+9,Dead Man Walking (1995),null
+10,Richard III (1995),null
+11,Seven (Se7en),null (1995),null
+12,Usual Suspects, The (1995),null
+13,Mighty Aphrodite (1995),null
+14,Postino, Il (1994),null
+15,Mr. Holland's Opus (1995),null
+16,French Twist (Gazon maudit),null (1995),null
+17,From Dusk Till Dawn (1996),null
+18,White Balloon, The (1995),null
+19,Antonia's Line (1995),null
+20,Angels and Insects (1995),null
+21,Muppet Treasure Island (1996),null
+22,Braveheart (1995),null
+23,Taxi Driver (1976),null
+24,Rumble in the Bronx (1995),null
+25,Birdcage, The (1996),null
+26,Brothers McMullen, The (1995),null
+27,Bad Boys (1995),null
+28,Apollo 13 (1995),null
+29,Batman Forever (1995),null
+30,Belle de jour (1967),null
+31,Crimson Tide (1995),null
+32,Crumb (1994),null
+33,Desperado (1995),null
+34,Doom Generation, The (1995),null
+35,Free Willy 2: The Adventure Home (1995),null
+36,Mad Love (1995),null
+37,Nadja (1994),null
+38,Net, The (1995),null
+39,Strange Days (1995),null
+40,To Wong Foo, Thanks for Everything! Julie Newmar (1995),null
+41,Billy Madison (1995),null
+42,Clerks (1994),null
+43,Disclosure (1994),null
+44,Dolores Claiborne (1994),null
+45,Eat Drink Man Woman (1994),null
+46,Exotica (1994),null
+47,Ed Wood (1994),null
+48,Hoop Dreams (1994),null
+49,I.Q. (1994),null
+50,Star Wars (1977),null
+51,Legends of the Fall (1994),null
+52,Madness of King George, The (1994),null
+53,Natural Born Killers (1994),null
+54,Outbreak (1995),null
+55,Professional, The (1994),null
+56,Pulp Fiction (1994),null
+57,Priest (1994),null
+58,Quiz Show (1994),null
+59,Three Colors: Red (1994),null
+60,Three Colors: Blue (1993),null
+61,Three Colors: White (1994),null
+62,Stargate (1994),null
+63,Santa Clause, The (1994),null
+64,Shawshank Redemption, The (1994),null
+65,What's Eating Gilbert Grape (1993),null
+66,While You Were Sleeping (1995),null
+67,Ace Ventura: Pet Detective (1994),null
+68,Crow, The (1994),null
+69,Forrest Gump (1994),null
+70,Four Weddings and a Funeral (1994),null
+71,Lion King, The (1994),null
+72,Mask, The (1994),null
+73,Maverick (1994),null
+74,Faster Pussycat! Kill! Kill! (1965),null
+75,Brother Minister: The Assassination of Malcolm X (1994),null
+76,Carlito's Way (1993),null
+77,Firm, The (1993),null
+78,Free Willy (1993),null
+79,Fugitive, The (1993),null
+80,Hot Shots! Part Deux (1993),null
+81,Hudsucker Proxy, The (1994),null
+82,Jurassic Park (1993),null
+83,Much Ado About Nothing (1993),null
+84,Robert A. Heinlein's The Puppet Masters (1994),null
+85,Ref, The (1994),null
+86,Remains of the Day, The (1993),null
+87,Searching for Bobby Fischer (1993),null
+88,Sleepless in Seattle (1993),null
+89,Blade Runner (1982),null
+90,So I Married an Axe Murderer (1993),null
+91,Nightmare Before Christmas, The (1993),null
+92,True Romance (1993),null
+93,Welcome to the Dollhouse (1995),null
+94,Home Alone (1990),null
+95,Aladdin (1992),null
+96,Terminator 2: Judgment Day (1991),null
+97,Dances with Wolves (1990),null
+98,Silence of the Lambs, The (1991),null
+99,Snow White and the Seven Dwarfs (1937),null
+100,Fargo (1996),null
+101,Heavy Metal (1981),null
+102,Aristocats, The (1970),null
+103,All Dogs Go to Heaven 2 (1996),null
+104,Theodore Rex (1995),null
+105,Sgt. Bilko (1996),null
+106,Diabolique (1996),null
+107,Moll Flanders (1996),null
+108,Kids in the Hall: Brain Candy (1996),null
+109,Mystery Science Theater 3000: The Movie (1996),null
+110,Operation Dumbo Drop (1995),null
+111,Truth About Cats & Dogs, The (1996),null
+112,Flipper (1996),null
+113,Horseman on the Roof, The (Hussard sur le toit, Le),null (1995),null
+114,Wallace & Gromit: The Best of Aardman Animation (1996),null
+115,Haunted World of Edward D. Wood Jr., The (1995),null
+116,Cold Comfort Farm (1995),null
+117,Rock, The (1996),null
+118,Twister (1996),null
+119,Maya Lin: A Strong Clear Vision (1994),null
+120,Striptease (1996),null
+121,Independence Day (ID4),null (1996),null
+122,Cable Guy, The (1996),null
+123,Frighteners, The (1996),null
+124,Lone Star (1996),null
+125,Phenomenon (1996),null
+126,Spitfire Grill, The (1996),null
+127,Godfather, The (1972),null
+128,Supercop (1992),null
+129,Bound (1996),null
+130,Kansas City (1996),null
+131,Breakfast at Tiffany's (1961),null
+132,Wizard of Oz, The (1939),null
+133,Gone with the Wind (1939),null
+134,Citizen Kane (1941),null
+135,2001: A Space Odyssey (1968),null
+136,Mr. Smith Goes to Washington (1939),null
+137,Big Night (1996),null
+138,D3: The Mighty Ducks (1996),null
+139,Love Bug, The (1969),null
+140,Homeward Bound: The Incredible Journey (1993),null
+141,20,000 Leagues Under the Sea (1954),null
+142,Bedknobs and Broomsticks (1971),null
+143,Sound of Music, The (1965),null
+144,Die Hard (1988),null
+145,Lawnmower Man, The (1992),null
+146,Unhook the Stars (1996),null
+147,Long Kiss Goodnight, The (1996),null
+148,Ghost and the Darkness, The (1996),null
+149,Jude (1996),null
+150,Swingers (1996),null
+151,Willy Wonka and the Chocolate Factory (1971),null
+152,Sleeper (1973),null
+153,Fish Called Wanda, A (1988),null
+154,Monty Python's Life of Brian (1979),null
+155,Dirty Dancing (1987),null
+156,Reservoir Dogs (1992),null
+157,Platoon (1986),null
+158,Weekend at Bernie's (1989),null
+159,Basic Instinct (1992),null
+160,Glengarry Glen Ross (1992),null
+161,Top Gun (1986),null
+162,On Golden Pond (1981),null
+163,Return of the Pink Panther, The (1974),null
+164,Abyss, The (1989),null
+165,Jean de Florette (1986),null
+166,Manon of the Spring (Manon des sources),null (1986),null
+167,Private Benjamin (1980),null
+168,Monty Python and the Holy Grail (1974),null
+169,Wrong Trousers, The (1993),null
+170,Cinema Paradiso (1988),null
+171,Delicatessen (1991),null
+172,Empire Strikes Back, The (1980),null
+173,Princess Bride, The (1987),null
+174,Raiders of the Lost Ark (1981),null
+175,Brazil (1985),null
+176,Aliens (1986),null
+177,Good, The Bad and The Ugly, The (1966),null
+178,12 Angry Men (1957),null
+179,Clockwork Orange, A (1971),null
+180,Apocalypse Now (1979),null
+181,Return of the Jedi (1983),null
+182,GoodFellas (1990),null
+183,Alien (1979),null
+184,Army of Darkness (1993),null
+185,Psycho (1960),null
+186,Blues Brothers, The (1980),null
+187,Godfather: Part II, The (1974),null
+188,Full Metal Jacket (1987),null
+189,Grand Day Out, A (1992),null
+190,Henry V (1989),null
+191,Amadeus (1984),null
+192,Raging Bull (1980),null
+193,Right Stuff, The (1983),null
+194,Sting, The (1973),null
+195,Terminator, The (1984),null
+196,Dead Poets Society (1989),null
+197,Graduate, The (1967),null
+198,Nikita (La Femme Nikita),null (1990),null
+199,Bridge on the River Kwai, The (1957),null
+200,Shining, The (1980),null
+201,Evil Dead II (1987),null
+202,Groundhog Day (1993),null
+203,Unforgiven (1992),null
+204,Back to the Future (1985),null
+205,Patton (1970),null
+206,Akira (1988),null
+207,Cyrano de Bergerac (1990),null
+208,Young Frankenstein (1974),null
+209,This Is Spinal Tap (1984),null
+210,Indiana Jones and the Last Crusade (1989),null
+211,M*A*S*H (1970),null
+212,Unbearable Lightness of Being, The (1988),null
+213,Room with a View, A (1986),null
+214,Pink Floyd,null
+215,Field of Dreams (1989),null
+216,When Harry Met Sally... (1989),null
+217,Bram Stoker's Dracula (1992),null
+218,Cape Fear (1991),null
+219,Nightmare on Elm Street, A (1984),null
+220,Mirror Has Two Faces, The (1996),null
+221,Breaking the Waves (1996),null
+222,Star Trek: First Contact (1996),null
+223,Sling Blade (1996),null
+224,Ridicule (1996),null
+225,101 Dalmatians (1996),null
+226,Die Hard 2 (1990),null
+227,Star Trek VI: The Undiscovered Country (1991),null
+228,Star Trek: The Wrath of Khan (1982),null
+229,Star Trek III: The Search for Spock (1984),null
+230,Star Trek IV: The Voyage Home (1986),null
+231,Batman Returns (1992),null
+232,Young Guns (1988),null
+233,Under Siege (1992),null
+234,Jaws (1975),null
+235,Mars Attacks! (1996),null
+236,Citizen Ruth (1996),null
+237,Jerry Maguire (1996),null
+238,Raising Arizona (1987),null
+239,Sneakers (1992),null
+240,Beavis and Butt,null
+241,Last of the Mohicans, The (1992),null
+242,Kolya (1996),null
+243,Jungle2Jungle (1997),null
+244,Smilla's Sense of Snow (1997),null
+245,Devil's Own, The (1997),null
+246,Chasing Amy (1997),null
+247,Turbo: A Power Rangers Movie (1997),null
+248,Grosse Pointe Blank (1997),null
+249,Austin Powers: International Man of Mystery (1997),null
+250,Fifth Element, The (1997),null
+251,Shall We Dance? (1996),null
+252,Lost World: Jurassic Park, The (1997),null
+253,Pillow Book, The (1995),null
+254,Batman & Robin (1997),null
+255,My Best Friend's Wedding (1997),null
+256,When the Cats Away (Chacun cherche son chat),null (1996),null
+257,Men in Black (1997),null
+258,Contact (1997),null
+259,George of the Jungle (1997),null
+260,Event Horizon (1997),null
+261,Air Bud (1997),null
+262,In the Company of Men (1997),null
+263,Steel (1997),null
+264,Mimic (1997),null
+265,Hunt for Red October, The (1990),null
+266,Kull the Conqueror (1997),null
+267,unknown,null
+268,Chasing Amy (1997),null
+269,Full Monty, The (1997),null
+270,Gattaca (1997),null
+271,Starship Troopers (1997),null
+272,Good Will Hunting (1997),null
+273,Heat (1995),null
+274,Sabrina (1995),null
+275,Sense and Sensibility (1995),null
+276,Leaving Las Vegas (1995),null
+277,Restoration (1995),null
+278,Bed of Roses (1996),null
+279,Once Upon a Time... When We Were Colored (1995),null
+280,Up Close and Personal (1996),null
+281,River Wild, The (1994),null
+282,Time to Kill, A (1996),null
+283,Emma (1996),null
+284,Tin Cup (1996),null
+285,Secrets & Lies (1996),null
+286,English Patient, The (1996),null
+287,Marvin's Room (1996),null
+288,Scream (1996),null
+289,Evita (1996),null
+290,Fierce Creatures (1997),null
+291,Absolute Power (1997),null
+292,Rosewood (1997),null
+293,Donnie Brasco (1997),null
+294,Liar Liar (1997),null
+295,Breakdown (1997),null
+296,Promesse, La (1996),null
+297,Ulee's Gold (1997),null
+298,Face/Off (1997),null
+299,Hoodlum (1997),null
+300,Air Force One (1997),null
+301,In & Out (1997),null
+302,L.A. Confidential (1997),null
+303,Ulee's Gold (1997),null
+304,Fly Away Home (1996),null
+305,Ice Storm, The (1997),null
+306,Mrs. Brown (Her Majesty, Mrs. Brown),null (1997),null
+307,Devil's Advocate, The (1997),null
+308,FairyTale: A True Story (1997),null
+309,Deceiver (1997),null
+310,Rainmaker, The (1997),null
+311,Wings of the Dove, The (1997),null
+312,Midnight in the Garden of Good and Evil (1997),null
+313,Titanic (1997),null
+314,3 Ninjas: High Noon At Mega Mountain (1998),null
+315,Apt Pupil (1998),null
+316,As Good As It Gets (1997),null
+317,In the Name of the Father (1993),null
+318,Schindler's List (1993),null
+319,Everyone Says I Love You (1996),null
+320,Paradise Lost: The Child Murders at Robin Hood Hills (1996),null
+321,Mother (1996),null
+322,Murder at 1600 (1997),null
+323,Dante's Peak (1997),null
+324,Lost Highway (1997),null
+325,Crash (1996),null
+326,G.I. Jane (1997),null
+327,Cop Land (1997),null
+328,Conspiracy Theory (1997),null
+329,Desperate Measures (1998),null
+330,187 (1997),null
+331,Edge, The (1997),null
+332,Kiss the Girls (1997),null
+333,Game, The (1997),null
+334,U Turn (1997),null
+335,How to Be a Player (1997),null
+336,Playing God (1997),null
+337,House of Yes, The (1997),null
+338,Bean (1997),null
+339,Mad City (1997),null
+340,Boogie Nights (1997),null
+341,Critical Care (1997),null
+342,Man Who Knew Too Little, The (1997),null
+343,Alien: Resurrection (1997),null
+344,Apostle, The (1997),null
+345,Deconstructing Harry (1997),null
+346,Jackie Brown (1997),null
+347,Wag the Dog (1997),null
+348,Desperate Measures (1998),null
+349,Hard Rain (1998),null
+350,Fallen (1998),null
+351,Prophecy II, The (1998),null
+352,Spice World (1997),null
+353,Deep Rising (1998),null
+354,Wedding Singer, The (1998),null
+355,Sphere (1998),null
+356,Client, The (1994),null
+357,One Flew Over the Cuckoo's Nest (1975),null
+358,Spawn (1997),null
+359,Assignment, The (1997),null
+360,Wonderland (1997),null
+361,Incognito (1997),null
+362,Blues Brothers 2000 (1998),null
+363,Sudden Death (1995),null
+364,Ace Ventura: When Nature Calls (1995),null
+365,Powder (1995),null
+366,Dangerous Minds (1995),null
+367,Clueless (1995),null
+368,Bio,null
+369,Black Sheep (1996),null
+370,Mary Reilly (1996),null
+371,Bridges of Madison County, The (1995),null
+372,Jeffrey (1995),null
+373,Judge Dredd (1995),null
+374,Mighty Morphin Power Rangers: The Movie (1995),null
+375,Showgirls (1995),null
+376,Houseguest (1994),null
+377,Heavyweights (1994),null
+378,Miracle on 34th Street (1994),null
+379,Tales From the Crypt Presents: Demon Knight (1995),null
+380,Star Trek: Generations (1994),null
+381,Muriel's Wedding (1994),null
+382,Adventures of Priscilla, Queen of the Desert, The (1994),null
+383,Flintstones, The (1994),null
+384,Naked Gun 33 1/3: The Final Insult (1994),null
+385,True Lies (1994),null
+386,Addams Family Values (1993),null
+387,Age of Innocence, The (1993),null
+388,Beverly Hills Cop III (1994),null
+389,Black Beauty (1994),null
+390,Fear of a Black Hat (1993),null
+391,Last Action Hero (1993),null
+392,Man Without a Face, The (1993),null
+393,Mrs. Doubtfire (1993),null
+394,Radioland Murders (1994),null
+395,Robin Hood: Men in Tights (1993),null
+396,Serial Mom (1994),null
+397,Striking Distance (1993),null
+398,Super Mario Bros. (1993),null
+399,Three Musketeers, The (1993),null
+400,Little Rascals, The (1994),null
+401,Brady Bunch Movie, The (1995),null
+402,Ghost (1990),null
+403,Batman (1989),null
+404,Pinocchio (1940),null
+405,Mission: Impossible (1996),null
+406,Thinner (1996),null
+407,Spy Hard (1996),null
+408,Close Shave, A (1995),null
+409,Jack (1996),null
+410,Kingpin (1996),null
+411,Nutty Professor, The (1996),null
+412,Very Brady Sequel, A (1996),null
+413,Tales from the Crypt Presents: Bordello of Blood (1996),null
+414,My Favorite Year (1982),null
+415,Apple Dumpling Gang, The (1975),null
+416,Old Yeller (1957),null
+417,Parent Trap, The (1961),null
+418,Cinderella (1950),null
+419,Mary Poppins (1964),null
+420,Alice in Wonderland (1951),null
+421,William Shakespeare's Romeo and Juliet (1996),null
+422,Aladdin and the King of Thieves (1996),null
+423,E.T. the Extra,null
+424,Children of the Corn: The Gathering (1996),null
+425,Bob Roberts (1992),null
+426,Transformers: The Movie, The (1986),null
+427,To Kill a Mockingbird (1962),null
+428,Harold and Maude (1971),null
+429,Day the Earth Stood Still, The (1951),null
+430,Duck Soup (1933),null
+431,Highlander (1986),null
+432,Fantasia (1940),null
+433,Heathers (1989),null
+434,Forbidden Planet (1956),null
+435,Butch Cassidy and the Sundance Kid (1969),null
+436,American Werewolf in London, An (1981),null
+437,Amityville 1992: It's About Time (1992),null
+438,Amityville 3,null
+439,Amityville: A New Generation (1993),null
+440,Amityville II: The Possession (1982),null
+441,Amityville Horror, The (1979),null
+442,Amityville Curse, The (1990),null
+443,Birds, The (1963),null
+444,Blob, The (1958),null
+445,Body Snatcher, The (1945),null
+446,Burnt Offerings (1976),null
+447,Carrie (1976),null
+448,Omen, The (1976),null
+449,Star Trek: The Motion Picture (1979),null
+450,Star Trek V: The Final Frontier (1989),null
+451,Grease (1978),null
+452,Jaws 2 (1978),null
+453,Jaws 3,null
+454,Bastard Out of Carolina (1996),null
+455,Jackie Chan's First Strike (1996),null
+456,Beverly Hills Ninja (1997),null
+457,Free Willy 3: The Rescue (1997),null
+458,Nixon (1995),null
+459,Cry, the Beloved Country (1995),null
+460,Crossing Guard, The (1995),null
+461,Smoke (1995),null
+462,Like Water For Chocolate (Como agua para chocolate),null 
+463,Secret of Roan Inish, The (1994),null
+464,Vanya on 42nd Street (1994),null
+465,Jungle Book, The (1994),null
+466,Red Rock West (1992),null
+467,Bronx Tale, A (1993),null
+468,Rudy (1993),null
+469,Short Cuts (1993),null
+470,Tombstone (1993),null
+471,Courage Under Fire (1996),null
+472,Dragonheart (1996),null
+473,James and the Giant Peach (1996),null
+474,Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb (1963),null
+475,Trainspotting (1996),null
+476,First Wives Club, The (1996),null
+477,Matilda (1996),null
+478,Philadelphia Story, The (1940),null
+479,Vertigo (1958),null
+480,North by Northwest (1959),null
+481,Apartment, The (1960),null
+482,Some Like It Hot (1959),null
+483,Casablanca (1942),null
+484,Maltese Falcon, The (1941),null
+485,My Fair Lady (1964),null
+486,Sabrina (1954),null
+487,Roman Holiday (1953),null
+488,Sunset Blvd. (1950),null
+489,Notorious (1946),null
+490,To Catch a Thief (1955),null
+491,Adventures of Robin Hood, The (1938),null
+492,East of Eden (1955),null
+493,Thin Man, The (1934),null
+494,His Girl Friday (1940),null
+495,Around the World in 80 Days (1956),null
+496,It's a Wonderful Life (1946),null
+497,Bringing Up Baby (1938),null
+498,African Queen, The (1951),null
+499,Cat on a Hot Tin Roof (1958),null
+500,Fly Away Home (1996),null
+501,Dumbo (1941),null
+502,Bananas (1971),null
+503,Candidate, The (1972),null
+504,Bonnie and Clyde (1967),null
+505,Dial M for Murder (1954),null
+506,Rebel Without a Cause (1955),null
+507,Streetcar Named Desire, A (1951),null
+508,People vs. Larry Flynt, The (1996),null
+509,My Left Foot (1989),null
+510,Magnificent Seven, The (1954),null
+511,Lawrence of Arabia (1962),null
+512,Wings of Desire (1987),null
+513,Third Man, The (1949),null
+514,Annie Hall (1977),null
+515,Boot, Das (1981),null
+516,Local Hero (1983),null
+517,Manhattan (1979),null
+518,Miller's Crossing (1990),null
+519,Treasure of the Sierra Madre, The (1948),null
+520,Great Escape, The (1963),null
+521,Deer Hunter, The (1978),null
+522,Down by Law (1986),null
+523,Cool Hand Luke (1967),null
+524,Great Dictator, The (1940),null
+525,Big Sleep, The (1946),null
+526,Ben,null
+527,Gandhi (1982),null
+528,Killing Fields, The (1984),null
+529,My Life as a Dog (Mitt liv som hund),null (1985),null
+530,Man Who Would Be King, The (1975),null
+531,Shine (1996),null
+532,Kama Sutra: A Tale of Love (1996),null
+533,Daytrippers, The (1996),null
+534,Traveller (1997),null
+535,Addicted to Love (1997),null
+536,Ponette (1996),null
+537,My Own Private Idaho (1991),null
+538,Anastasia (1997),null
+539,Mouse Hunt (1997),null
+540,Money Train (1995),null
+541,Mortal Kombat (1995),null
+542,Pocahontas (1995),null
+543,Mis?rables, Les (1995),null
+544,Things to Do in Denver when You're Dead (1995),null
+545,Vampire in Brooklyn (1995),null
+546,Broken Arrow (1996),null
+547,Young Poisoner's Handbook, The (1995),null
+548,NeverEnding Story III, The (1994),null
+549,Rob Roy (1995),null
+550,Die Hard: With a Vengeance (1995),null
+551,Lord of Illusions (1995),null
+552,Species (1995),null
+553,Walk in the Clouds, A (1995),null
+554,Waterworld (1995),null
+555,White Man's Burden (1995),null
+556,Wild Bill (1995),null
+557,Farinelli: il castrato (1994),null
+558,Heavenly Creatures (1994),null
+559,Interview with the Vampire (1994),null
+560,Kid in King Arthur's Court, A (1995),null
+561,Mary Shelley's Frankenstein (1994),null
+562,Quick and the Dead, The (1995),null
+563,Stephen King's The Langoliers (1995),null
+564,Tales from the Hood (1995),null
+565,Village of the Damned (1995),null
+566,Clear and Present Danger (1994),null
+567,Wes Craven's New Nightmare (1994),null
+568,Speed (1994),null
+569,Wolf (1994),null
+570,Wyatt Earp (1994),null
+571,Another Stakeout (1993),null
+572,Blown Away (1994),null
+573,Body Snatchers (1993),null
+574,Boxing Helena (1993),null
+575,City Slickers II: The Legend of Curly's Gold (1994),null
+576,Cliffhanger (1993),null
+577,Coneheads (1993),null
+578,Demolition Man (1993),null
+579,Fatal Instinct (1993),null
+580,Englishman Who Went Up a Hill, But Came Down a Mountain, The (1995),null
+581,Kalifornia (1993),null
+582,Piano, The (1993),null
+583,Romeo Is Bleeding (1993),null
+584,Secret Garden, The (1993),null
+585,Son in Law (1993),null
+586,Terminal Velocity (1994),null
+587,Hour of the Pig, The (1993),null
+588,Beauty and the Beast (1991),null
+589,Wild Bunch, The (1969),null
+590,Hellraiser: Bloodline (1996),null
+591,Primal Fear (1996),null
+592,True Crime (1995),null
+593,Stalingrad (1993),null
+594,Heavy (1995),null
+595,Fan, The (1996),null
+596,Hunchback of Notre Dame, The (1996),null
+597,Eraser (1996),null
+598,Big Squeeze, The (1996),null
+599,Police Story 4: Project S (Chao ji ji hua),null (1993),null
+600,Daniel Defoe's Robinson Crusoe (1996),null
+601,For Whom the Bell Tolls (1943),null
+602,American in Paris, An (1951),null
+603,Rear Window (1954),null
+604,It Happened One Night (1934),null
+605,Meet Me in St. Louis (1944),null
+606,All About Eve (1950),null
+607,Rebecca (1940),null
+608,Spellbound (1945),null
+609,Father of the Bride (1950),null
+610,Gigi (1958),null
+611,Laura (1944),null
+612,Lost Horizon (1937),null
+613,My Man Godfrey (1936),null
+614,Giant (1956),null
+615,39 Steps, The (1935),null
+616,Night of the Living Dead (1968),null
+617,Blue Angel, The (Blaue Engel, Der),null (1930),null
+618,Picnic (1955),null
+619,Extreme Measures (1996),null
+620,Chamber, The (1996),null
+621,Davy Crockett, King of the Wild Frontier (1955),null
+622,Swiss Family Robinson (1960),null
+623,Angels in the Outfield (1994),null
+624,Three Caballeros, The (1945),null
+625,Sword in the Stone, The (1963),null
+626,So Dear to My Heart (1949),null
+627,Robin Hood: Prince of Thieves (1991),null
+628,Sleepers (1996),null
+629,Victor/Victoria (1982),null
+630,Great Race, The (1965),null
+631,Crying Game, The (1992),null
+632,Sophie's Choice (1982),null
+633,Christmas Carol, A (1938),null
+634,Microcosmos: Le peuple de l'herbe (1996),null
+635,Fog, The (1980),null
+636,Escape from New York (1981),null
+637,Howling, The (1981),null
+638,Return of Martin Guerre, The (Retour de Martin Guerre, Le),null (1982),null
+639,Tin Drum, The (Blechtrommel, Die),null (1979),null
+640,Cook the Thief His Wife & Her Lover, The (1989),null
+641,Paths of Glory (1957),null
+642,Grifters, The (1990),null
+643,The Innocent (1994),null
+644,Thin Blue Line, The (1988),null
+645,Paris Is Burning (1990),null
+646,Once Upon a Time in the West (1969),null
+647,Ran (1985),null
+648,Quiet Man, The (1952),null
+649,Once Upon a Time in America (1984),null
+650,Seventh Seal, The (Sjunde inseglet, Det),null (1957),null
+651,Glory (1989),null
+652,Rosencrantz and Guildenstern Are Dead (1990),null
+653,Touch of Evil (1958),null
+654,Chinatown (1974),null
+655,Stand by Me (1986),null
+656,M (1931),null
+657,Manchurian Candidate, The (1962),null
+658,Pump Up the Volume (1990),null
+659,Arsenic and Old Lace (1944),null
+660,Fried Green Tomatoes (1991),null
+661,High Noon (1952),null
+662,Somewhere in Time (1980),null
+663,Being There (1979),null
+664,Paris, Texas (1984),null
+665,Alien 3 (1992),null
+666,Blood For Dracula (Andy Warhol's Dracula),null (1974),null
+667,Audrey Rose (1977),null
+668,Blood Beach (1981),null
+669,Body Parts (1991),null
+670,Body Snatchers (1993),null
+671,Bride of Frankenstein (1935),null
+672,Candyman (1992),null
+673,Cape Fear (1962),null
+674,Cat People (1982),null
+675,Nosferatu (Nosferatu, eine Symphonie des Grauens),null (1922),null
+676,Crucible, The (1996),null
+677,Fire on the Mountain (1996),null
+678,Volcano (1997),null
+679,Conan the Barbarian (1981),null
+680,Kull the Conqueror (1997),null
+681,Wishmaster (1997),null
+682,I Know What You Did Last Summer (1997),null
+683,Rocket Man (1997),null
+684,In the Line of Fire (1993),null
+685,Executive Decision (1996),null
+686,Perfect World, A (1993),null
+687,McHale's Navy (1997),null
+688,Leave It to Beaver (1997),null
+689,Jackal, The (1997),null
+690,Seven Years in Tibet (1997),null
+691,Dark City (1998),null
+692,American President, The (1995),null
+693,Casino (1995),null
+694,Persuasion (1995),null
+695,Kicking and Screaming (1995),null
+696,City Hall (1996),null
+697,Basketball Diaries, The (1995),null
+698,Browning Version, The (1994),null
+699,Little Women (1994),null
+700,Miami Rhapsody (1995),null
+701,Wonderful, Horrible Life of Leni Riefenstahl, The (1993),null
+702,Barcelona (1994),null
+703,Widows' Peak (1994),null
+704,House of the Spirits, The (1993),null
+705,Singin' in the Rain (1952),null
+706,Bad Moon (1996),null
+707,Enchanted April (1991),null
+708,Sex, Lies, and Videotape (1989),null
+709,Strictly Ballroom (1992),null
+710,Better Off Dead... (1985),null
+711,Substance of Fire, The (1996),null
+712,Tin Men (1987),null
+713,Othello (1995),null
+714,Carrington (1995),null
+715,To Die For (1995),null
+716,Home for the Holidays (1995),null
+717,Juror, The (1996),null
+718,In the Bleak Midwinter (1995),null
+719,Canadian Bacon (1994),null
+720,First Knight (1995),null
+721,Mallrats (1995),null
+722,Nine Months (1995),null
+723,Boys on the Side (1995),null
+724,Circle of Friends (1995),null
+725,Exit to Eden (1994),null
+726,Fluke (1995),null
+727,Immortal Beloved (1994),null
+728,Junior (1994),null
+729,Nell (1994),null
+730,Queen Margot (Reine Margot, La),null (1994),null
+731,Corrina, Corrina (1994),null
+732,Dave (1993),null
+733,Go Fish (1994),null
+734,Made in America (1993),null
+735,Philadelphia (1993),null
+736,Shadowlands (1993),null
+737,Sirens (1994),null
+738,Threesome (1994),null
+739,Pretty Woman (1990),null
+740,Jane Eyre (1996),null
+741,Last Supper, The (1995),null
+742,Ransom (1996),null
+743,Crow: City of Angels, The (1996),null
+744,Michael Collins (1996),null
+745,Ruling Class, The (1972),null
+746,Real Genius (1985),null
+747,Benny & Joon (1993),null
+748,Saint, The (1997),null
+749,MatchMaker, The (1997),null
+750,Amistad (1997),null
+751,Tomorrow Never Dies (1997),null
+752,Replacement Killers, The (1998),null
+753,Burnt By the Sun (1994),null
+754,Red Corner (1997),null
+755,Jumanji (1995),null
+756,Father of the Bride Part II (1995),null
+757,Across the Sea of Time (1995),null
+758,Lawnmower Man 2: Beyond Cyberspace (1996),null
+759,Fair Game (1995),null
+760,Screamers (1995),null
+761,Nick of Time (1995),null
+762,Beautiful Girls (1996),null
+763,Happy Gilmore (1996),null
+764,If Lucy Fell (1996),null
+765,Boomerang (1992),null
+766,Man of the Year (1995),null
+767,Addiction, The (1995),null
+768,Casper (1995),null
+769,Congo (1995),null
+770,Devil in a Blue Dress (1995),null
+771,Johnny Mnemonic (1995),null
+772,Kids (1995),null
+773,Mute Witness (1994),null
+774,Prophecy, The (1995),null
+775,Something to Talk About (1995),null
+776,Three Wishes (1995),null
+777,Castle Freak (1995),null
+778,Don Juan DeMarco (1995),null
+779,Drop Zone (1994),null
+780,Dumb & Dumber (1994),null
+781,French Kiss (1995),null
+782,Little Odessa (1994),null
+783,Milk Money (1994),null
+784,Beyond Bedlam (1993),null
+785,Only You (1994),null
+786,Perez Family, The (1995),null
+787,Roommates (1995),null
+788,Relative Fear (1994),null
+789,Swimming with Sharks (1995),null
+790,Tommy Boy (1995),null
+791,Baby,null
+792,Bullets Over Broadway (1994),null
+793,Crooklyn (1994),null
+794,It Could Happen to You (1994),null
+795,Richie Rich (1994),null
+796,Speechless (1994),null
+797,Timecop (1994),null
+798,Bad Company (1995),null
+799,Boys Life (1995),null
+800,In the Mouth of Madness (1995),null
+801,Air Up There, The (1994),null
+802,Hard Target (1993),null
+803,Heaven & Earth (1993),null
+804,Jimmy Hollywood (1994),null
+805,Manhattan Murder Mystery (1993),null
+806,Menace II Society (1993),null
+807,Poetic Justice (1993),null
+808,Program, The (1993),null
+809,Rising Sun (1993),null
+810,Shadow, The (1994),null
+811,Thirty,null
+812,Andre (1994),null
+813,Celluloid Closet, The (1995),null
+814,Great Day in Harlem, A (1994),null
+815,One Fine Day (1996),null
+816,Candyman: Farewell to the Flesh (1995),null
+817,Frisk (1995),null
+818,Girl 6 (1996),null
+819,Eddie (1996),null
+820,Space Jam (1996),null
+821,Mrs. Winterbourne (1996),null
+822,Faces (1968),null
+823,Mulholland Falls (1996),null
+824,Great White Hype, The (1996),null
+825,Arrival, The (1996),null
+826,Phantom, The (1996),null
+827,Daylight (1996),null
+828,Alaska (1996),null
+829,Fled (1996),null
+830,Power 98 (1995),null
+831,Escape from L.A. (1996),null
+832,Bogus (1996),null
+833,Bulletproof (1996),null
+834,Halloween: The Curse of Michael Myers (1995),null
+835,Gay Divorcee, The (1934),null
+836,Ninotchka (1939),null
+837,Meet John Doe (1941),null
+838,In the Line of Duty 2 (1987),null
+839,Loch Ness (1995),null
+840,Last Man Standing (1996),null
+841,Glimmer Man, The (1996),null
+842,Pollyanna (1960),null
+843,Shaggy Dog, The (1959),null
+844,Freeway (1996),null
+845,That Thing You Do! (1996),null
+846,To Gillian on Her 37th Birthday (1996),null
+847,Looking for Richard (1996),null
+848,Murder, My Sweet (1944),null
+849,Days of Thunder (1990),null
+850,Perfect Candidate, A (1996),null
+851,Two or Three Things I Know About Her (1966),null
+852,Bloody Child, The (1996),null
+853,Braindead (1992),null
+854,Bad Taste (1987),null
+855,Diva (1981),null
+856,Night on Earth (1991),null
+857,Paris Was a Woman (1995),null
+858,Amityville: Dollhouse (1996),null
+859,April Fool's Day (1986),null
+860,Believers, The (1987),null
+861,Nosferatu a Venezia (1986),null
+862,Jingle All the Way (1996),null
+863,Garden of Finzi,null
+864,My Fellow Americans (1996),null
+865,Ice Storm, The (1997),null
+866,Michael (1996),null
+867,Whole Wide World, The (1996),null
+868,Hearts and Minds (1996),null
+869,Fools Rush In (1997),null
+870,Touch (1997),null
+871,Vegas Vacation (1997),null
+872,Love Jones (1997),null
+873,Picture Perfect (1997),null
+874,Career Girls (1997),null
+875,She's So Lovely (1997),null
+876,Money Talks (1997),null
+877,Excess Baggage (1997),null
+878,That Darn Cat! (1997),null
+879,Peacemaker, The (1997),null
+880,Soul Food (1997),null
+881,Money Talks (1997),null
+882,Washington Square (1997),null
+883,Telling Lies in America (1997),null
+884,Year of the Horse (1997),null
+885,Phantoms (1998),null
+886,Life Less Ordinary, A (1997),null
+887,Eve's Bayou (1997),null
+888,One Night Stand (1997),null
+889,Tango Lesson, The (1997),null
+890,Mortal Kombat: Annihilation (1997),null
+891,Bent (1997),null
+892,Flubber (1997),null
+893,For Richer or Poorer (1997),null
+894,Home Alone 3 (1997),null
+895,Scream 2 (1997),null
+896,Sweet Hereafter, The (1997),null
+897,Time Tracers (1995),null
+898,Postman, The (1997),null
+899,Winter Guest, The (1997),null
+900,Kundun (1997),null
+901,Mr. Magoo (1997),null
+902,Big Lebowski, The (1998),null
+903,Afterglow (1997),null
+904,Ma vie en rose (My Life in Pink),null (1997),null
+905,Great Expectations (1998),null
+906,Oscar & Lucinda (1997),null
+907,Vermin (1998),null
+908,Half Baked (1998),null
+909,Dangerous Beauty (1998),null
+910,Nil By Mouth (1997),null
+911,Twilight (1998),null
+912,U.S. Marshalls (1998),null
+913,Love and Death on Long Island (1997),null
+914,Wild Things (1998),null
+915,Primary Colors (1998),null
+916,Lost in Space (1998),null
+917,Mercury Rising (1998),null
+918,City of Angels (1998),null
+919,City of Lost Children, The (1995),null
+920,Two Bits (1995),null
+921,Farewell My Concubine (1993),null
+922,Dead Man (1995),null
+923,Raise the Red Lantern (1991),null
+924,White Squall (1996),null
+925,Unforgettable (1996),null
+926,Down Periscope (1996),null
+927,Flower of My Secret, The (Flor de mi secreto, La),null (1995),null
+928,Craft, The (1996),null
+929,Harriet the Spy (1996),null
+930,Chain Reaction (1996),null
+931,Island of Dr. Moreau, The (1996),null
+932,First Kid (1996),null
+933,Funeral, The (1996),null
+934,Preacher's Wife, The (1996),null
+935,Paradise Road (1997),null
+936,Brassed Off (1996),null
+937,Thousand Acres, A (1997),null
+938,Smile Like Yours, A (1997),null
+939,Murder in the First (1995),null
+940,Airheads (1994),null
+941,With Honors (1994),null
+942,What's Love Got to Do with It (1993),null
+943,Killing Zoe (1994),null
+944,Renaissance Man (1994),null
+945,Charade (1963),null
+946,Fox and the Hound, The (1981),null
+947,Big Blue, The (Grand bleu, Le),null (1988),null
+948,Booty Call (1997),null
+949,How to Make an American Quilt (1995),null
+950,Georgia (1995),null
+951,Indian in the Cupboard, The (1995),null
+952,Blue in the Face (1995),null
+953,Unstrung Heroes (1995),null
+954,Unzipped (1995),null
+955,Before Sunrise (1995),null
+956,Nobody's Fool (1994),null
+957,Pushing Hands (1992),null
+958,To Live (Huozhe),null (1994),null
+959,Dazed and Confused (1993),null
+960,Naked (1993),null
+961,Orlando (1993),null
+962,Ruby in Paradise (1993),null
+963,Some Folks Call It a Sling Blade (1993),null
+964,Month by the Lake, A (1995),null
+965,Funny Face (1957),null
+966,Affair to Remember, An (1957),null
+967,Little Lord Fauntleroy (1936),null
+968,Inspector General, The (1949),null
+969,Winnie the Pooh and the Blustery Day (1968),null
+970,Hear My Song (1991),null
+971,Mediterraneo (1991),null
+972,Passion Fish (1992),null
+973,Grateful Dead (1995),null
+974,Eye for an Eye (1996),null
+975,Fear (1996),null
+976,Solo (1996),null
+977,Substitute, The (1996),null
+978,Heaven's Prisoners (1996),null
+979,Trigger Effect, The (1996),null
+980,Mother Night (1996),null
+981,Dangerous Ground (1997),null
+982,Maximum Risk (1996),null
+983,Rich Man's Wife, The (1996),null
+984,Shadow Conspiracy (1997),null
+985,Blood & Wine (1997),null
+986,Turbulence (1997),null
+987,Underworld (1997),null
+988,Beautician and the Beast, The (1997),null
+989,Cats Don't Dance (1997),null
+990,Anna Karenina (1997),null
+991,Keys to Tulsa (1997),null
+992,Head Above Water (1996),null
+993,Hercules (1997),null
+994,Last Time I Committed Suicide, The (1997),null
+995,Kiss Me, Guido (1997),null
+996,Big Green, The (1995),null
+997,Stuart Saves His Family (1995),null
+998,Cabin Boy (1994),null
+999,Clean Slate (1994),null
+1000,Lightning Jack (1994),null
+1001,Stupids, The (1996),null
+1002,Pest, The (1997),null
+1003,That Darn Cat! (1997),null
+1004,Geronimo: An American Legend (1993),null
+1005,Double vie de V?ronique, La (Double Life of Veronique, The),null (1991),null
+1006,Until the End of the World (Bis ans Ende der Welt),null (1991),null
+1007,Waiting for Guffman (1996),null
+1008,I Shot Andy Warhol (1996),null
+1009,Stealing Beauty (1996),null
+1010,Basquiat (1996),null
+1011,2 Days in the Valley (1996),null
+1012,Private Parts (1997),null
+1013,Anaconda (1997),null
+1014,Romy and Michele's High School Reunion (1997),null
+1015,Shiloh (1997),null
+1016,Con Air (1997),null
+1017,Trees Lounge (1996),null
+1018,Tie Me Up! Tie Me Down! (1990),null
+1019,Die xue shuang xiong (Killer, The),null (1989),null
+1020,Gaslight (1944),null
+1021,8 1/2 (1963),null
+1022,Fast, Cheap & Out of Control (1997),null
+1023,Fathers' Day (1997),null
+1024,Mrs. Dalloway (1997),null
+1025,Fire Down Below (1997),null
+1026,Lay of the Land, The (1997),null
+1027,Shooter, The (1995),null
+1028,Grumpier Old Men (1995),null
+1029,Jury Duty (1995),null
+1030,Beverly Hillbillies, The (1993),null
+1031,Lassie (1994),null
+1032,Little Big League (1994),null
+1033,Homeward Bound II: Lost in San Francisco (1996),null
+1034,Quest, The (1996),null
+1035,Cool Runnings (1993),null
+1036,Drop Dead Fred (1991),null
+1037,Grease 2 (1982),null
+1038,Switchback (1997),null
+1039,Hamlet (1996),null
+1040,Two if by Sea (1996),null
+1041,Forget Paris (1995),null
+1042,Just Cause (1995),null
+1043,Rent,null
+1044,Paper, The (1994),null
+1045,Fearless (1993),null
+1046,Malice (1993),null
+1047,Multiplicity (1996),null
+1048,She's the One (1996),null
+1049,House Arrest (1996),null
+1050,Ghost and Mrs. Muir, The (1947),null
+1051,Associate, The (1996),null
+1052,Dracula: Dead and Loving It (1995),null
+1053,Now and Then (1995),null
+1054,Mr. Wrong (1996),null
+1055,Simple Twist of Fate, A (1994),null
+1056,Cronos (1992),null
+1057,Pallbearer, The (1996),null
+1058,War, The (1994),null
+1059,Don't Be a Menace to South Central While Drinking Your Juice in the Hood (1996),null
+1060,Adventures of Pinocchio, The (1996),null
+1061,Evening Star, The (1996),null
+1062,Four Days in September (1997),null
+1063,Little Princess, A (1995),null
+1064,Crossfire (1947),null
+1065,Koyaanisqatsi (1983),null
+1066,Balto (1995),null
+1067,Bottle Rocket (1996),null
+1068,Star Maker, The (Uomo delle stelle, L'),null (1995),null
+1069,Amateur (1994),null
+1070,Living in Oblivion (1995),null
+1071,Party Girl (1995),null
+1072,Pyromaniac's Love Story, A (1995),null
+1073,Shallow Grave (1994),null
+1074,Reality Bites (1994),null
+1075,Man of No Importance, A (1994),null
+1076,Pagemaster, The (1994),null
+1077,Love and a .45 (1994),null
+1078,Oliver & Company (1988),null
+1079,Joe's Apartment (1996),null
+1080,Celestial Clockwork (1994),null
+1081,Curdled (1996),null
+1082,Female Perversions (1996),null
+1083,Albino Alligator (1996),null
+1084,Anne Frank Remembered (1995),null
+1085,Carried Away (1996),null
+1086,It's My Party (1995),null
+1087,Bloodsport 2 (1995),null
+1088,Double Team (1997),null
+1089,Speed 2: Cruise Control (1997),null
+1090,Sliver (1993),null
+1091,Pete's Dragon (1977),null
+1092,Dear God (1996),null
+1093,Live Nude Girls (1995),null
+1094,Thin Line Between Love and Hate, A (1996),null
+1095,High School High (1996),null
+1096,Commandments (1997),null
+1097,Hate (Haine, La),null (1995),null
+1098,Flirting With Disaster (1996),null
+1099,Red Firecracker, Green Firecracker (1994),null
+1100,What Happened Was... (1994),null
+1101,Six Degrees of Separation (1993),null
+1102,Two Much (1996),null
+1103,Trust (1990),null
+1104,C'est arriv? pr?s de chez vous (1992),null
+1105,Firestorm (1998),null
+1106,Newton Boys, The (1998),null
+1107,Beyond Rangoon (1995),null
+1108,Feast of July (1995),null
+1109,Death and the Maiden (1994),null
+1110,Tank Girl (1995),null
+1111,Double Happiness (1994),null
+1112,Cobb (1994),null
+1113,Mrs. Parker and the Vicious Circle (1994),null
+1114,Faithful (1996),null
+1115,Twelfth Night (1996),null
+1116,Mark of Zorro, The (1940),null
+1117,Surviving Picasso (1996),null
+1118,Up in Smoke (1978),null
+1119,Some Kind of Wonderful (1987),null
+1120,I'm Not Rappaport (1996),null
+1121,Umbrellas of Cherbourg, The (Parapluies de Cherbourg, Les),null (1964),null
+1122,They Made Me a Criminal (1939),null
+1123,Last Time I Saw Paris, The (1954),null
+1124,Farewell to Arms, A (1932),null
+1125,Innocents, The (1961),null
+1126,Old Man and the Sea, The (1958),null
+1127,Truman Show, The (1998),null
+1128,Heidi Fleiss: Hollywood Madam (1995),null 
+1129,Chungking Express (1994),null
+1130,Jupiter's Wife (1994),null
+1131,Safe (1995),null
+1132,Feeling Minnesota (1996),null
+1133,Escape to Witch Mountain (1975),null
+1134,Get on the Bus (1996),null
+1135,Doors, The (1991),null
+1136,Ghosts of Mississippi (1996),null
+1137,Beautiful Thing (1996),null
+1138,Best Men (1997),null
+1139,Hackers (1995),null
+1140,Road to Wellville, The (1994),null
+1141,War Room, The (1993),null
+1142,When We Were Kings (1996),null
+1143,Hard Eight (1996),null
+1144,Quiet Room, The (1996),null
+1145,Blue Chips (1994),null
+1146,Calendar Girl (1993),null
+1147,My Family (1995),null
+1148,Tom & Viv (1994),null
+1149,Walkabout (1971),null
+1150,Last Dance (1996),null
+1151,Original Gangstas (1996),null
+1152,In Love and War (1996),null
+1153,Backbeat (1993),null
+1154,Alphaville (1965),null
+1155,Rendezvous in Paris (Rendez,null
+1156,Cyclo (1995),null
+1157,Relic, The (1997),null
+1158,Fille seule, La (A Single Girl),null 
+1159,Stalker (1979),null
+1160,Love! Valour! Compassion! (1997),null
+1161,Palookaville (1996),null
+1162,Phat Beach (1996),null
+1163,Portrait of a Lady, The (1996),null
+1164,Zeus and Roxanne (1997),null
+1165,Big Bully (1996),null
+1166,Love & Human Remains (1993),null
+1167,Sum of Us, The (1994),null
+1168,Little Buddha (1993),null
+1169,Fresh (1994),null
+1170,Spanking the Monkey (1994),null
+1171,Wild Reeds (1994),null
+1172,Women, The (1939),null
+1173,Bliss (1997),null
+1174,Caught (1996),null
+1175,Hugo Pool (1997),null
+1176,Welcome To Sarajevo (1997),null
+1177,Dunston Checks In (1996),null
+1178,Major Payne (1994),null
+1179,Man of the House (1995),null
+1180,I Love Trouble (1994),null
+1181,Low Down Dirty Shame, A (1994),null
+1182,Cops and Robbersons (1994),null
+1183,Cowboy Way, The (1994),null
+1184,Endless Summer 2, The (1994),null
+1185,In the Army Now (1994),null
+1186,Inkwell, The (1994),null
+1187,Switchblade Sisters (1975),null
+1188,Young Guns II (1990),null
+1189,Prefontaine (1997),null
+1190,That Old Feeling (1997),null
+1191,Letter From Death Row, A (1998),null
+1192,Boys of St. Vincent, The (1993),null
+1193,Before the Rain (Pred dozhdot),null (1994),null
+1194,Once Were Warriors (1994),null
+1195,Strawberry and Chocolate (Fresa y chocolate),null (1993),null
+1196,Savage Nights (Nuits fauves, Les),null (1992),null
+1197,Family Thing, A (1996),null
+1198,Purple Noon (1960),null
+1199,Cemetery Man (Dellamorte Dellamore),null (1994),null
+1200,Kim (1950),null
+1201,Marlene Dietrich: Shadow and Light (1996),null 
+1202,Maybe, Maybe Not (Bewegte Mann, Der),null (1994),null
+1203,Top Hat (1935),null
+1204,To Be or Not to Be (1942),null
+1205,Secret Agent, The (1996),null
+1206,Amos & Andrew (1993),null
+1207,Jade (1995),null
+1208,Kiss of Death (1995),null
+1209,Mixed Nuts (1994),null
+1210,Virtuosity (1995),null
+1211,Blue Sky (1994),null
+1212,Flesh and Bone (1993),null
+1213,Guilty as Sin (1993),null
+1214,In the Realm of the Senses (Ai no corrida),null (1976),null
+1215,Barb Wire (1996),null
+1216,Kissed (1996),null
+1217,Assassins (1995),null
+1218,Friday (1995),null
+1219,Goofy Movie, A (1995),null
+1220,Higher Learning (1995),null
+1221,When a Man Loves a Woman (1994),null
+1222,Judgment Night (1993),null
+1223,King of the Hill (1993),null
+1224,Scout, The (1994),null
+1225,Angus (1995),null
+1226,Night Falls on Manhattan (1997),null
+1227,Awfully Big Adventure, An (1995),null
+1228,Under Siege 2: Dark Territory (1995),null
+1229,Poison Ivy II (1995),null
+1230,Ready to Wear (Pret,null
+1231,Marked for Death (1990),null
+1232,Madonna: Truth or Dare (1991),null
+1233,N?nette et Boni (1996),null
+1234,Chairman of the Board (1998),null
+1235,Big Bang Theory, The (1994),null
+1236,Other Voices, Other Rooms (1997),null
+1237,Twisted (1996),null
+1238,Full Speed (1996),null
+1239,Cutthroat Island (1995),null
+1240,Ghost in the Shell (Kokaku kidotai),null (1995),null
+1241,Van, The (1996),null
+1242,Old Lady Who Walked in the Sea, The (Vieille qui marchait dans la mer, La),null (1991),null
+1243,Night Flier (1997),null
+1244,Metro (1997),null
+1245,Gridlock'd (1997),null
+1246,Bushwhacked (1995),null
+1247,Bad Girls (1994),null
+1248,Blink (1994),null
+1249,For Love or Money (1993),null
+1250,Best of the Best 3: No Turning Back (1995),null
+1251,A Chef in Love (1996),null
+1252,Contempt (M?pris, Le),null (1963),null
+1253,Tie That Binds, The (1995),null
+1254,Gone Fishin' (1997),null
+1255,Broken English (1996),null
+1256,Designated Mourner, The (1997),null
+1257,Designated Mourner, The (1997),null
+1258,Trial and Error (1997),null
+1259,Pie in the Sky (1995),null
+1260,Total Eclipse (1995),null
+1261,Run of the Country, The (1995),null
+1262,Walking and Talking (1996),null
+1263,Foxfire (1996),null
+1264,Nothing to Lose (1994),null
+1265,Star Maps (1997),null
+1266,Bread and Chocolate (Pane e cioccolata),null (1973),null
+1267,Clockers (1995),null
+1268,Bitter Moon (1992),null
+1269,Love in the Afternoon (1957),null
+1270,Life with Mikey (1993),null
+1271,North (1994),null
+1272,Talking About Sex (1994),null
+1273,Color of Night (1994),null
+1274,Robocop 3 (1993),null
+1275,Killer (Bulletproof Heart),null (1994),null
+1276,Sunset Park (1996),null
+1277,Set It Off (1996),null
+1278,Selena (1997),null
+1279,Wild America (1997),null
+1280,Gang Related (1997),null
+1281,Manny & Lo (1996),null
+1282,Grass Harp, The (1995),null
+1283,Out to Sea (1997),null
+1284,Before and After (1996),null
+1285,Princess Caraboo (1994),null
+1286,Shall We Dance? (1937),null
+1287,Ed (1996),null
+1288,Denise Calls Up (1995),null
+1289,Jack and Sarah (1995),null
+1290,Country Life (1994),null
+1291,Celtic Pride (1996),null
+1292,Simple Wish, A (1997),null
+1293,Star Kid (1997),null
+1294,Ayn Rand: A Sense of Life (1997),null
+1295,Kicked in the Head (1997),null
+1296,Indian Summer (1996),null
+1297,Love Affair (1994),null
+1298,Band Wagon, The (1953),null
+1299,Penny Serenade (1941),null
+1300,Til There Was You (1997),null
+1301,Stripes (1981),null
+1302,Late Bloomers (1996),null
+1303,Getaway, The (1994),null
+1304,New York Cop (1996),null
+1305,National Lampoon's Senior Trip (1995),null
+1306,Delta of Venus (1994),null
+1307,Carmen Miranda: Bananas Is My Business (1994),null
+1308,Babyfever (1994),null
+1309,Very Natural Thing, A (1974),null
+1310,Walk in the Sun, A (1945),null
+1311,Waiting to Exhale (1995),null
+1312,Pompatus of Love, The (1996),null
+1313,Palmetto (1998),null
+1314,Surviving the Game (1994),null
+1315,Inventing the Abbotts (1997),null
+1316,Horse Whisperer, The (1998),null
+1317,Journey of August King, The (1995),null
+1318,Catwalk (1995),null
+1319,Neon Bible, The (1995),null
+1320,Homage (1995),null
+1321,Open Season (1996),null
+1322,Metisse (Caf? au Lait),null (1993),null
+1323,Wooden Man's Bride, The (Wu Kui),null (1994),null
+1324,Loaded (1994),null
+1325,August (1996),null
+1326,Boys (1996),null
+1327,Captives (1994),null
+1328,Of Love and Shadows (1994),null
+1329,Low Life, The (1994),null
+1330,An Unforgettable Summer (1994),null
+1331,Last Klezmer: Leopold Kozlowski, His Life and Music, The (1995),null
+1332,My Life and Times With Antonin Artaud (En compagnie d'Antonin Artaud),null (1993),null
+1333,Midnight Dancers (Sibak),null (1994),null
+1334,Somebody to Love (1994),null
+1335,American Buffalo (1996),null
+1336,Kazaam (1996),null
+1337,Larger Than Life (1996),null
+1338,Two Deaths (1995),null
+1339,Stefano Quantestorie (1993),null
+1340,Crude Oasis, The (1995),null
+1341,Hedd Wyn (1992),null
+1342,Convent, The (Convento, O),null (1995),null
+1343,Lotto Land (1995),null
+1344,Story of Xinghua, The (1993),null
+1345,Day the Sun Turned Cold, The (Tianguo niezi),null (1994),null
+1346,Dingo (1992),null
+1347,Ballad of Narayama, The (Narayama Bushiko),null (1958),null
+1348,Every Other Weekend (1990),null
+1349,Mille bolle blu (1993),null
+1350,Crows and Sparrows (1949),null
+1351,Lover's Knot (1996),null
+1352,Shadow of Angels (Schatten der Engel),null (1976),null
+1353,1
+1354,Venice/Venice (1992),null
+1355,Infinity (1996),null
+1356,Ed's Next Move (1996),null
+1357,For the Moment (1994),null
+1358,The Deadly Cure (1996),null
+1359,Boys in Venice (1996),null
+1360,Sexual Life of the Belgians, The (1994),null
+1361,Search for One
+1362,American Strays (1996),null
+1363,Leopard Son, The (1996),null
+1364,Bird of Prey (1996),null
+1365,Johnny 100 Pesos (1993),null
+1366,JLG/JLG 
+1367,Faust (1994),null
+1368,Mina Tannenbaum (1994),null
+1369,Forbidden Christ, The (Cristo proibito, Il),null (1950),null
+1370,I Can't Sleep (J'ai pas sommeil),null (1994),null
+1371,Machine, The (1994),null
+1372,Stranger, The (1994),null
+1373,Good Morning (1971),null
+1374,Falling in Love Again (1980),null
+1375,Cement Garden, The (1993),null
+1376,Meet Wally Sparks (1997),null
+1377,Hotel de Love (1996),null
+1378,Rhyme & Reason (1997),null
+1379,Love and Other Catastrophes (1996),null
+1380,Hollow Reed (1996),null
+1381,Losing Chase (1996),null
+1382,Bonheur, Le (1965),null
+1383,Second Jungle Book: Mowgli & Baloo, The (1997),null
+1384,Squeeze (1996),null
+1385,Roseanna's Grave (For Roseanna),null (1997),null
+1386,Tetsuo II: Body Hammer (1992),null
+1387,Fall (1997),null
+1388,Gabbeh (1996),null
+1389,Mondo (1996),null
+1390,Innocent Sleep, The (1995),null
+1391,For Ever Mozart (1996),null
+1392,Locusts, The (1997),null
+1393,Stag (1997),null
+1394,Swept from the Sea (1997),null
+1395,Hurricane Streets (1998),null
+1396,Stonewall (1995),null
+1397,Of Human Bondage (1934),null
+1398,Anna (1996),null
+1399,Stranger in the House (1997),null
+1400,Picture Bride (1995),null
+1401,M. Butterfly (1993),null
+1402,Ciao, Professore! (1993),null
+1403,Caro Diario (Dear Diary),null (1994),null
+1404,Withnail and I (1987),null
+1405,Boy's Life 2 (1997),null
+1406,When Night Is Falling (1995),null
+1407,Specialist, The (1994),null
+1408,Gordy (1995),null
+1409,Swan Princess, The (1994),null
+1410,Harlem (1993),null
+1411,Barbarella (1968),null
+1412,Land Before Time III: The Time of the Great Giving (1995),null (V),null
+1413,Street Fighter (1994),null
+1414,Coldblooded (1995),null
+1415,Next Karate Kid, The (1994),null
+1416,No Escape (1994),null
+1417,Turning, The (1992),null
+1418,Joy Luck Club, The (1993),null
+1419,Highlander III: The Sorcerer (1994),null
+1420,Gilligan's Island: The Movie (1998),null
+1421,My Crazy Life (Mi vida loca),null (1993),null
+1422,Suture (1993),null
+1423,Walking Dead, The (1995),null
+1424,I Like It Like That (1994),null
+1425,I'll Do Anything (1994),null
+1426,Grace of My Heart (1996),null
+1427,Drunks (1995),null
+1428,SubUrbia (1997),null
+1429,Sliding Doors (1998),null
+1430,Ill Gotten Gains (1997),null
+1431,Legal Deceit (1997),null
+1432,Mighty, The (1998),null
+1433,Men of Means (1998),null
+1434,Shooting Fish (1997),null
+1435,Steal Big, Steal Little (1995),null
+1436,Mr. Jones (1993),null
+1437,House Party 3 (1994),null
+1438,Panther (1995),null
+1439,Jason's Lyric (1994),null
+1440,Above the Rim (1994),null
+1441,Moonlight and Valentino (1995),null
+1442,Scarlet Letter, The (1995),null
+1443,8 Seconds (1994),null
+1444,That Darn Cat! (1965),null
+1445,Ladybird Ladybird (1994),null
+1446,Bye Bye, Love (1995),null
+1447,Century (1993),null
+1448,My Favorite Season (1993),null
+1449,Pather Panchali (1955),null
+1450,Golden Earrings (1947),null
+1451,Foreign Correspondent (1940),null
+1452,Lady of Burlesque (1943),null
+1453,Angel on My Shoulder (1946),null
+1454,Angel and the Badman (1947),null
+1455,Outlaw, The (1943),null
+1456,Beat the Devil (1954),null
+1457,Love Is All There Is (1996),null
+1458,Damsel in Distress, A (1937),null
+1459,Madame Butterfly (1995),null
+1460,Sleepover (1995),null
+1461,Here Comes Cookie (1935),null
+1462,Thieves (Voleurs, Les),null (1996),null
+1463,Boys, Les (1997),null
+1464,Stars Fell on Henrietta, The (1995),null
+1465,Last Summer in the Hamptons (1995),null
+1466,Margaret's Museum (1995),null
+1467,Saint of Fort Washington, The (1993),null
+1468,Cure, The (1995),null
+1469,Tom and Huck (1995),null
+1470,Gumby: The Movie (1995),null
+1471,Hideaway (1995),null
+1472,Visitors, The (Visiteurs, Les),null (1993),null
+1473,Little Princess, The (1939),null
+1474,Nina Takes a Lover (1994),null
+1475,Bhaji on the Beach (1993),null
+1476,Raw Deal (1948),null
+1477,Nightwatch (1997),null
+1478,Dead Presidents (1995),null
+1479,Reckless (1995),null
+1480,Herbie Rides Again (1974),null
+1481,S.F.W. (1994),null
+1482,Gate of Heavenly Peace, The (1995),null
+1483,Man in the Iron Mask, The (1998),null
+1484,Jerky Boys, The (1994),null
+1485,Colonel Chabert, Le (1994),null
+1486,Girl in the Cadillac (1995),null
+1487,Even Cowgirls Get the Blues (1993),null
+1488,Germinal (1993),null
+1489,Chasers (1994),null
+1490,Fausto (1993),null
+1491,Tough and Deadly (1995),null
+1492,Window to Paris (1994),null
+1493,Modern Affair, A (1995),null
+1494,Mostro, Il (1994),null
+1495,Flirt (1995),null
+1496,Carpool (1996),null
+1497,Line King: Al Hirschfeld, The (1996),null
+1498,Farmer & Chase (1995),null
+1499,Grosse Fatigue (1994),null
+1500,Santa with Muscles (1996),null
+1501,Prisoner of the Mountains (Kavkazsky Plennik),null (1996),null
+1502,Naked in New York (1994),null
+1503,Gold Diggers: The Secret of Bear Mountain (1995),null
+1504,Bewegte Mann, Der (1994),null
+1505,Killer: A Journal of Murder (1995),null
+1506,Nelly & Monsieur Arnaud (1995),null
+1507,Three Lives and Only One Death (1996),null
+1508,Babysitter, The (1995),null
+1509,Getting Even with Dad (1994),null
+1510,Mad Dog Time (1996),null
+1511,Children of the Revolution (1996),null
+1512,World of Apu, The (Apur Sansar),null (1959),null
+1513,Sprung (1997),null
+1514,Dream With the Fishes (1997),null
+1515,Wings of Courage (1995),null
+1516,Wedding Gift, The (1994),null
+1517,Race the Sun (1996),null
+1518,Losing Isaiah (1995),null
+1519,New Jersey Drive (1995),null
+1520,Fear, The (1995),null
+1521,Mr. Wonderful (1993),null
+1522,Trial by Jury (1994),null
+1523,Good Man in Africa, A (1994),null
+1524,Kaspar Hauser (1993),null
+1525,Object of My Affection, The (1998),null
+1526,Witness (1985),null
+1527,Senseless (1998),null
+1528,Nowhere (1997),null
+1529,Underground (1995),null
+1530,Jefferson in Paris (1995),null
+1531,Far From Home: The Adventures of Yellow Dog (1995),null
+1532,Foreign Student (1994),null
+1533,I Don't Want to Talk About It (De eso no se habla),null (1993),null
+1534,Twin Town (1997),null
+1535,Enfer, L' (1994),null
+1536,Aiqing wansui (1994),null
+1537,Cosi (1996),null
+1538,All Over Me (1997),null
+1539,Being Human (1993),null
+1540,Amazing Panda Adventure, The (1995),null
+1541,Beans of Egypt, Maine, The (1994),null
+1542,Scarlet Letter, The (1926),null
+1543,Johns (1996),null
+1544,It Takes Two (1995),null
+1545,Frankie Starlight (1995),null
+1546,Shadows (Cienie),null (1988),null
+1547,Show, The (1995),null
+1548,The Courtyard (1995),null
+1549,Dream Man (1995),null
+1550,Destiny Turns on the Radio (1995),null
+1551,Glass Shield, The (1994),null
+1552,Hunted, The (1995),null
+1553,Underneath, The (1995),null
+1554,Safe Passage (1994),null
+1555,Secret Adventures of Tom Thumb, The (1993),null
+1556,Condition Red (1995),null
+1557,Yankee Zulu (1994),null
+1558,Aparajito (1956),null
+1559,Hostile Intentions (1994),null
+1560,Clean Slate (Coup de Torchon),null (1981),null
+1561,Tigrero: A Film That Was Never Made (1994),null
+1562,Eye of Vichy, The (Oeil de Vichy, L'),null (1993),null
+1563,Promise, The (Versprechen, Das),null (1994),null
+1564,To Cross the Rubicon (1991),null
+1565,Daens (1992),null
+1566,Man from Down Under, The (1943),null
+1567,Careful (1992),null
+1568,Vermont Is For Lovers (1992),null
+1569,Vie est belle, La (Life is Rosey),null (1987),null
+1570,Quartier Mozart (1992),null
+1571,Touki Bouki (Journey of the Hyena),null (1973),null
+1572,Wend Kuuni (God's Gift),null (1982),null
+1573,Spirits of the Dead (Tre passi nel delirio),null (1968),null
+1574,Pharaoh's Army (1995),null
+1575,I, Worst of All (Yo, la peor de todas),null (1990),null
+1576,Hungarian Fairy Tale, A (1987),null
+1577,Death in the Garden (Mort en ce jardin, La),null (1956),null
+1578,Collectionneuse, La (1967),null
+1579,Baton Rouge (1988),null
+1580,Liebelei (1933),null
+1581,Woman in Question, The (1950),null
+1582,T,null
+1583,Invitation, The (Zaproszenie),null (1986),null
+1584,Symphonie pastorale, La (1946),null
+1585,American Dream (1990),null
+1586,Lashou shentan (1992),null
+1587,Terror in a Texas Town (1958),null
+1588,Salut cousin! (1996),null
+1589,Schizopolis (1996),null
+1590,To Have, or Not (1995),null
+1591,Duoluo tianshi (1995),null
+1592,Magic Hour, The (1998),null
+1593,Death in Brunswick (1991),null
+1594,Everest (1998),null
+1595,Shopping (1994),null
+1596,Nemesis 2: Nebula (1995),null
+1597,Romper Stomper (1992),null
+1598,City of Industry (1997),null
+1599,Someone Else's America (1995),null
+1600,Guantanamera (1994),null
+1601,Office Killer (1997),null
+1602,Price Above Rubies, A (1998),null
+1603,Angela (1995),null
+1604,He Walked by Night (1948),null
+1605,Love Serenade (1996),null
+1606,Deceiver (1997),null
+1607,Hurricane Streets (1998),null
+1608,Buddy (1997),null
+1609,B*A*P*S (1997),null
+1610,Truth or Consequences, N.M. (1997),null
+1611,Intimate Relations (1996),null
+1612,Leading Man, The (1996),null
+1613,Tokyo Fist (1995),null
+1614,Reluctant Debutante, The (1958),null
+1615,Warriors of Virtue (1997),null
+1616,Desert Winds (1995),null
+1617,Hugo Pool (1997),null
+1618,King of New York (1990),null
+1619,All Things Fair (1996),null
+1620,Sixth Man, The (1997),null
+1621,Butterfly Kiss (1995),null
+1622,Paris, France (1993),null
+1623,C?r?monie, La (1995),null
+1624,Hush (1998),null
+1625,Nightwatch (1997),null
+1626,Nobody Loves Me (Keiner liebt mich),null (1994),null
+1627,Wife, The (1995),null
+1628,Lamerica (1994),null
+1629,Nico Icon (1995),null
+1630,Silence of the Palace, The (Saimt el Qusur),null (1994),null
+1631,Slingshot, The (1993),null
+1632,Land and Freedom (Tierra y libertad),null (1995),null
+1633,? k?ldum klaka (Cold Fever),null (1994),null
+1634,Etz Hadomim Tafus (Under the Domin Tree),null (1994),null
+1635,Two Friends (1986),null 
+1636,Brothers in Trouble (1995),null
+1637,Girls Town (1996),null
+1638,Normal Life (1996),null
+1639,Bitter Sugar (Azucar Amargo),null (1996),null
+1640,Eighth Day, The (1996),null
+1641,Dadetown (1995),null
+1642,Some Mother's Son (1996),null
+1643,Angel Baby (1995),null
+1644,Sudden Manhattan (1996),null
+1645,Butcher Boy, The (1998),null
+1646,Men With Guns (1997),null
+1647,Hana
+1648,Niagara, Niagara (1997),null
+1649,Big One, The (1997),null
+1650,Butcher Boy, The (1998),null
+1651,Spanish Prisoner, The (1997),null
+1652,Temptress Moon (Feng Yue),null (1996),null
+1653,Entertaining Angels: The Dorothy Day Story (1996),null
+1654,Chairman of the Board (1998),null
+1655,Favor, The (1994),null
+1656,Little City (1998),null
+1657,Target (1995),null
+1658,Substance of Fire, The (1996),null
+1659,Getting Away With Murder (1996),null
+1660,Small Faces (1995),null
+1661,New Age, The (1994),null
+1662,Rough Magic (1995),null
+1663,Nothing Personal (1995),null
+1664,8 Heads in a Duffel Bag (1997),null
+1665,Brother's Kiss, A (1997),null
+1666,Ripe (1996),null
+1667,Next Step, The (1995),null
+1668,Wedding Bell Blues (1996),null
+1669,MURDER and murder (1996),null
+1670,Tainted (1998),null
+1671,Further Gesture, A (1996),null
+1672,Kika (1993),null
+1673,Mirage (1995),null
+1674,Mamma Roma (1962),null
+1675,Sunchaser, The (1996),null
+1676,War at Home, The (1996),null
+1677,Sweet Nothing (1995),null
+1678,Mat' i syn (1997),null
+1679,B. Monkey (1998),null
+1680,Sliding Doors (1998),null
+1681,You So Crazy (1994),null
+1682,Scream of Stone (Schrei aus Stein),null (1991),null
+

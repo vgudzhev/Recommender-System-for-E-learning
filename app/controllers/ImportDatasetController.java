@@ -1,15 +1,12 @@
 package controllers;
 
 import java.io.File;
-import java.io.FileWriter;
-
 import play.Logger;
 import play.i18n.Messages;
 import play.mvc.Controller;
 import play.mvc.Http.MultipartFormData;
 import play.mvc.Http.MultipartFormData.FilePart;
 import play.mvc.Result;
-import recommendationSystem.dataset.DatasetPath;
 import recommendationSystem.dataset.ImportUtils.DatasetImporter;
 import views.html.admin.statusPage;
 
@@ -53,13 +50,14 @@ public class ImportDatasetController extends Controller {
 	
 	public static Result importAbstractItemRatings() {
 		MultipartFormData body = request().body().asMultipartFormData();
-		FilePart users = body.getFile("abstractItemRatingInput");
+		FilePart users = body.getFile("abstractItemsRatingInput");
 		if (users != null) {
 			File file = users.getFile();
 			try{
 				DatasetImporter.getCSVImporter().importItemsRating(file);
 				
 			}catch(Exception ex){
+				Logger.info(ex.getMessage()+ "---");
 				return badRequest(statusPage.render(Messages.get("dataset.import.error")));
 			}
 			

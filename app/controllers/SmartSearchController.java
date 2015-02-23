@@ -18,7 +18,6 @@ import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;
-import views.html.admin.listAbstractItems;
 import views.html.smartSearch.*;
 
 /**

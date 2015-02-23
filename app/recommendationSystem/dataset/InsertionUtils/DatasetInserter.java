@@ -3,7 +3,6 @@ package recommendationSystem.dataset.InsertionUtils;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 
@@ -12,12 +11,7 @@ import models.Book;
 import models.Course;
 import models.User;
 import models.Video;
-import models.rating.AbstractItemRating;
-import models.rating.BookRating;
-import models.rating.CourseRating;
-import models.rating.VideoRating;
 import recommendationSystem.dataset.DatasetPath;
-import au.com.bytecode.opencsv.CSVReader;
 
 public class DatasetInserter {
 	private static String CSV_SEPARATOR = ",";

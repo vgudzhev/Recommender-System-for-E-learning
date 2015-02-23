@@ -6,7 +6,6 @@ import java.util.List;
 import org.apache.mahout.cf.taste.common.TasteException;
 import org.apache.mahout.cf.taste.recommender.RecommendedItem;
 
-import play.Logger;
 import recommendationSystem.dataset.DatasetType;
 import recommendationSystem.engine.ItemBasedEngine;
 import recommendationSystem.engine.UserBasedEngine;

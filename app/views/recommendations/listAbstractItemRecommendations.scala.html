@@ -1,6 +1,6 @@
 @(items: List[AbstractItem],recType:String, rating:List[Double])
 														
-@main("A") {
+@main("Abstract Items rating") {
 @recommendationsDashboard("Item based"){
 	<div id="container">
 	<h1></h1>
@@ -13,12 +13,14 @@
 					<th>Item id</th>
 					<th>Item name</th>
 					<th>Item description/topic</th>
+					<th>Rating</th>
 				</tr>
 				@for((item, index) <- items.zipWithIndex) {
 				    <tr>
 						<td>@item.id</td>
 						<td>@item.title</td>
 						<td>@item.description</td>
+						<td>@rating.lift(index)</td>
 					</tr>
 				}
 			</table> 

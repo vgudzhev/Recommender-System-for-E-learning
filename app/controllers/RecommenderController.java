@@ -8,11 +8,8 @@ import models.Book;
 import models.Course;
 import models.User;
 import models.Video;
-import models.rating.*;
-
 import org.apache.mahout.cf.taste.recommender.RecommendedItem;
 
-import play.Logger;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;

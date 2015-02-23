@@ -6,7 +6,6 @@ import models.AbstractItem;
 import models.Video;
 import play.data.DynamicForm;
 import play.data.Form;
-import play.data.validation.Constraints.Required;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;

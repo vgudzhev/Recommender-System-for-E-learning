@@ -15,3 +15,4 @@ libraryDependencies ++= Seq(
   "mysql" % "mysql-connector-java" % "5.1.32",
   "org.mindrot" % "jbcrypt" % "0.3m"
 )
+

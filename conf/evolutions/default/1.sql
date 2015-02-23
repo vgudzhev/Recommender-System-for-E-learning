@@ -67,6 +67,7 @@ create table user (
   gender                    varchar(255),
   profession                varchar(255),
   default_locale            varchar(255),
+  role                      varchar(255),
   constraint pk_user primary key (user_id))
 ;
 
