@@ -108,9 +108,11 @@ public class CSVExporter {
 
 			public void onReady(Chunks.Out<String> out) {
 				List<User> users = User.find.all();
-				// TODO 
+
 				for(User currentUser: users){
 					out.write(currentUser.userID+"");
+					out.write(SEPARATOR);
+					out.write(currentUser.email);
 					out.write(SEPARATOR);
 					out.write(currentUser.password+"");
 					out.write(NEW_LINE);
@@ -125,10 +127,13 @@ public class CSVExporter {
 		Chunks<String> chunks = new StringChunks() {
 
 			public void onReady(Chunks.Out<String> out) {
-				List<Course> courses = Course.find.all();
-				// TODO 
+				List<Course> courses = Course.find.all(); 
 				for(Course currentCourse: courses){
+					out.write(currentCourse.id+"");
+					out.write(SEPARATOR);
 					out.write(currentCourse.title+"");
+					out.write(SEPARATOR);
+					out.write(currentCourse.shortDescription);
 					out.write(NEW_LINE);
 				}
 				out.close();
@@ -141,10 +146,13 @@ public class CSVExporter {
 		Chunks<String> chunks = new StringChunks() {
 
 			public void onReady(Chunks.Out<String> out) {
-				List<AbstractItem> items = AbstractItem.find.all();
-				// TODO 
+				List<AbstractItem> items = AbstractItem.find.all(); 
 				for(AbstractItem currentItem: items){
+					out.write(currentItem.id+"");
+					out.write(SEPARATOR);
 					out.write(currentItem.title+"");
+					out.write(SEPARATOR);
+					out.write(currentItem.shortDescription);
 					out.write(NEW_LINE);
 				}
 				out.close();
@@ -157,10 +165,13 @@ public class CSVExporter {
 		Chunks<String> chunks = new StringChunks() {
 
 			public void onReady(Chunks.Out<String> out) {
-				List<Video> videos = Video.find.all();
-				// TODO 
+				List<Video> videos = Video.find.all(); 
 				for(Video currentVideo: videos){
+					out.write(currentVideo.id+"");
+					out.write(SEPARATOR);
 					out.write(currentVideo.title);
+					out.write(SEPARATOR);
+					out.write(currentVideo.shortDescription);
 					out.write(NEW_LINE);
 				}
 				out.close();
@@ -173,10 +184,13 @@ public class CSVExporter {
 		Chunks<String> chunks = new StringChunks() {
 
 			public void onReady(Chunks.Out<String> out) {
-				List<Book> books = Book.find.all();
-				// TODO 
+				List<Book> books = Book.find.all(); 
 				for(Book currentBook: books){
+					out.write(currentBook.id+"");
+					out.write(SEPARATOR);
 					out.write(currentBook.title);
+					out.write(SEPARATOR);
+					out.write(currentBook.shortDescription);
 					out.write(NEW_LINE);
 				}
 				out.close();

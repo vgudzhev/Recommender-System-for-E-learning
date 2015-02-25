@@ -3,6 +3,10 @@ import play.Application;
 import play.GlobalSettings;
 import play.libs.Yaml;
 
+/**
+ * It is used to load the initial data in the application
+ * @author VGudzhev
+ */
 public class Global extends GlobalSettings {
     @Override
     public void onStart(Application app) {

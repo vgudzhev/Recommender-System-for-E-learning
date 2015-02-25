@@ -19,6 +19,11 @@ import play.mvc.Result;
 import recommendationSystem.dataset.ImportUtils.DatasetImporter;
 import views.html.admin.*;
 
+/**
+ * The class provide administrators of the application with additional functionality
+ * @author VGudzhev
+ *
+ */
 public class AdminController extends Controller {
 	private static final int PAGE_LENGTH = 20;
 
@@ -142,7 +147,12 @@ public class AdminController extends Controller {
 		return ok(statusPage.render("ok"));
 	}
 	
-
+	/**
+	 * Util method used for pagination
+	 * @param collectionLength
+	 * @param from - position from which the data will be displayed
+	 * @return
+	 */
 	private static int getEndPage(int collectionLength, int from) {
 		int to = (from + PAGE_LENGTH) > collectionLength ? collectionLength
 				: from + PAGE_LENGTH;
