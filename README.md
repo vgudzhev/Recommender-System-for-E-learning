@@ -13,7 +13,12 @@ Java 1.7, Play Framework 2.3.5 Ebean, SBT, H2 database/MySQL, Apache Mahout
 
 git clone github.com/vgudzhev/ssrs open command prompt and navigate to the cloned repo type->
 
-activator cleanFiles activator run -> The web app is ready; ** If you want to use MySQL, not H2base you must uncoment the following lines from root/conf/application.conf: db.default.driver=com.mysql.jdbc.Driver db.default.url=“jdbc:mysql://127.0.0.1:3306/ssrs” db.default.user=“root” db.default.pass=“pass”
+- activator cleanFiles
+- activator run -> The web app is ready; 
+- ** Note that If you want to use MySQL, not H2base you must uncoment the following lines from root/conf/application.conf: 
+-- db.default.driver=com.mysql.jdbc.Driver
+-- db.default.url=“jdbc:mysql://127.0.0.1:3306/ssrs”
+-- db.default.user=“root” db.default.pass=“pass”
 
 ## Default credentials:
-admin-user: admin@mail.bg password: pass
+- admin-user: admin@mail.bg password: pass
